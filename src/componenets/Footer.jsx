@@ -1,31 +1,35 @@
 import React from 'react';
 import {  Col, Row} from 'antd';
-import {Link} from 'react-router'
+import CustomLink from './CustomLink'
 import innoLogo from '../assets/img/inno1.png'
 
 
 class Footer extends React.Component {
+
+
     render() {
+
+
         return (
-            <div   className="Footer">
+            <div   className="Footer" style={{marginTop:'0.1rem',backgroundColor:'#027BBB',color:'#A0DEF4',paddingTop:'1.5rem',textAlign:'left',paddingLeft:'0.5rem'}}>
                 <Row>
                     <Col span={8}>
                         <ul>
-                            <li >快速入口</li>
-                            <li><Link to="/">首页</Link></li>
-                            <li><Link to="/multicenter">多中心</Link></li>
-                            <li><Link to="/managecenter">管理中心</Link></li>
+                            <li  style={{fontWeight:'bold',fontSize:'1.0rem'}}>快速入口</li>
+                            <li ><CustomLink path="/" content="首页"></CustomLink></li>
+                            <li ><CustomLink path="/multicenter"  content="多中心" ></CustomLink></li>
+                            <li ><CustomLink path="/managecenter"  content="管理中心" ></CustomLink></li>
                         </ul>
                     </Col>
                     <Col span={8}>
                         <ul>
-                            <li>云平台咨询</li>
-                            <li><Link to="/">常见问题FAQ</Link></li>
+                            <li style={{fontWeight:'bold',fontSize:'1.0rem'}}>云平台咨询</li>
+                            <li ><CustomLink path="/"  content="常见问题FAQ" ></CustomLink></li>
                         </ul>
                     </Col>
                     <Col span={8}>
                         <ul>
-                            <li>联系我们</li>
+                            <li style={{fontWeight:'bold',fontSize:'1.0rem'}}>联系我们</li>
                             <li>地址：上海市漕河泾开发区松江高科技园
                                 莘砖公路518号11栋1004室</li>
                             <li>电话：021-37027535 37027537</li>
