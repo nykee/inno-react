@@ -1,0 +1,31 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import 'font-awesome/css/font-awesome.min.css';
+import App from './App';
+import Index from '../src/pages/Index'
+import MultipleCenter from '../src/pages/MultipleCenter'
+import ManageCenter from '../src/pages/ManagelCenter'
+import { Router, Route,  browserHistory,IndexRoute  } from 'react-router';
+import registerServiceWorker from './registerServiceWorker';
+
+
+const routes =
+    <Route path={'/'} components={App}>
+        <IndexRoute component={Index} />
+        <Route path="multicenter" component={MultipleCenter}>
+        </Route>
+        <Route path="managecenter" component={ManageCenter}>
+        </Route>
+
+
+
+
+    </Route>;
+
+ReactDOM.render(
+    <Router history={browserHistory}>
+        {routes}
+    </Router>,
+    document.getElementById('root'));
+registerServiceWorker();
