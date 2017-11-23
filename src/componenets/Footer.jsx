@@ -6,7 +6,9 @@ import innoLogo from '../assets/img/inno1.png'
 
 class Footer extends React.Component {
 
-
+    /*triggerLinkEvent(arg){
+        console.log(arg);
+    }*/
     render() {
 
 
@@ -16,9 +18,9 @@ class Footer extends React.Component {
                     <Col span={8}>
                         <ul>
                             <li  style={{fontWeight:'bold',fontSize:'1.0rem'}}>快速入口</li>
-                            <li ><CustomLink path="/" content="首页"></CustomLink></li>
-                            <li ><CustomLink path="/multicenter"  content="多中心" ></CustomLink></li>
-                            <li ><CustomLink path="/managecenter"  content="管理中心" ></CustomLink></li>
+                            <li ><CustomLink path="/" content="首页" ></CustomLink></li>
+                            <li ><CustomLink path="/multicenter"   content="多中心" ></CustomLink></li>
+                            <li ><CustomLink path="/managecenter"   content="管理中心" ></CustomLink></li>
                         </ul>
                     </Col>
                     <Col span={8}>

@@ -21,6 +21,9 @@ class CustomLink extends React.Component {
             hover:false
         })
     }
+    handleClickEvent(){
+        console.log(this.props.path);
+    }
 
     render() {
         let normalLinkStyle ={
@@ -33,7 +36,7 @@ class CustomLink extends React.Component {
             textDecoration:'none'
         };
         return (
-            <Link to={this.props.path}  onMouseEnter={this.onMouserEnter} onMouseLeave={this.onMouseLeave} style={this.state.hover?activeLinkStyle:normalLinkStyle}>{this.props.content}</Link>
+            <Link to={this.props.path} onClick={this.handleClickEvent} onMouseEnter={this.onMouserEnter} onMouseLeave={this.onMouseLeave} style={this.state.hover?activeLinkStyle:normalLinkStyle}>{this.props.content}</Link>
 
         )
     }

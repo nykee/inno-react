@@ -1,10 +1,10 @@
 import React from 'react';
-import { Menu, Dropdown, Avatar,Icon ,Button,Row,Col} from 'antd';
-import {browserHistory} from 'react-router'
-// import CustomButton from '../componenets/CustomButton'
+import { Menu, Dropdown, Avatar,Icon ,Row,Col} from 'antd';
+import {browserHistory,Link} from 'react-router'
 import LoginBtn from '../componenets/LoginBtn'
 import userAvatar from '../assets/img/nykee.png'
 import innoLogo from '../assets/img/inno1.png'
+import ep from '../utils/eventProxy'
 
 class TopNav extends React.Component {
     state = {
@@ -17,6 +17,11 @@ class TopNav extends React.Component {
         });
         browserHistory.push(e.key)
     };
+    componentDidMount(){
+        ep.on('fastEntranceItemClick',(path)=>{
+
+        })
+    }
 
 
     render() {
@@ -47,7 +52,7 @@ class TopNav extends React.Component {
                     </Menu>
                 </Col>
 
-                <Col span={4}><LoginBtn ></LoginBtn>   </Col>
+                <Col span={4}><Link to="/login"><LoginBtn ></LoginBtn> </Link>  </Col>
 
 
 

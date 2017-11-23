@@ -1,5 +1,6 @@
 import React from 'react';
-import { Carousel,Row,Col,Button } from 'antd';
+import { Carousel,Row,Col,Button} from 'antd';
+import { Link } from 'react-router';
 import ServiceNameComponent from '../componenets/ServiceNameComponent'
 import MapChartIndex from '../componenets/Echarts/MapChartIndex'
 import CustomButton from '../componenets/CustomButton'
@@ -98,8 +99,8 @@ class Index extends React.Component {
                 </Row>
                 <Row type="flex" justify="center"  style={{backgroundColor:'#00c1de',padding:"1rem 1rem"}} >
                     {/*ButtonCol*/}
-                    <Col span={3}><CustomButton content="查看逸动多中心"></CustomButton></Col>
-                    <Col span={2}><CustomButton content="立刻登录"></CustomButton></Col>
+                    <Col span={3}><Link to="/multicenter"><CustomButton content="查看逸动多中心"></CustomButton></Link></Col>
+                    <Col span={2}><Link to="/login"><CustomButton content="立刻登录"></CustomButton></Link></Col>
                 </Row>
 
             </div>
