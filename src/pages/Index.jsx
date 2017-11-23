@@ -6,6 +6,12 @@ import CustomButton from '../componenets/CustomButton'
 import BG1 from '../assets/img/index/silde-banner3.jpg'
 import BG2 from '../assets/img/index/silde-banner4.jpg'
 import BG3 from '../assets/img/index/silde-banner5.jpg'
+import kf from '../assets/img/index/kf.png';
+import ky from '../assets/img/index/ky.png'
+import tj from '../assets/img/index/tj.png'
+import yd from '../assets/img/index/yd.png'
+import mz from '../assets/img/index/mz.png'
+import js from '../assets/img/index/js.png'
 
 class Index extends React.Component {
     render() {
@@ -55,29 +61,29 @@ class Index extends React.Component {
                 </Row>
                 <Row>
                     {/*服务介绍*/}
-                    <Col  span={10} offset={7}>精确定位，发散市场，逸动云能为各种类型的市场提供服务</Col>
+                    <Col  span={10} offset={7} style={{fontSize:'1.2rem',fontWeight:'bold',lineHeight:'1.3rem'}}>精确定位，发散市场，逸动云能为各种类型的市场提供服务</Col>
                     <Row>
                         <Col span={8} >
-                            <ServiceNameComponent sName="科研评估" cName="fa fa-envelope fa-4x"></ServiceNameComponent>
+                            <ServiceNameComponent sName="科研评估" imgSrc={ky}></ServiceNameComponent>
                         </Col>
                         <Col  span={8}>
-                            <ServiceNameComponent sName="关节康复" cName="fa fa-envelope fa-4x"></ServiceNameComponent>
+                            <ServiceNameComponent sName="关节康复" imgSrc={kf}></ServiceNameComponent>
                         </Col>
                         <Col span={8} >
-                            <ServiceNameComponent sName="门诊辅助" cName="fa fa-envelope fa-4x"></ServiceNameComponent>
+                            <ServiceNameComponent sName="门诊辅助" imgSrc={mz}></ServiceNameComponent>
                         </Col>
                     </Row>
                    <Row>
                        <Col  span={8}>
-                           <ServiceNameComponent sName="运动训练" cName="fa fa-envelope fa-4x"></ServiceNameComponent>
+                           <ServiceNameComponent sName="运动训练" imgSrc={yd}></ServiceNameComponent>
                        </Col>
                        <Col span={8} >
-                           <ServiceNameComponent sName="军事训练" cName="fa fa-envelope fa-4x"></ServiceNameComponent>
+                           <ServiceNameComponent sName="军事训练" imgSrc={js}></ServiceNameComponent>
                        </Col>
 
                        <Col  span={8}>
 
-                           <ServiceNameComponent sName="体检项目" cName="fa fa-envelope fa-4x"></ServiceNameComponent>
+                           <ServiceNameComponent sName="体检项目" imgSrc={tj}></ServiceNameComponent>
                        </Col>
                    </Row>
 

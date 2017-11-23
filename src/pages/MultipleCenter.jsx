@@ -25,17 +25,17 @@ class MultipleCenter extends React.Component {
                         <span>请选择你需要查看数据的医院或机构： </span>
                         <Select  style={{ width: 200 }}
                                  placeholder="选择你需要查看数据的医院或机构">
-                            <option value="301" selected="selected">解放军301总医院</option>
-                            <option value="JST">积水潭医院</option>
-                            <option value="GJTY">国家体育总局</option>
-                            <option value="SHHS">华山医院</option>
-                            <option value="D9RM">上海市第九人民医院</option>
-                            <option value="D6RM">上海市第六人民医院</option>
-                            <option value="SHTY">上海体育学院</option>
-                            <option value="SHJT">上海交通大学</option>
-                            <option value="GZJQ">广州军区总医院</option>
-                            <option value="HNLG">华南理工大学</option>
-                            <option value="XGZW">香港威尔士亲王医院</option>
+                            <Option value="301" selected="selected">解放军301总医院</Option>
+                            <Option value="JST">积水潭医院</Option>
+                            <Option value="GJTY">国家体育总局</Option>
+                            <Option value="SHHS">华山医院</Option>
+                            <Option value="D9RM">上海市第九人民医院</Option>
+                            <Option value="D6RM">上海市第六人民医院</Option>
+                            <Option value="SHTY">上海体育学院</Option>
+                            <Option value="SHJT">上海交通大学</Option>
+                            <Option value="GZJQ">广州军区总医院</Option>
+                            <Option value="HNLG">华南理工大学</Option>
+                            <Option value="XGZW">香港威尔士亲王医院</Option>
                         </Select>
                         <Button type="primary">查看</Button>
                     </Col>
