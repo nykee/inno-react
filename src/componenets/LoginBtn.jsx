@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button } from 'antd'
-class CustomButton extends React.Component {
+class LoginBtn extends React.Component {
     constructor(){
         super();
         this.state ={
@@ -9,16 +9,18 @@ class CustomButton extends React.Component {
         this.normalBtnStyle ={
             backgroundColor:'transparent',
             color:'#fff',
-            height:'3rem',
+            height:'2rem',
             fontSize:'1rem',
+            marginTop:'5%',
             border:'1px solid #fff'
         };
         this.activeBtnStyle ={
             color:'#00C1DE',
             backgroundColor:'#fff',
-            height:'3rem',
+            height:'2rem',
             fontSize:'1rem',
-            border:'transparent'
+            border:'transparent',
+            marginTop:'5%',
         };
         this.onMouseLeave =this.onMouseLeave.bind(this);
         this.onMouserEnter =this.onMouserEnter.bind(this)
@@ -35,30 +37,16 @@ class CustomButton extends React.Component {
         })
     }
     render() {
-        /*let normalBtnStyle ={
-            backgroundColor:'transparent',
-            color:'#fff',
-            height:'3rem',
-            fontSize:'1rem',
-            border:'1px solid #fff'
-        };
-        let activeBtnStyle ={
-            color:'#00C1DE',
-            backgroundColor:'#fff',
-            height:'3rem',
-            fontSize:'1rem',
-            border:'transparent'
-        };*/
         return (
             <Button  onMouseEnter={this.onMouserEnter}
                      onMouseLeave={this.onMouseLeave}
                      style={this.state.hover?this.activeBtnStyle:this.normalBtnStyle}
             >
-                {this.props.content}
+                登录
             </Button>
 
         )
     }
 }
 
-export default CustomButton;
+export default LoginBtn;

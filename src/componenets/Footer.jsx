@@ -12,7 +12,7 @@ class Footer extends React.Component {
 
         return (
             <div   className="Footer" style={{marginTop:'0.1rem',backgroundColor:'#027BBB',color:'#A0DEF4',paddingTop:'1.5rem',textAlign:'left',paddingLeft:'0.5rem'}}>
-                <Row>
+                <Row style={{paddingBottom:'0.2rem'}}>
                     <Col span={8}>
                         <ul>
                             <li  style={{fontWeight:'bold',fontSize:'1.0rem'}}>快速入口</li>

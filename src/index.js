@@ -6,22 +6,30 @@ import App from './App';
 import Index from '../src/pages/Index'
 import MultipleCenter from '../src/pages/MultipleCenter'
 import ManageCenter from '../src/pages/ManagelCenter'
+import Login from '../src/pages/Login'
+import Container from '../src/componenets/Container'
 import { Router, Route,  browserHistory,IndexRoute  } from 'react-router';
 import registerServiceWorker from './registerServiceWorker';
 
 
 const routes =
-    <Route path={'/'} components={App}>
-        <IndexRoute component={Index} />
-        <Route path="multicenter" component={MultipleCenter}>
+    <Route path={'/'} components={Container}>
+        <Route path={''} components={App}>
+            <IndexRoute component={Index} />
+            <Route path="multicenter" component={MultipleCenter}>
+            </Route>
+            <Route path="managecenter" component={ManageCenter}>
+            </Route>
         </Route>
-        <Route path="managecenter" component={ManageCenter}>
+
+
+        <Route path="login" component={Login}>
         </Route>
 
 
 
-
-    </Route>;
+    </Route>
+;
 
 ReactDOM.render(
     <Router history={browserHistory}>
