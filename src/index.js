@@ -6,6 +6,7 @@ import App from './App';
 import Index from '../src/pages/Index'
 import MultipleCenter from '../src/pages/MultipleCenter'
 import ManageCenter from '../src/pages/ManagelCenter'
+import Hospital from '../src/pages/Hospital'
 import Login from '../src/pages/Login'
 import Container from '../src/componenets/Container'
 import { Router, Route,  browserHistory,IndexRoute  } from 'react-router';
@@ -19,6 +20,8 @@ const routes =
             <Route path="multicenter" component={MultipleCenter}>
             </Route>
             <Route path="managecenter" component={ManageCenter}>
+            </Route>
+            <Route path="hospital" component={Hospital}>
             </Route>
         </Route>
 

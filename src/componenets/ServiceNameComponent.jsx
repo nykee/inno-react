@@ -26,6 +26,7 @@ class ServiceNameComponent extends React.Component {
         };
         let hoverImgStyle ={
             verticalAlign:'middle',width:'3.1rem',height:'3.1rem',
+            cursor:'pointer',
           webkitTransform:'rotateY(360deg)',
             mozTransform:'rotateY(360deg)',
             webkitTransition:'all 1s ease-in-out',
@@ -38,9 +39,9 @@ class ServiceNameComponent extends React.Component {
             fontSize:'1.2rem',fontWeight:'bold',marginTop:'0.5rem',color:'#00c1de',cursor:'pointer'
         };
         return (
-            <ul style={{marginTop:'1rem'}}>
-                <li><img onMouseLeave={this.onMouseLeave} onMouseEnter={this.onMouserEnter} src={this.props.imgSrc} alt="" style={this.state.hover?hoverImgStyle:normalImgStyle}/></li>
-                <li onMouseLeave={this.onMouseLeave} onMouseEnter={this.onMouserEnter} style={this.state.hover?hoverKLiStyle:normalLiStyle}>{this.props.sName}</li>
+            <ul style={{marginTop:'1rem'}} onMouseLeave={this.onMouseLeave} onMouseEnter={this.onMouserEnter}>
+                <li><img  src={this.props.imgSrc} alt="" style={this.state.hover?hoverImgStyle:normalImgStyle}/></li>
+                <li  style={this.state.hover?hoverKLiStyle:normalLiStyle}>{this.props.sName}</li>
             </ul>
 
         )
