@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row,Col,Menu,Icon,Select,Button} from 'antd';
-import LineCharts from '../componenets/D3Charts/LineCharts'
+import LineCharts from '../componenets/D3Charts/LineCharts';
+import PieCharts from '../componenets/D3Charts/PieCharts'
 const SubMenu = Menu.SubMenu;
 const Option = Select.Option;
 
@@ -75,6 +76,7 @@ class ManageCenter extends React.Component {
                                 <Button type="primary">提交 </Button>
 
                                 <LineCharts></LineCharts>
+                                <PieCharts></PieCharts>
 
                             </div>
 

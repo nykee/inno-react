@@ -56,18 +56,44 @@ class LineCharts extends React.Component {
             .data(dataset)
             .enter()
             .append("rect")
+            .on('mousemove',function (d,i) {
+                d3.select(this)
+                    .attr("fill","yellow");
+            })
+            .on('mouseout',function (d,i) {
+                d3.select(this)
+                    .transition()
+                    .duration(500)
+                    .attr("fill","steelblue");
+            })
             .attr("class","LineRect")
             .attr("transform","translate(" + padding.left + "," + padding.top + ")")
             .attr("x", function(d,i){
                 return xScale(i) + rectPadding/2;
             } )
+            .attr("width", xScale.bandwidth() - rectPadding )
+            .attr("y",function(d){
+                var min = yScale.domain()[0];
+                return yScale(min);
+            })
+            .attr("height",function (d) {
+                return 0
+            })
+            .transition()
+            .delay(200)
+            .duration(2000)
+
             .attr("y",function(d){
                 return yScale(d);
             })
-            .attr("width", xScale.bandwidth() - rectPadding )
             .attr("height", function(d){
                 return height - padding.top - padding.bottom - yScale(d);
-            });
+            })
+            .attr('fill','steelblue')
+
+
+
+        ;
 
         //添加文字元素
         var texts = svg.selectAll(".MyText")
@@ -79,17 +105,24 @@ class LineCharts extends React.Component {
             .attr("x", function(d,i){
                 return xScale(i) + rectPadding/2;
             } )
+                .attr("dx",function(){
+                    return (xScale.bandwidth() - rectPadding)/2;
+                })
+                .attr("dy",function(d){
+                    return 20;
+                })
+                .text(function(d){
+                    return d;
+                })
+            .attr('y',function (d) {
+                let min = yScale.domain()[0];
+                return yScale(min);
+            })
+            .transition()
+            .delay(200)
+            .duration(2000)
             .attr("y",function(d){
                 return yScale(d);
-            })
-            .attr("dx",function(){
-                return (xScale.bandwidth() - rectPadding)/2;
-            })
-            .attr("dy",function(d){
-                return 20;
-            })
-            .text(function(d){
-                return d;
             });
 
         //添加x轴
