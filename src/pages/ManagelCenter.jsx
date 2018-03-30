@@ -1,6 +1,6 @@
 import React from 'react';
 import {Row,Col,Menu,Icon,Select,Button} from 'antd';
-import * as d3 from 'd3'
+import LineCharts from '../componenets/D3Charts/LineCharts'
 const SubMenu = Menu.SubMenu;
 const Option = Select.Option;
 
@@ -10,28 +10,7 @@ class ManageCenter extends React.Component {
         openKeys: ['sub1'],
     };
     componentDidMount(){
-        let width =300;
-        let height =300;
-        var dataset = [ 250 , 210 , 170 , 130 , 90 ];
-        var rectHeight = 25;   //每个矩形所占的像素高度(包括空白)
-        var svg = d3.select('#svg-box')
-            .append('svg')
-            .attr("width",width)
-            .attr("height",height);
 
-        svg.selectAll('rect')
-            .data(dataset)
-            .enter()
-            .append('rect')
-            .attr('x',20)
-            .attr('y',(d,i)=>{
-                return i*rectHeight
-            })
-            .attr('width',(d)=>{
-                return d
-            })
-            .attr('height',rectHeight-2)
-            .attr("fill","steelblue")
 
     }
     rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
@@ -95,9 +74,7 @@ class ManageCenter extends React.Component {
                                 </Select>
                                 <Button type="primary">提交 </Button>
 
-                                <div id="svg-box">
-
-                                </div>
+                                <LineCharts></LineCharts>
 
                             </div>
 
