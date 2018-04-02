@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3'
 
-class PieCharts extends React.Component {
+class PieChart extends React.Component {
     componentDidMount(){
         let dataset = [30 , 10 , 43 , 55 , 13];
         let pie = d3.pie();
@@ -66,4 +66,4 @@ class PieCharts extends React.Component {
     }
 }
 
-export default PieCharts;
+export default PieChart;

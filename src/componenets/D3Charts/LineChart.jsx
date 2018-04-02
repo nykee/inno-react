@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3';
 import '../../style/D3Charts/LineCharts.css'
-class LineCharts extends React.Component {
+class LineChart extends React.Component {
 
     componentDidMount(){
         //SVG画布大小
@@ -150,4 +150,4 @@ class LineCharts extends React.Component {
     }
 }
 
-export default LineCharts;
+export default LineChart;

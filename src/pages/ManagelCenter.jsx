@@ -1,7 +1,8 @@
 import React from 'react';
 import {Row,Col,Menu,Icon,Select,Button} from 'antd';
-import LineCharts from '../componenets/D3Charts/LineCharts';
-import PieCharts from '../componenets/D3Charts/PieCharts'
+import LineChart from '../componenets/D3Charts/LineChart';
+import PieChart from '../componenets/D3Charts/PieChart'
+import ForceChart from '../componenets/D3Charts/ForceChart'
 const SubMenu = Menu.SubMenu;
 const Option = Select.Option;
 
@@ -75,8 +76,9 @@ class ManageCenter extends React.Component {
                                 </Select>
                                 <Button type="primary">提交 </Button>
 
-                                <LineCharts></LineCharts>
-                                <PieCharts></PieCharts>
+                                <LineChart></LineChart>
+                                <PieChart></PieChart>
+                                <ForceChart></ForceChart>
 
                             </div>
 
