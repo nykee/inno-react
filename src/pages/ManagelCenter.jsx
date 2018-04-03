@@ -4,6 +4,7 @@ import LineChart from '../componenets/D3Charts/LineChart';
 import PieChart from '../componenets/D3Charts/PieChart'
 import ForceChart from '../componenets/D3Charts/ForceChart'
 import TreeChart from '../componenets/D3Charts/TreeChart'
+import PackChart from '../componenets/D3Charts/PackChart'
 const SubMenu = Menu.SubMenu;
 const Option = Select.Option;
 
@@ -92,6 +93,10 @@ class ManageCenter extends React.Component {
                                     <Col span={8}>
                                         <TreeChart/>
                                     </Col>
+                                    <Col span={8}>
+                                        <PackChart/>
+                                    </Col>
+
                                 </Row>
 
 
