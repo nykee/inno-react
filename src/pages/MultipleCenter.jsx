@@ -36,10 +36,10 @@ class MultipleCenter extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col> <h1>逸动医疗多中心展示</h1></Col>
+                    <Col> <h1>XY医疗多中心展示</h1></Col>
                 </Row>
                 <Row>
-                    <Col><h2>逸动医疗致力于关节功能多中心的建立，在北京上海广州香港等地均建立了多中心</h2></Col>
+                    <Col><h2>XY医疗致力于关节功能多中心的建立，在北京上海广州香港等地均建立了多中心</h2></Col>
                     <Col>
                         <span>请选择你需要查看数据的医院或机构： </span>
                         <Select  style={{ width: 200 }}
@@ -69,7 +69,7 @@ class MultipleCenter extends React.Component {
                         <ul>
                             <li>
                                 <ul>
-                                    <li>逸动医疗北京中心</li>
+                                    <li>XY医疗北京中心</li>
                                     <li>
                                         <a ><img src={h_301} alt="解放军301总医院" style={{width:50,height:50,verticalAlign:'middle'}}/><span>解放军301总医院</span></a>
                                     </li>
@@ -83,7 +83,7 @@ class MultipleCenter extends React.Component {
                             </li>
                             <li>
                                 <ul>
-                                    <li>逸动医疗上海中心</li>
+                                    <li>XY医疗上海中心</li>
                                     <li>
                                         <a ><img src={h_HSYY} alt="华山医院" style={{width:50,height:50,verticalAlign:'middle'}}/><span>华山医院</span></a>
                                     </li>
@@ -97,7 +97,7 @@ class MultipleCenter extends React.Component {
                             </li>
                             <li>
                                 <ul>
-                                    <li>逸动医疗广东中心</li>
+                                    <li>XY医疗广东中心</li>
                                     <li>
                                         <a ><img src={h_GZJQ} alt="广州军区总医院" style={{width:50,height:50,verticalAlign:'middle'}}/><span>广州军区总医院</span></a>
                                     </li>

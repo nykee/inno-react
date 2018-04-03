@@ -12,15 +12,15 @@ class PieChart extends React.Component {
         let height =300;
 
         //画布周边的空白
-        var padding = {
+       /* var padding = {
             left:30,
             right:30,
             top:20,
             bottom:20
-        };
+        };*/
 
         //添加一个 SVG 画布
-        var svg = d3.select('#svg-box')
+        var svg = d3.select('#svg-box-pie')
             .append('svg')
             .attr("width",width)
             .attr("height",height);
@@ -32,7 +32,7 @@ class PieChart extends React.Component {
             .innerRadius(innerRadius)
             .outerRadius(outerRadius);
         let  color = d3.schemeCategory10;
-        console.log(color);
+        // console.log(color);
 
         var arcs =svg.selectAll('g')
             .data(piedata)
@@ -58,7 +58,7 @@ class PieChart extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div id="svg-box-pie">
 
             </div>
 

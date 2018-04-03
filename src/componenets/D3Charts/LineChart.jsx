@@ -17,7 +17,7 @@ class LineChart extends React.Component {
         };
 
         //添加一个 SVG 画布
-        var svg = d3.select('#svg-box')
+        var svg = d3.select('#svg-box-line')
             .append('svg')
             .attr("width",width)
             .attr("height",height);
@@ -140,10 +140,8 @@ class LineChart extends React.Component {
     }
     render() {
         return (
-            <div>
-                <div id="svg-box">
+            <div id="svg-box-line">
 
-                </div>
             </div>
 
         )

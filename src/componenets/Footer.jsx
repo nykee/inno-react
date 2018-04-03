@@ -1,7 +1,7 @@
 import React from 'react';
 import {  Col, Row} from 'antd';
 import CustomLink from './CustomLink'
-import innoLogo from '../assets/img/inno1.png'
+import innoLogo from '../assets/img/nykeeLogo.png'
 
 
 class Footer extends React.Component {
@@ -32,20 +32,20 @@ class Footer extends React.Component {
                     <Col span={8}>
                         <ul>
                             <li style={{fontWeight:'bold',fontSize:'1.0rem'}}>联系我们</li>
-                            <li>地址：上海市漕河泾开发区松江高科技园
-                                莘砖公路518号11栋1004室</li>
-                            <li>电话：021-37027535 37027537</li>
-                            <li>传真：021-67690739</li>
-                            <li>E-mail：info@innomotion.biz</li>
-                            <li>http://www.innomotion.biz</li>
+                            <li>地址：上海市XXXXXXX高科技园
+                                XX公路XX18号X栋X室</li>
+                            <li>电话：021-XXXXXX XXXXXY</li>
+                            <li>传真：021-XXX1111</li>
+                            <li>E-mail：info@XXXXX.com</li>
+                            <li>http://www.XXXXXX.com</li>
                         </ul>
                     </Col>
                 </Row>
                 <Row style={{borderTop:'1px dotted #000',paddingTop:'0.5rem'}}>
                     <Col span={8}>
                         <ul>
-                            <li>上海逸动医学科技有限公司</li>
-                            <li>Copyright © 2012-2017 Shanghai Innomotion Medical Inc. All Rights Reserved</li>
+                            <li>上海XXXX科技有限公司</li>
+                            <li>Copyright © 2012-2017 Shanghai XY Medical Inc. All Rights Reserved</li>
                         </ul></Col>
                     <Col  span={3} offset={13}><img src={innoLogo} alt=""/></Col>
                 </Row>

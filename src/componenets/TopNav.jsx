@@ -2,8 +2,8 @@ import React from 'react';
 import { Menu, Dropdown, Avatar,Icon ,Row,Col} from 'antd';
 import {browserHistory,Link} from 'react-router'
 import LoginBtn from '../componenets/LoginBtn'
-import userAvatar from '../assets/img/nykee.png'
-import innoLogo from '../assets/img/inno1.png'
+
+import innoLogo from '../assets/img/nykeeLogo.png'
 import ep from '../utils/eventProxy'
 
 class TopNav extends React.Component {

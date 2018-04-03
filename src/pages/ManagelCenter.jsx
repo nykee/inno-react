@@ -3,6 +3,7 @@ import {Row,Col,Menu,Icon,Select,Button} from 'antd';
 import LineChart from '../componenets/D3Charts/LineChart';
 import PieChart from '../componenets/D3Charts/PieChart'
 import ForceChart from '../componenets/D3Charts/ForceChart'
+import TreeChart from '../componenets/D3Charts/TreeChart'
 const SubMenu = Menu.SubMenu;
 const Option = Select.Option;
 
@@ -76,9 +77,24 @@ class ManageCenter extends React.Component {
                                 </Select>
                                 <Button type="primary">提交 </Button>
 
-                                <LineChart></LineChart>
-                                <PieChart></PieChart>
-                                <ForceChart></ForceChart>
+                                <Row>
+                                    <Col span={8}>
+                                        <LineChart/>
+                                    </Col>
+                                    <Col span={8}>
+                                        <PieChart/>
+                                    </Col>
+                                    <Col span={8}>
+                                        <ForceChart/>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col span={8}>
+                                        <TreeChart/>
+                                    </Col>
+                                </Row>
+
+
 
                             </div>
 
