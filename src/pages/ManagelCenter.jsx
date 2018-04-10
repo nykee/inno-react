@@ -1,19 +1,30 @@
 import React from 'react';
+import Mock from 'mockjs';
+import axios from 'axios'
 import {Row,Col,Menu,Icon,Select,Button} from 'antd';
 import LineChart from '../componenets/D3Charts/LineChart';
 import PieChart from '../componenets/D3Charts/PieChart'
 import ForceChart from '../componenets/D3Charts/ForceChart'
 import TreeChart from '../componenets/D3Charts/TreeChart'
 import PackChart from '../componenets/D3Charts/PackChart'
+import MapChart from '../componenets/D3Charts/MapChart'
+
 const SubMenu = Menu.SubMenu;
 const Option = Select.Option;
 
 class ManageCenter extends React.Component {
+    constructor(){
+        super();
+        this.state ={
 
+        }
+    }
     state = {
         openKeys: ['sub1'],
     };
     componentDidMount(){
+
+
 
 
     }
@@ -30,6 +41,9 @@ class ManageCenter extends React.Component {
     };
     handleChange =(value)=>{
         console.log(`selected ${value}`);
+        if(value ==="age"){
+
+        }
     };
     render() {
         return (
@@ -96,6 +110,10 @@ class ManageCenter extends React.Component {
                                     <Col span={8}>
                                         <PackChart/>
                                     </Col>
+                                    <Col span={8}>
+                                        <MapChart/>
+                                    </Col>
+
 
                                 </Row>
 
