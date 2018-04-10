@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 
 class MapChart extends React.Component {
     componentDidMount(){
-        axios.get('https://data.jianshukeji.com/jsonp?filename=geochina/china.json&callback=?')
+        /*axios.get('https://data.jianshukeji.com/jsonp?filename=geochina/china.json&callback=?')
             .then((data)=>{
                 console.log(data);
 
@@ -37,7 +37,7 @@ class MapChart extends React.Component {
             })
             .catch((err)=>{
                 console.log(err);
-            });
+            });*/
 
 
 

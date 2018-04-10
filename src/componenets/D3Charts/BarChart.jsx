@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3';
-import '../../style/D3Charts/LineCharts.css'
-class LineChart extends React.Component {
+import '../../style/D3Charts/BarChart.css'
+class BarChart extends React.Component {
 
     componentDidMount(){
         //SVG画布大小
@@ -17,7 +17,7 @@ class LineChart extends React.Component {
         };
 
         //添加一个 SVG 画布
-        var svg = d3.select('#svg-box-line')
+        var svg = d3.select('#svg-box-bar')
             .append('svg')
             .attr("width",width)
             .attr("height",height);
@@ -27,9 +27,15 @@ class LineChart extends React.Component {
 
 
         //x轴的比例尺,索引比例尺
+
         var xScale = d3.scaleBand()
             .domain(d3.range(dataset.length))
             .rangeRound([0, width - padding.left - padding.right]);
+
+        /* var xScale = d3.scaleOrdinal()
+             .domain(['AA','AA','AA','AA','AA','AA','AA','AA'])
+             .range([0, width - padding.left - padding.right])*/
+
 
         //y轴的比例尺，线性比例尺
         var yScale = d3.scaleLinear()
@@ -140,7 +146,7 @@ class LineChart extends React.Component {
     }
     render() {
         return (
-            <div id="svg-box-line">
+            <div id="svg-box-bar">
 
             </div>
 
@@ -148,4 +154,4 @@ class LineChart extends React.Component {
     }
 }
 
-export default LineChart;
+export default BarChart;

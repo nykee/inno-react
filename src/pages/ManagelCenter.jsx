@@ -2,12 +2,12 @@ import React from 'react';
 import Mock from 'mockjs';
 import axios from 'axios'
 import {Row,Col,Menu,Icon,Select,Button} from 'antd';
-import LineChart from '../componenets/D3Charts/LineChart';
-import PieChart from '../componenets/D3Charts/PieChart'
-import ForceChart from '../componenets/D3Charts/ForceChart'
-import TreeChart from '../componenets/D3Charts/TreeChart'
-import PackChart from '../componenets/D3Charts/PackChart'
-import MapChart from '../componenets/D3Charts/MapChart'
+import D3BarChart from '../componenets/D3Charts/BarChart';
+import D3PieChart from '../componenets/D3Charts/PieChart'
+import D3ForceChart from '../componenets/D3Charts/ForceChart'
+import D3TreeChart from '../componenets/D3Charts/TreeChart'
+import D3PackChart from '../componenets/D3Charts/PackChart'
+import D3MapChart from '../componenets/D3Charts/MapChart'
 
 const SubMenu = Menu.SubMenu;
 const Option = Select.Option;
@@ -16,19 +16,17 @@ class ManageCenter extends React.Component {
     constructor(){
         super();
         this.state ={
-
+            openKeys: ['sub1'],
+            current:'1'
         }
     }
-    state = {
-        openKeys: ['sub1'],
-    };
     componentDidMount(){
 
 
 
 
     }
-    rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
+    rootSubmenuKeys = ['sub1', 'sub2', 'sub3'];
     onOpenChange = (openKeys) => {
         const latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
         if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
@@ -45,6 +43,12 @@ class ManageCenter extends React.Component {
 
         }
     };
+    handleClick = (e) => {
+        console.log('click ', e);
+        this.setState({
+            current: e.key,
+        });
+    };
     render() {
         return (
             <div>
@@ -54,23 +58,24 @@ class ManageCenter extends React.Component {
                             mode="inline"
                             openKeys={this.state.openKeys}
                             onOpenChange={this.onOpenChange}
+                            selectedKeys={[this.state.current]}
                             style={{ width: 256 }}
+                            onClick={this.handleClick}
                         >
-                            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>运动学数据分析</span></span>}>
-                                <Menu.Item key="1">数据上传</Menu.Item>
-                                <Menu.Item key="2">图表分析</Menu.Item>
-                                <Menu.Item key="3">数据管理</Menu.Item>
+                            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>运动学图表分析</span></span>}>
+                                <Menu.Item key="1" >D3.js图表</Menu.Item>
+                                <Menu.Item key="2">HighChart图表</Menu.Item>
                             </SubMenu>
-                            <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-                                <Menu.Item key="5">Option 5</Menu.Item>
-                                <Menu.Item key="6">Option 6</Menu.Item>
+                          {/*  <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
+                                <Menu.Item key="4">Option 5</Menu.Item>
+                                <Menu.Item key="5">Option 6</Menu.Item>
                             </SubMenu>
-                            <SubMenu key="sub4" title={<span><Icon type="setting" /><span>Navigation Three</span></span>}>
-                                <Menu.Item key="9">Option 9</Menu.Item>
-                                <Menu.Item key="10">Option 10</Menu.Item>
-                                <Menu.Item key="11">Option 11</Menu.Item>
-                                <Menu.Item key="12">Option 12</Menu.Item>
-                            </SubMenu>
+                            <SubMenu key="sub3" title={<span><Icon type="setting" /><span>Navigation Three</span></span>}>
+                                <Menu.Item key="6">Option 9</Menu.Item>
+                                <Menu.Item key="7">Option 10</Menu.Item>
+                                <Menu.Item key="8">Option 11</Menu.Item>
+                                <Menu.Item key="9">Option 12</Menu.Item>
+                            </SubMenu>*/}
                         </Menu>
                     </Col>
                     <Col span={18}>
@@ -91,31 +96,41 @@ class ManageCenter extends React.Component {
                                     <Option value="gender">性别</Option>
                                 </Select>
                                 <Button type="primary">提交 </Button>
+                                {this.state.current ==="1"?
+                                    <div id="D3-Chart">
+                                        <Row>
+                                            <Col span={8}>
+                                                <D3BarChart/>
+                                            </Col>
+                                            <Col span={8}>
+                                                <D3PieChart/>
+                                            </Col>
+                                            <Col span={8}>
+                                                <D3ForceChart/>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col span={8}>
+                                                <D3TreeChart/>
+                                            </Col>
+                                            <Col span={8}>
+                                                <D3PackChart/>
+                                            </Col>
+                                            <Col span={8}>
+                                                <D3MapChart/>
+                                            </Col>
 
-                                <Row>
-                                    <Col span={8}>
-                                        <LineChart/>
-                                    </Col>
-                                    <Col span={8}>
-                                        <PieChart/>
-                                    </Col>
-                                    <Col span={8}>
-                                        <ForceChart/>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col span={8}>
-                                        <TreeChart/>
-                                    </Col>
-                                    <Col span={8}>
-                                        <PackChart/>
-                                    </Col>
-                                    <Col span={8}>
-                                        <MapChart/>
-                                    </Col>
+
+                                        </Row>
+                                    </div>
+                                    :
+                                    <div id="H-Chart">
+
+                                    </div>
+                                }
 
 
-                                </Row>
+
 
 
 
