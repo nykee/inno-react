@@ -50,16 +50,20 @@ class ManageCenter extends React.Component {
 
     render() {
         let title,
-            chartContainer
+            chartContainer;
         if(this.state.current === '1'){
-            title ="运动学数据图表分析-D3"
+            title ="运动学数据图表分析-D3";
             chartContainer =<D3ChartContainer/>
         }
-        else if(this.state.current == '2'){
-            title ="运动学数据图表分析-Highcharts"
+        else if(this.state.current === '2'){
+            title ="运动学数据图表分析-Highcharts";
             chartContainer = <HChartContainer/>
-        }else {
-            title ="运动学数据图表分析-DashBoard"
+        }
+        else if(this.state.current === '3'){
+            title ="客户端连接监控-DashBoard"
+        }
+        else if(this.state.current === '4'){
+            title ="销售业界监控盘-DashBoard"
         }
 
         return (
@@ -71,21 +75,22 @@ class ManageCenter extends React.Component {
                             openKeys={this.state.openKeys}
                             onOpenChange={this.onOpenChange}
                             selectedKeys={[this.state.current]}
-                            style={{ width: 256,height:900 }}
+                            style={{ width: 256,height:900 ,marginRight:0}}
                             onClick={this.handleClick}
 
                         >
                             <SubMenu key="sub1" title={<span><Icon type="mail" /><span>运动学图表分析</span></span>}>
                                 <Menu.Item key="1" >D3.js图表</Menu.Item>
                                 <Menu.Item key="2">HighChart图表</Menu.Item>
-                                <Menu.Item key="3">客户端监控DashBoard</Menu.Item>
+                                <Menu.Item key="3">客户端连接监控DashBoard</Menu.Item>
+                                <Menu.Item key="4">销售业务监控DashBoard</Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Col>
                     <Col span={19} style={{height:'900px'}} className={this.state.current ==="3"?'blackBG':''}>
                             <div>
                                 <Header title={title} selected={this.state.current}/>
-                                {this.state.current ==="3"?'':<SelectPanel/>}
+                                {(this.state.current ==="3"||this.state.current ==="4")?'':<SelectPanel/>}
                                 {chartContainer}
 
                             </div>
