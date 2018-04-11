@@ -5,7 +5,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import Index from '../src/pages/Index'
 import MultipleCenter from '../src/pages/MultipleCenter'
-import ManageCenter from '../src/pages/ManagelCenter'
+import ManageCenter from './pages/ManageCenter/ManagelCenter'
 import Hospital from '../src/pages/Hospital'
 import Login from '../src/pages/Login'
 import Container from '../src/componenets/Container'

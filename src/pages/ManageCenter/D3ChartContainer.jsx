@@ -1,0 +1,51 @@
+import React from 'react';
+import {Row,Col} from 'antd'
+import D3BarChart from '../../componenets/D3Charts/BarChart';
+import D3PieChart from '../../componenets/D3Charts/PieChart'
+import D3ForceChart from '../../componenets/D3Charts/ForceChart'
+import D3TreeChart from '../../componenets/D3Charts/TreeChart'
+import D3PackChart from '../../componenets/D3Charts/PackChart'
+import D3MapChart from '../../componenets/D3Charts/MapChart'
+
+class D3ChartContainer extends React.Component {
+    constructor() {
+        super();
+        this.state = {};
+    }
+
+    componentDidMount() {
+
+    }
+
+    render() {
+        return (
+
+
+                <div id="D3-Chart">
+                    <Row>
+                        <Col span={12}>
+                            <D3BarChart/>
+                        </Col>
+                        <Col span={12}>
+                            <D3PieChart/>
+                        </Col>
+
+                    </Row>
+                    <Row>
+                        <Col span={12}>
+                            <D3ForceChart/>
+                        </Col>
+                        <Col span={12}>
+                            <D3TreeChart/>
+                        </Col>
+
+
+                    </Row>
+                </div>
+
+
+        )
+    }
+}
+
+export default D3ChartContainer;

@@ -1,0 +1,14 @@
+.blackBG{
+    background-color: #2F323A;
+}
+
+.normalHeader{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.blackHeader{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    background-color: #2F323A;
+    color: #fff;
+}
