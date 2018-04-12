@@ -19,8 +19,8 @@ class HChartContainer extends React.Component {
         return (
             <div id="H-Chart">
                 <Row>
-                    <Col span={12}>
-                        <HBarchart/>
+                    <Col span={12} >
+                        <HBarchart />
                     </Col>
                     <Col span={12}>
                         <HDpiechart/>

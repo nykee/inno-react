@@ -44,7 +44,7 @@ class TopNav extends React.Component {
                             <Icon type="mail" /><span>多中心</span>
                         </Menu.Item>
                         <Menu.Item key="/managecenter">
-                            <Icon type="mail" /><span>管理中心</span>
+                            <Icon type="mail" /><span>数据中心</span>
                         </Menu.Item>
 
 

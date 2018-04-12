@@ -6,6 +6,7 @@ import {Row,Col,Menu,Icon,Select,Button} from 'antd';
 import SelectPanel from './SelectPanel'
 import D3ChartContainer from './D3ChartContainer'
 import HChartContainer from './HChartContainer'
+import SalesDashboard from './SalesDashboard/SalesDashboard'
 import Header from './Header'
 
 import '../../style/ManageCenter.css'
@@ -63,19 +64,20 @@ class ManageCenter extends React.Component {
             title ="客户端连接监控-DashBoard"
         }
         else if(this.state.current === '4'){
-            title ="销售业界监控盘-DashBoard"
+            title ="销售业务监控-DashBoard";
+            chartContainer =<SalesDashboard/>
         }
 
         return (
             <div>
                 <Row>
-                    <Col span={5} >
+                    <Col   xs={{span:3}} lg={{span:3}}>
                         <Menu
                             mode="inline"
                             openKeys={this.state.openKeys}
                             onOpenChange={this.onOpenChange}
                             selectedKeys={[this.state.current]}
-                            style={{ width: 256,height:900 ,marginRight:0}}
+                            style={{ height:900 ,marginRight:0}}
                             onClick={this.handleClick}
 
                         >
@@ -87,7 +89,7 @@ class ManageCenter extends React.Component {
                             </SubMenu>
                         </Menu>
                     </Col>
-                    <Col span={19} style={{height:'900px'}} className={this.state.current ==="3"?'blackBG':''}>
+                    <Col xs={{span:21}} lg={{span:21}} style={{height:'900px'}} className={(this.state.current ==="3"||this.state.current ==="4")?'blackBG':''}>
                             <div>
                                 <Header title={title} selected={this.state.current}/>
                                 {(this.state.current ==="3"||this.state.current ==="4")?'':<SelectPanel/>}
