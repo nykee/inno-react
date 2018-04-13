@@ -11,19 +11,19 @@ class ProductLists extends React.Component {
         return (
             <Row>
                 <Col span={4} >
-                    <ProductListsItems name="HuaWei"/>
+                    <ProductListsItems name="HuaWei" qty="1900"/>
                 </Col>
                 <Col span={4} offset={1}>
-                     <ProductListsItems name="HTC"/>
+                     <ProductListsItems name="HTC" qty="852"/>
                 </Col>
                 <Col span={4} offset={1}>
-                    <ProductListsItems name="SamSung"/>
+                    <ProductListsItems name="SamSung" qty="121"/>
                 </Col>
                 <Col span={4} offset={1}>
-                    <ProductListsItems name="Apple"/>
+                    <ProductListsItems name="Apple" qty="2400"/>
                 </Col>
                 <Col span={4} offset={1}>
-                    <ProductListsItems name="XiaoMi"/>
+                    <ProductListsItems name="XiaoMi" qty="1800"/>
                 </Col>
             </Row>
 

@@ -66,14 +66,14 @@ class Header extends React.Component {
         return (
             <Row className={(this.props.selected ==="3"||this.props.selected ==="4")?'blackHeader':'normalHeader'}>
                 <Col xs={{span:7}}
-                     lg={{span:5}}
+                     lg={{span:6}}
                      xl={{span:4}}>
                     <span className="title-header">
                         {this.props.title}
                     </span>
                 </Col>
                 <Col xs={{span:5,offset :12}}
-                     lg={{span:4,offset :15}}
+                     lg={{span:3,offset :15}}
                 xl={{span:3,offset:17}}>
                     <i className={this.state.iconclass}/>
                 </Col>
