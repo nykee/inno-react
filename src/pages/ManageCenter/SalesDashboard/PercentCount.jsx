@@ -1,10 +1,13 @@
 import React from 'react';
 import DPie from '../../../componenets/Echarts/DPieChart'
+import CustomLegend from '../../../componenets/Echarts/CustomLegend'
 
 class PercentCount extends React.Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {
+            colorList:['#9F86FF','#1CA8DD','#007AE1',]
+        };
     }
 
     componentDidMount() {
@@ -12,21 +15,16 @@ class PercentCount extends React.Component {
     }
 
     render() {
+        let self=this;
         let colorOption =function(params) {
             // build a color map as your need.
-            var colorList = [
-                '#9F86FF','#1CA8DD','#007AE1',
-
-            ];
+            var colorList = self.state.colorList;
             return colorList[params.dataIndex]
         };
 
-        let option={
-           /* tooltip : {
-                trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },*/
+        let chartOption={
             legend: {
+                show:false,
                 orient: 'horizontal',
                 x:'center',
                 y:'bottom',
@@ -34,32 +32,11 @@ class PercentCount extends React.Component {
                 itemHeight:14,
                 padding:0,
                 textStyle:{color:'#8E95A4'},
-                formatter:function () {
-
+                formatter:function (params) {
+                    console.log(params);
                 },
                 data:['New Customers','Sales','Refound']
             },
-            /*toolbox: {
-                show : false,
-                feature : {
-                    mark : {show: true},
-                    dataView : {show: true, readOnly: false},
-                    magicType : {
-                        show: true,
-                        type: ['pie', 'funnel'],
-                        option: {
-                            funnel: {
-                                x: '25%',
-                                width: '50%',
-                                funnelAlign: 'center',
-                                max: 1548
-                            }
-                        }
-                    },
-                    restore : {show: true},
-                    saveAsImage : {show: true}
-                }
-            },*/
             calculable : false,
             series : [
                 {
@@ -118,10 +95,19 @@ class PercentCount extends React.Component {
                 }
             ]
         };
+        let legendOption={
+            items:[
+                {value:'15', name:'New Customers',color:'#9F86FF'},
+                {value:'20', name:'Sales',color:'#1CA8DD'},
+                {value:'35', name:'Refound',color:'#007AE1'},
+            ],
+            // color:self.state.colorList
+        };
 
         return (
             <div>
-                <DPie chartOption={option}/>
+                <DPie chartOption={chartOption}/>
+                <CustomLegend legendOption={legendOption}/>
             </div>
 
         )

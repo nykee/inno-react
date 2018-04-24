@@ -1,0 +1,15 @@
+.legendBox{
+    display: inline-block;
+    width: .9rem;
+    height: .9rem;
+}
+.itemName{
+    color: #A6AEBF;
+    text-align: left;
+    font-size:0.9rem;
+}
+.itemValue{
+    color: #1CA8DD;
+    font-weight: bold;
+    font-size:0.9rem;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {Row,Col} from 'antd'
+import '../../../style/SaleDashboard/OrderLists.css'
 class OrderLists extends React.Component {
 
 
@@ -18,12 +19,22 @@ class OrderLists extends React.Component {
         for (let order of orders ){
             tbodyElement.push(
 
-                    <tr>
-                        <td>{order.item}</td>
-                        <td>{order.Costumer}</td>
-                        <td>{order.price}</td>
-                        <td>{order.Product}</td>
-                    </tr>
+
+                        <Row>
+                            <Col span={6} className="tbody-item">
+                                <td>{order.item}</td>
+                            </Col>
+                            <Col span={4} offset={6} className="tbody-item">
+                                <td>{order.Costumer}</td>
+                            </Col>
+                            <Col span={4} className="tbody-item-price">
+                                <td>{order.price}</td>
+                            </Col>
+                            <Col span={4} className="tbody-item">
+                                <td>{order.Product}</td>
+                            </Col>
+                        </Row>
+
 
 
 
@@ -43,27 +54,18 @@ class OrderLists extends React.Component {
                 <div>
                     <h4>Your Orders</h4>
                 </div>
-                <table>
-                    <th>
-                        <tr>
-                            <td>Item</td>
-                        </tr>
-                    </th>
-                    <th>
-                        <tr>
-                            <td>Costumer</td>
-                        </tr>
-                    </th><th>
-                        <tr>
-                            <td>Price</td>
-                        </tr>
-                    </th><th>
-                        <tr>
-                            <td>Product</td>
-                        </tr>
-                    </th>
+                <div>
+                        <Row>
+                            <Col span={6} className="thead">Item</Col>
+                            <Col span={4} offset={6} className="thead">Costumer</Col>
+                            <Col span={4} className="thead">Price</Col>
+                            <Col span={4} className="thead">Product</Col>
+                        </Row>
+
                     {tbodyElement  }
-                </table>
+
+
+                </div>
 
             </div>
 
