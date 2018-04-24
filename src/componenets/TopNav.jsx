@@ -52,7 +52,7 @@ class TopNav extends React.Component {
                     </Menu>
                 </Col>
 
-                <Col span={4}><Link to="/login"><LoginBtn ></LoginBtn> </Link>  </Col>
+                <Col span={4}><Link to="/login"><LoginBtn /> </Link>  </Col>
 
 
 

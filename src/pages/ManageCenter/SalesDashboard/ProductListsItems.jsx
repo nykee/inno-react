@@ -13,7 +13,7 @@ class ProductListsItems extends React.Component {
         qty = (qty/1000>1)?(qty/1000)+"K":qty;
         // console.log(qty);
         return (
-           <div style={{border:'1px solid #fff'}} >
+           <div  >
                <p>{this.props.name}</p>
                <div className="SVG-container" >
                    <svg width="120" height="120" >
