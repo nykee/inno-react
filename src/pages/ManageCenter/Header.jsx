@@ -1,6 +1,6 @@
 import React from 'react';
 import {Row,Col} from 'antd'
-
+import '../../style/SaleDashboard/Header.css'
 
 class Header extends React.Component {
     constructor() {

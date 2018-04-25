@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row,Col} from 'antd'
+import CommonTitle from './CommonTitle'
 import '../../../style/SaleDashboard/OrderLists.css'
 class OrderLists extends React.Component {
 
@@ -52,7 +53,8 @@ class OrderLists extends React.Component {
 
             <div>
                 <div>
-                    <h4>Your Orders</h4>
+                    <CommonTitle titleName="Your Orders"/>
+                    {/*<h4 style={{textAlign:'left',color:'#fff',fontSize:'1rem',marginBottom:'.5rem'}}>Your Orders</h4>*/}
                 </div>
                 <div>
                         <Row>

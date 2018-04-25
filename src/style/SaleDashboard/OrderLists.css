@@ -2,7 +2,7 @@
     color: #fff;
     text-align: left;
     font-size: 1rem;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 .tbody-item{
     color: #A6AEBF;
@@ -11,5 +11,5 @@
 .tbody-item-price{
     color: #1CA8DD;
     font-size: 1rem;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }

@@ -1,8 +1,6 @@
 import React from 'react';
 import echarts from 'echarts';
 import  'echarts/chart/bar';
-import 'echarts/component/title';
-import 'echarts/component/tooltip';
 class BarChart extends React.Component {
     constructor() {
         super();

@@ -1,16 +1,17 @@
 import React from 'react';
 import BarChart from '../../../componenets/Echarts/BarChart'
-
+import '../../../style/SaleDashboard/AmontCount.css'
 class AmountCount extends React.Component {
 
 
     render() {
         let chartOption ={
-            title: {
+           /* title: {
                 text: '按病种查看'
-            },
+            },*/
 
             grid: {
+                borderWidth:0,
                 left: '0%',
                 right: '0%',
                 bottom: '0%',
@@ -18,7 +19,8 @@ class AmountCount extends React.Component {
             },
             calculable : false,
             xAxis : [
-                {   splitLine:{show: false},//去除网格线
+                {
+                    splitLine:{show: false},//去除网格线
                     type : 'category',
                     data :  ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
                     axisTick: {
@@ -30,6 +32,11 @@ class AmountCount extends React.Component {
                         textStyle: {
                             color:'#A6AEBF'
                         }
+                    },
+                    axisLine:{
+                        lineStyle:{
+                            color:'transparent'
+                        },
                     }
                 }
             ],
@@ -40,26 +47,31 @@ class AmountCount extends React.Component {
                     type : 'value',
                     axisLabel: {textStyle: {
                         color:'#A6AEBF'
-                    }}
+                    }},
+                    axisLine:{
+                        lineStyle:{
+                            color:'transparent'
+                        },
+                    }
                 }
             ],
             series : [
                 {
-                    name:'',
+                    name:'SS',
                     type:'bar',
-                    barWidth: '20%',
-                    data:[2, 4, 7, 23, 25, 76, 135],
+                    barWidth: '70%',
+                    data:[2,4,7,23,25,76,13],
                     itemStyle:{
                         normal: {
-                            color: function(params) {
+                            /*color: function(params) {
                                 // build a color map as your need.
                                 var colorList = [
                                     '#9F86FF','#1CA8DD','#007AE1'
                                 ];
                                 return colorList[params.dataIndex]
-                            },
+                            },*/
                             label: {
-                                show: false,
+                                show: true,
                                 position: 'top',
                                 formatter: '{c}'
                             }
@@ -83,6 +95,12 @@ class AmountCount extends React.Component {
 
         return (
             <div>
+                <div >
+                    <span className="title" >Pending</span>
+                    <span className="title" style={{marginLeft:'.5rem'}}>Completed</span>
+                    <span className="title" style={{marginLeft:'.5rem'}}>Refounded</span>
+                </div>
+
                 <BarChart chartOption={chartOption} />
                 {/*<BarChart></BarChart>*/}
             </div>

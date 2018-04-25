@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../../style/SaleDashboard/CommonTitle.css'
 class CommonTitle extends React.Component {
 
 
@@ -7,9 +7,9 @@ class CommonTitle extends React.Component {
 
 
         return (
-            <span>
-
-            </span>
+            <h4 className="common-title">
+                {this.props.titleName}
+            </h4>
 
         )
     }

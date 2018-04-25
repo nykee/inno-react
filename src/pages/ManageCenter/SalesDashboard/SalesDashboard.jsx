@@ -14,7 +14,7 @@ class SalesDashboard extends React.Component {
 
 
         return (
-            <div style={{color:'#fff'}}>
+            <div style={{color:'#fff',paddingLeft:'0.5rem'}}>
                 <Row>
                     <Col span={18}>
                         <MonthlySummary/>
