@@ -24,13 +24,13 @@ class CustomLegend extends React.Component {
                 item.name ==="New Customers"?(item.value='+'+item.value+'%'):(item.value='-'+item.value+'%');
                 legendElement.push (
                     <Row>
-                        <Col span={5}>
+                        <Col span={5}  style={{textAlign:'left'}}>
                             <span className="legendBox"  style={{background:item.color}}/>
                         </Col>
-                        <Col span={10} >
+                        <Col span={10}  style={{textAlign:'left'}}>
                             <b className="itemName">{item.name}</b>
                         </Col>
-                        <Col span={5} offset={4}>
+                        <Col span={5} offset={4} style={{textAlign:'left'}}>
                             <span className="itemValue" >{item.value}</span>
                         </Col>
                     </Row>

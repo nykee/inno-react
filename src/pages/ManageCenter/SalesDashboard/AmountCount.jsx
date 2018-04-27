@@ -84,7 +84,7 @@ class AmountCount extends React.Component {
     componentDidMount(){
 
     }
-    
+
     getChartData(type){
         let ajaxData=[];
         if(type ==="Pending"){
