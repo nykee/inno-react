@@ -8,6 +8,8 @@ import  'echarts/chart/pie';
 import 'echarts/component/legend';
 import 'echarts/component/title';
 
+import ep from '../../utils/eventProxy'
+
 class DPieChart extends React.Component {
     constructor() {
         super();
@@ -87,6 +89,11 @@ class DPieChart extends React.Component {
         let option = this.props.chartOption? this.props.chartOption:defaultOption;
         let chart =echarts.init(document.getElementById("DPie-E"));
         chart.setOption(option);
+        chart.on('hover',function (p) {
+            // console.log(p.data.name);
+            ep.trigger('pieHover',p.data.name);
+
+        })
 
     }
 

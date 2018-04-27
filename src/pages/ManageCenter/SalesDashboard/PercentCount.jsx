@@ -1,7 +1,7 @@
 import React from 'react';
 import DPie from '../../../componenets/Echarts/DPieChart'
 import CustomLegend from '../../../componenets/Echarts/CustomLegend'
-
+import ep from '../../../utils/eventProxy';
 class PercentCount extends React.Component {
     constructor() {
         super();
@@ -11,7 +11,21 @@ class PercentCount extends React.Component {
     }
 
     componentDidMount() {
-
+        let emphisColor="";
+        ep.on('pieHover',function (v) {
+            console.log('PercentCount收到事件');
+            console.log(v);
+            if(v==="Sales"){
+                emphisColor='#49B9E3'
+            }
+            else if(v==="New Customers"){
+                emphisColor='#B29EFF'
+            }
+            else if(v==="Refound"){
+                emphisColor='#3394E7'
+            }
+            ep.trigger('changeLegendColor',emphisColor)
+        })
     }
 
     render() {

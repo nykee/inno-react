@@ -99,7 +99,18 @@ class MonthlySummary extends React.Component {
                     type:'line',
                     symbol:'none', //去掉折线上的点标注
                     smooth:false,
-                    itemStyle: {normal: {areaStyle: {type: 'default',color:'rgba(159,134,255,.7)'}}},
+                    itemStyle: {
+                                normal:
+                                    {
+                                        areaStyle: {
+                                            type: 'default',
+                                            color:'rgba(159,134,255,.7)'
+                                        },
+                                        lineStyle:{
+                                            color:'transparent'
+                                        }
+                                    }
+                                },
                     data:dataFake_1
                 },
                 {
@@ -107,7 +118,18 @@ class MonthlySummary extends React.Component {
                     type:'line',
                     symbol:'none', //去掉折线上的点标注
                     smooth:false,
-                    itemStyle: {normal: {areaStyle: {type: 'default',color:'rgba(28,168,221,.7)'}}},
+                    itemStyle: {
+                                normal:
+                                    {
+                                        areaStyle: {
+                                            type: 'default',
+                                            color:'rgba(28,168,221,.7)'},
+                                        lineStyle:{
+                                            color:'transparent'
+                                        }
+                                    }
+                                }
+                                    ,
                     data:dataFake_2
                 },
                 {
@@ -115,7 +137,18 @@ class MonthlySummary extends React.Component {
                     type:'line',
                     symbol:'none', //去掉折线上的点标注
                     smooth:false,
-                    itemStyle: {normal: {areaStyle: {type: 'default',color:'rgba(0,122,225,.7)'}}},
+                    itemStyle: {
+                                normal:
+                                    {
+                                        areaStyle: {
+                                            type: 'default',
+                                            color:'rgba(0,122,225,.7)'},
+                                        lineStyle:{
+                                            color:'transparent'
+                                        }
+                                    }
+                                },
+
                     data:dataFake_3
                 }
             ]

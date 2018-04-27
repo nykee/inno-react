@@ -1,14 +1,20 @@
 import React from 'react';
 import {Row,Col} from 'antd'
 import '../../style/ECharts/CustomLegend.css'
+import ep from '../../utils/eventProxy';
 class CustomLegend extends React.Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {
+            legendColor:''
+        };
     }
 
     componentDidMount() {
         console.log(this.props.legendOption.items);
+        ep.on('changeLegendColor',function (v) {
+            console.log('pieHover');
+        })
 
     }
 
@@ -19,7 +25,7 @@ class CustomLegend extends React.Component {
                 legendElement.push (
                     <Row>
                         <Col span={5}>
-                            <span className="legendBox"  style={{background:item.color}}/>
+                            <span className="legendBox"  style={{background:this.state.legendColor.length>0?this.state.legendColor:item.color}}/>
                         </Col>
                         <Col span={10} >
                             <b className="itemName">{item.name}</b>

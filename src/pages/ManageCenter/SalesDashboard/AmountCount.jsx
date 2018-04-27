@@ -8,8 +8,8 @@ class AmountCount extends React.Component {
         let chartOption = {
             grid: {
                 borderWidth: 0,
-                x:25,
-                y:25,
+                x:30,
+                y:30,
                 x2:25,
                 y2:25,
             },
@@ -34,7 +34,16 @@ class AmountCount extends React.Component {
                     type: 'value',
                     splitLine:{show: false},//去除网格线
                     axisLabel: {textStyle: {
-                            color:'#A6AEBF'
+                            color:'#A6AEBF',
+                            /*formatter:function (v) {
+                                console.log("Yaxis formatter");
+                                console.log(v);
+                            }*/
+                        },
+                        formatter:function (v) {
+                            v/1000>=1? v=(v/1000)+'k':'';
+                            console.log(v);
+                            return '$ '+v
                         }},
                     axisLine:{
                         lineStyle:{
@@ -64,7 +73,7 @@ class AmountCount extends React.Component {
                             }
                         }
                     },
-                    data: [12,21,10,4,12,5,6],
+                    data: [1200,857,3300,720,3900,1221,590],
                 }
             ]
         };
