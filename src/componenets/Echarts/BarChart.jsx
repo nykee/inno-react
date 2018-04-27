@@ -6,6 +6,9 @@ class BarChart extends React.Component {
         super();
         this.state = {};
     }
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps)
+    }
 
     componentDidMount() {
         let defaultOption ={
@@ -96,7 +99,7 @@ class BarChart extends React.Component {
         };
         let option = this.props.chartOption? this.props.chartOption:defaultOption;
         let chart =echarts.init(document.getElementById("Bar-E"));
-        chart.setOption(option);
+        chart.setOption(option,true);
     }
 
 
