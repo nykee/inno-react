@@ -104,7 +104,7 @@ class ProductLists extends React.Component {
                 },
                 {
                     type : 'pie',
-                    center : ['52%', '50%'],
+                    center : ['50%', '50%'],
                     radius : radius,
                     x:'40%', // for funnel
                     // itemStyle : labelFromatter,
@@ -130,7 +130,7 @@ class ProductLists extends React.Component {
                 },
                 {
                     type : 'pie',
-                    center : ['72%', '50%'],
+                    center : ['70%', '50%'],
                     radius : radius,
                     x:'60%', // for funnel
                     // itemStyle : labelFromatter,
@@ -156,7 +156,7 @@ class ProductLists extends React.Component {
                 },
                 {
                     type : 'pie',
-                    center : ['92%', '50%'],
+                    center : ['90%', '50%'],
                     radius : radius,
                     x:'80%', // for funnel
                     // itemStyle : labelFromatter,
@@ -199,7 +199,7 @@ class ProductLists extends React.Component {
                     <Col span={4} offset={1} >
                         <ProductListsItems name="Samsung" qty="1800"/>
                     </Col>
-                    <Col span={4} offset={1} style={{textAlign:'left'}}>
+                    <Col span={4} offset={1} >
                         <ProductListsItems name="Apple" qty="2400"/>
                     </Col>
                 </Row>

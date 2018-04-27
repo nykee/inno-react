@@ -88,7 +88,7 @@ class LineChart extends React.Component {
 
     render() {
         return (
-            <div id="Line-E" style={{width:300,height:200}}>
+            <div id="Line-E" style={{width:'100%',height:200}}>
             </div>
 
         )

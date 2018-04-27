@@ -93,13 +93,14 @@ class DPieChart extends React.Component {
             // console.log(p.data.name);
             ep.trigger('pieHover',p.data.name);
 
-        })
+        });
+       window.onresize =chart.resize;
 
     }
 
     render() {
         return (
-            <div id="DPie-E" style={{width:300,height:300}}>
+            <div id="DPie-E" style={{width:'100%',height:300}}>
             </div>
 
         )

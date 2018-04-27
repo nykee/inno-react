@@ -82,6 +82,7 @@ class DPieChart extends React.Component{
             chart.setTitle({
                 y:centerY+titleHeight/2
             })
+
         }
         render()
         {

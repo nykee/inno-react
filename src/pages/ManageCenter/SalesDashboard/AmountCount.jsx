@@ -1,6 +1,7 @@
 import React from 'react';
 import BarChart from '../../../componenets/Echarts/BarChart'
 import '../../../style/SaleDashboard/AmontCount.css'
+import {Row,Col} from 'antd'
 class AmountCount extends React.Component {
 
 
@@ -80,11 +81,12 @@ class AmountCount extends React.Component {
 
         return (
             <div>
-                <div >
-                    <span className="title" >Pending</span>
-                    <span className="title" style={{marginLeft:'.5rem'}}>Completed</span>
-                    <span className="title" style={{marginLeft:'.5rem'}}>Refounded</span>
-                </div>
+                <Row >
+                    <Col span={5} offset={2}><span className="title" >Pending</span></Col>
+                    <Col span={5}><span className="title" style={{marginLeft:'.5rem',color:'#1D85B4'}}>Completed</span></Col>
+                    <Col span={5}><span className="title" style={{marginLeft:'.5rem'}}>Refounded</span></Col>
+                    <Col span={5} offset={2}><i className="fa fa-edit fa-2x"/></Col>
+                </Row>
 
                 <BarChart chartOption={chartOption} />
                 {/*<BarChart></BarChart>*/}

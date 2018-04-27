@@ -19,7 +19,7 @@ class PieChart extends React.Component {
     render() {
         return (
 
-                <div id="Pie-E" style={{width:740,height:220}}>
+                <div id="Pie-E" style={{width:'100%',height:220}}>
                 </div>
 
 

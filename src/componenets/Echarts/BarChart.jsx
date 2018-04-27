@@ -102,7 +102,7 @@ class BarChart extends React.Component {
 
     render() {
         return (
-            <div id="Bar-E" style={{width:300,height:300}}>
+            <div id="Bar-E" style={{width:'100%',height:300}}>
             </div>
 
         )

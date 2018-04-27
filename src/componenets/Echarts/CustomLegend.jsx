@@ -25,7 +25,7 @@ class CustomLegend extends React.Component {
                 legendElement.push (
                     <Row>
                         <Col span={5}>
-                            <span className="legendBox"  style={{background:this.state.legendColor.length>0?this.state.legendColor:item.color}}/>
+                            <span className="legendBox"  style={{background:item.color}}/>
                         </Col>
                         <Col span={10} >
                             <b className="itemName">{item.name}</b>

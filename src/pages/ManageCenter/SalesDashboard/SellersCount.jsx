@@ -86,14 +86,14 @@ class SellersCount extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col span={8} offset={6}>
-                        <span>Best Sellers</span>
+                    <Col span={6} offset={8}>
+                        <span style={{fontSize:'.9rem',color:'#1D85B4'}}>Best Sellers</span>
                     </Col>
                     <Col span={6} >
-                        <span>View All</span>
+                        <span style={{fontSize:'.9rem'}}>View All</span>
                     </Col>
                     <Col span={4} >
-                        <i className="fa fa-edit"/>
+                        <i className="fa fa-edit fa-2x"/>
                     </Col>
                 </Row>
 

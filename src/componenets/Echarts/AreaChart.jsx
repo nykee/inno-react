@@ -78,7 +78,7 @@ class AreaChart extends React.Component {
 
     render() {
         return (
-            <div id="Area-E" style={{width:800,height:300}}>
+            <div id="Area-E" style={{width:'100%',height:300}}>
             </div>
 
         )

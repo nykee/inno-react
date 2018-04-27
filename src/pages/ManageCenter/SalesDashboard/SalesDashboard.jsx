@@ -23,7 +23,7 @@ class SalesDashboard extends React.Component {
                         <PercentCount/>
                     </Col>
                 </Row>
-                <Row gutter={2}>
+                <Row gutter={2} style={{marginTop:'.8rem'}}>
                     <Col span={17}>
                         <OrderLists/>
                     </Col>
@@ -31,7 +31,7 @@ class SalesDashboard extends React.Component {
                         <AmountCount/>
                     </Col>
                 </Row>
-                <Row gutter={2}>
+                <Row gutter={2} style={{marginTop:'.8rem'}}>
                     <Col span={17}>
                         <ProductLists/>
                     </Col>
