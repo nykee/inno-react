@@ -16,26 +16,26 @@ class SalesDashboard extends React.Component {
         return (
             <div style={{color:'#fff',paddingLeft:'0.5rem'}}>
                 <Row>
-                    <Col span={18}>
+                    <Col span={17}>
                         <MonthlySummary/>
                     </Col>
-                    <Col span={6}>
+                    <Col span={7}>
                         <PercentCount/>
                     </Col>
                 </Row>
                 <Row>
-                    <Col span={18}>
+                    <Col span={17}>
                         <OrderLists/>
                     </Col>
-                    <Col span={6}>
+                    <Col span={7}>
                         <AmountCount/>
                     </Col>
                 </Row>
                 <Row>
-                    <Col span={18}>
+                    <Col span={16}>
                         <ProductLists/>
                     </Col>
-                    <Col span={6}>
+                    <Col span={8}>
                         <SellersCount/>
                     </Col>
                 </Row>

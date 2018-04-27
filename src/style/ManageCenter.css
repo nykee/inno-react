@@ -5,12 +5,16 @@
 .normalHeader{
     padding-bottom: 1rem;
     padding-top: 1rem;
+    text-align: left;
+    padding-left:.5rem ;
 }
 .blackHeader{
     padding-bottom: 1rem;
     padding-top: 1rem;
     background-color: #2F323A;
     color: #fff;
+    text-align: left;
+    padding-left:.5rem ;
 }
 .title-header{
     font-size: 1.1rem;
