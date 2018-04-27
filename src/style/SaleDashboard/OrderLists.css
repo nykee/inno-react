@@ -7,6 +7,7 @@
 .tbody-item{
     color: #A6AEBF;
     font-size: 1rem;
+    /*text-align: center;*/
 }
 .tbody-item-price{
     color: #1CA8DD;

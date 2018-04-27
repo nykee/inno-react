@@ -8,8 +8,10 @@ class AmountCount extends React.Component {
         let chartOption = {
             grid: {
                 borderWidth: 0,
-                y: 80,
-                y2: 60
+                x:25,
+                y:25,
+                x2:25,
+                y2:25,
             },
             xAxis: [
                 {
@@ -19,6 +21,11 @@ class AmountCount extends React.Component {
                     axisLabel: {textStyle: {
                             color:'#A6AEBF'
                         }},
+                    axisLine:{
+                        lineStyle:{
+                            color:'transparent'
+                        },
+                    },
                     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
                 }
             ],
@@ -29,6 +36,11 @@ class AmountCount extends React.Component {
                     axisLabel: {textStyle: {
                             color:'#A6AEBF'
                         }},
+                    axisLine:{
+                        lineStyle:{
+                            color:'transparent'
+                        },
+                    },
                     show: true
                 }
             ],

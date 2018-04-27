@@ -26,7 +26,7 @@ class OrderLists extends React.Component {
                                 <td>{order.item}</td>
                             </Col>
                             <Col span={4} offset={6} className="tbody-item">
-                                <td>{order.Costumer}</td>
+                                <td >{order.Costumer}</td>
                             </Col>
                             <Col span={4} className="tbody-item-price">
                                 <td>{order.price}</td>

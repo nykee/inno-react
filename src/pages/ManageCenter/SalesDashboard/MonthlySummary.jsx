@@ -47,6 +47,10 @@ class MonthlySummary extends React.Component {
                 }
             },*/
            grid:{
+               x:25,
+               y:25,
+               x2:25,
+               y2:25,
                borderWidth:0
                // borderColor:'#2F323A'
            },

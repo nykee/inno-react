@@ -67,7 +67,7 @@ class ProductLists extends React.Component {
             series : [
                 {
                     type : 'pie',
-                    center : ['10%', '30%'],
+                    center : ['10%', '50%'],
                     radius : radius,
                     x: '0%', // for funnel
                     // itemStyle : labelFromatter,
@@ -78,7 +78,7 @@ class ProductLists extends React.Component {
                 },
                 {
                     type : 'pie',
-                    center : ['30%', '30%'],
+                    center : ['30%', '50%'],
                     radius : radius,
                     x:'20%', // for funnel
                     // itemStyle : labelFromatter,
@@ -104,7 +104,7 @@ class ProductLists extends React.Component {
                 },
                 {
                     type : 'pie',
-                    center : ['50%', '30%'],
+                    center : ['52%', '50%'],
                     radius : radius,
                     x:'40%', // for funnel
                     // itemStyle : labelFromatter,
@@ -130,7 +130,7 @@ class ProductLists extends React.Component {
                 },
                 {
                     type : 'pie',
-                    center : ['70%', '30%'],
+                    center : ['72%', '50%'],
                     radius : radius,
                     x:'60%', // for funnel
                     // itemStyle : labelFromatter,
@@ -156,7 +156,7 @@ class ProductLists extends React.Component {
                 },
                 {
                     type : 'pie',
-                    center : ['92%', '30%'],
+                    center : ['92%', '50%'],
                     radius : radius,
                     x:'80%', // for funnel
                     // itemStyle : labelFromatter,
@@ -190,16 +190,16 @@ class ProductLists extends React.Component {
                     <Col span={4} >
                         <ProductListsItems name="HTC" qty="450"/>
                     </Col>
-                    <Col span={4} offset={1}>
+                    <Col span={4} offset={1} >
                         <ProductListsItems name="Nokia" qty="657"/>
                     </Col>
-                    <Col span={4} offset={1}>
+                    <Col span={4} offset={1} >
                         <ProductListsItems name="LG" qty="1200"/>
                     </Col>
-                    <Col span={4} offset={1}>
+                    <Col span={4} offset={1} >
                         <ProductListsItems name="Samsung" qty="1800"/>
                     </Col>
-                    <Col span={4} offset={1}>
+                    <Col span={4} offset={1} style={{textAlign:'left'}}>
                         <ProductListsItems name="Apple" qty="2400"/>
                     </Col>
                 </Row>
