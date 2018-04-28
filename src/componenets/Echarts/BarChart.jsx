@@ -1,16 +1,31 @@
 import React from 'react';
 import echarts from 'echarts';
 import  'echarts/chart/bar';
+import ep from '../../utils/eventProxy'
 class BarChart extends React.Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {
+            // chartOption:{},
+            // seriesData:[]
+        };
     }
     componentWillReceiveProps(nextProps){
-        console.log(nextProps)
+        // console.log("componentWillReceiveProps!!!");
+        // console.log(nextProps);
+    }
+    componentWillMount(){
+        // console.log(this.props.ajaxData);
+        // this.setState({
+        //     chartOption:this.props.chartOption
+        // });
+
     }
 
     componentDidMount() {
+
+
+        // console.log(this.props.ajaxData);
         let defaultOption ={
             title: {
                 text: '按病种查看'
@@ -88,18 +103,31 @@ class BarChart extends React.Component {
 
 
             ],
-            /*loadingOption:{
-                text:'数据读取中...',
-                effect:'spin'
-
-            },
-            noDataLoadingOption:{
-                text:'暂无数据'
-            }*/
         };
         let option = this.props.chartOption? this.props.chartOption:defaultOption;
         let chart =echarts.init(document.getElementById("Bar-E"));
         chart.setOption(option,true);
+       /* this.setState({
+            chartOption:this.props.chartOption
+        });
+        let option = this.state.chartOption? this.state.chartOption:defaultOption;
+        let chart =echarts.init(document.getElementById("Bar-E"));
+        chart.setOption(option,true);*/
+
+        ep.on('AmountSelectionChange',function (type,data) {
+            console.log(data);
+            if(String(type)==='Pending'){
+                console.log("AmountSelectionChange-Pending");
+            }
+            else if(String(type)==='Completed'){
+                console.log("AmountSelectionChange-Completed");
+            }
+            else if(String(type)==='Refounded'){
+                console.log("AmountSelectionChange-Refounded");
+            }
+            option.series[0].data =data;
+            chart.setOption(option,true)
+        });
     }
 
 
