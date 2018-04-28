@@ -13,8 +13,8 @@ class PercentCount extends React.Component {
     componentDidMount() {
         let emphisColor="";
         ep.on('pieHover',function (v) {
-            console.log('PercentCount收到事件');
-            console.log(v);
+            // console.log('PercentCount收到事件');
+            // console.log(v);
             if(v==="Sales"){
                 emphisColor='#49B9E3'
             }
@@ -35,7 +35,11 @@ class PercentCount extends React.Component {
             var colorList = self.state.colorList;
             return colorList[params.dataIndex]
         };
-
+        let seriesData =[
+            {value:'15', name:'New Customers'},
+            {value:'20', name:'Sales'},
+            {value:'35', name:'Refound'},
+        ];
         let chartOption={
             legend: {
                 show:false,
@@ -46,10 +50,30 @@ class PercentCount extends React.Component {
                 itemHeight:14,
                 padding:0,
                 textStyle:{color:'#8E95A4'},
-                formatter:function (params) {
-                    console.log(params);
+        data:[
+            {name:'New Customers',icon:'bar',textStyle:{
+
+                }},
+            '',
+            {name:'Sales',icon:'bar'},
+            '',
+            {name:'Refound',icon:'bar'}
+        ],
+
+                formatter:function (name) {
+                    let res;
+                    console.log(seriesData.length);
+                    for(let i =0;i<seriesData.length;i++){
+                        console.log(seriesData[i].value);
+                        res = name+'           '+seriesData[i].value+'%'
+
+                    }
+                    return res;
+                    // console.log(params);
+                    // console.log(res);
+
                 },
-                data:['New Customers','Sales','Refound']
+
             },
             calculable : false,
             series : [

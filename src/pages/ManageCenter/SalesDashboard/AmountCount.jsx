@@ -51,6 +51,7 @@ class AmountCount extends React.Component {
                 x2:25,
                 y2:25,
         },
+
         xAxis: [
             {
                 type: 'category',
@@ -80,7 +81,7 @@ class AmountCount extends React.Component {
                     },
                     formatter:function (v) {
                         v/1000>=1? v=(v/1000)+'k':'';
-                        console.log(v);
+                        // console.log(v);
                         return '$ '+v
                     }},
                 axisLine:{

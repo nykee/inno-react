@@ -13,7 +13,7 @@ class CustomLegend extends React.Component {
     componentDidMount() {
         console.log(this.props.legendOption.items);
         ep.on('changeLegendColor',function (v) {
-            console.log('pieHover');
+            // console.log('pieHover');
         })
 
     }
