@@ -7,6 +7,7 @@ import SelectPanel from './SelectPanel'
 import D3ChartContainer from './D3ChartContainer'
 import HChartContainer from './HChartContainer'
 import SalesDashboard from './SalesDashboard/SalesDashboard'
+import SalesDashboardD3 from './SalesDashboardD3/SalesDashboardD3'
 import Header from './Header'
 
 import '../../style/ManageCenter.css'
@@ -65,8 +66,12 @@ class ManageCenter extends React.Component {
             title ="客户端连接监控-DashBoard"
         }
         else if(this.state.current === '4'){
-            title ="销售业务监控-DashBoard";
+            title ="销售业务监控-DashBoard-echarts";
             chartContainer =<SalesDashboard/>
+        }
+        else if(this.state.current === '5'){
+            title ="销售业务监控-DashBoard-D3";
+            chartContainer =<SalesDashboardD3/>
         }
 
         return (
@@ -86,7 +91,8 @@ class ManageCenter extends React.Component {
                                 <Menu.Item key="1" >D3.js图表</Menu.Item>
                                 <Menu.Item key="2">HighChart图表</Menu.Item>
                                 <Menu.Item key="3">客户端连接监控DashBoard</Menu.Item>
-                                <Menu.Item key="4">销售业务监控DashBoard</Menu.Item>
+                                <Menu.Item key="4">echarts-销售业务监控DashBoard</Menu.Item>
+                                <Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Col>
