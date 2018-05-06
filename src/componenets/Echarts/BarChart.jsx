@@ -115,8 +115,8 @@ class BarChart extends React.Component {
         chart.setOption(option,true);*/
 
         ep.on('AmountSelectionChange',function (type,data) {
-            console.log(data);
-            if(String(type)==='Pending'){
+            // console.log(data);
+           /* if(String(type)==='Pending'){
                 console.log("AmountSelectionChange-Pending");
             }
             else if(String(type)==='Completed'){
@@ -124,7 +124,7 @@ class BarChart extends React.Component {
             }
             else if(String(type)==='Refounded'){
                 console.log("AmountSelectionChange-Refounded");
-            }
+            }*/
             option.series[0].data =data;
             chart.setOption(option,true)
         });

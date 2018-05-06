@@ -1,31 +1,39 @@
 import React from 'react';
 import BarChart from '../../../componenets/Echarts/BarChart'
-import '../../../style/SaleDashboard/AmontCount.css'
+import '../../../style/SaleDashboard/common.css'
 import {Row,Col} from 'antd'
 import ep from '../../../utils/eventProxy'
 class AmountCount extends React.Component {
     constructor() {
         super();
         this.state = {
-
+            selected:'pending'
         };
 
 
     }
     componentWillMount(){
-
+        this.setState({
+            SData:[1200,857,3300,720,3900,1221,590]
+        })
     }
 
     getChartData(type){
         let ajaxData=[];
         if(type ==="Pending"){
-            console.log('pending');
+            // console.log('pending');
+            this.setState({
+                selected:'pending'
+            });
             ajaxData =[1200,857,3300,720,3900,1221,590];
             ep.trigger('AmountSelectionChange','Pending',ajaxData);
 
         }
         else if(type ==="Completed"){
-            console.log('Completed');
+            // console.log('Completed');
+            this.setState({
+                selected:'completed'
+            });
             ajaxData =[700,527,3700,620,4100,221,190];
             ep.trigger('AmountSelectionChange','Completed',ajaxData);
             // this.setState({
@@ -33,7 +41,10 @@ class AmountCount extends React.Component {
             // });
         }
         else if(type ==="Refounded"){
-            console.log('Refounded');
+            // console.log('Refounded');
+            this.setState({
+                selected:'refounded'
+            });
             ajaxData =[850,897,2200,1280,880,3221,790];
             ep.trigger('AmountSelectionChange','Refounded',ajaxData);
         }
@@ -112,7 +123,8 @@ class AmountCount extends React.Component {
                         }
                     }
                 },
-                data: [1200,857,3300,720,3900,1221,590],
+                // data: [1200,857,3300,720,3900,1221,590],
+                data: this.state.SData
             }
         ]
     };
@@ -120,10 +132,10 @@ class AmountCount extends React.Component {
         return (
             <div>
                 <Row >
-                    <Col span={5} offset={2}><span className="title" style={{color:'#1D85B4'}} onClick={this.getChartData.bind(this,'Pending')}>Pending</span></Col>
-                    <Col span={5}><span className="title" style={{marginLeft:'.5rem'}} onClick={this.getChartData.bind(this,'Completed')}>Completed</span></Col>
-                    <Col span={5}><span className="title" style={{marginLeft:'.5rem'}} onClick={this.getChartData.bind(this,'Refounded')}>Refounded</span></Col>
-                    <Col span={5} offset={2}><i className="fa fa-edit fa-2x"/></Col>
+                    <Col span={4} offset={2}><span className={this.state.selected==="pending"?'title-selected':'title'}  onClick={this.getChartData.bind(this,'Pending')}>Pending</span></Col>
+                    <Col span={6}><span className={this.state.selected==="completed"?'title-selected':'title'} style={{marginLeft:'.5rem'}} onClick={this.getChartData.bind(this,'Completed')}>Completed</span></Col>
+                    <Col span={6}><span className={this.state.selected==="refounded"?'title-selected':'title'} style={{marginLeft:'.5rem'}} onClick={this.getChartData.bind(this,'Refounded')}>Refounded</span></Col>
+                    <Col span={4} offset={2}><i className="fa fa-edit fa-2x"/></Col>
                 </Row>
 
                 <BarChart chartOption={chartOption} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import echarts from "echarts";
 import  'echarts/chart/line';
+import ep from '../../utils/eventProxy'
 
 class LineChart extends React.Component {
     constructor() {
@@ -84,6 +85,12 @@ class LineChart extends React.Component {
         let option = this.props.chartOption? this.props.chartOption:defaultOption;
         let chart =echarts.init(document.getElementById("Line-E"));
         chart.setOption(option);
+
+        ep.on('SellerSelectionChange',function (type,data) {
+            // console.log(data)
+            option.series[0].data =data;
+            chart.setOption(option,true)
+        })
     }
 
     render() {

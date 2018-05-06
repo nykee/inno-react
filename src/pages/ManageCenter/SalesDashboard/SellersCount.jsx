@@ -1,10 +1,45 @@
 import React from 'react';
 import {Row,Col} from 'antd'
 import LineChart from '../../../componenets/Echarts/LineChart'
+import ep from '../../../utils/eventProxy'
+
 import '../../../style/SaleDashboard/SellersCount.css'
+import '../../../style/SaleDashboard/common.css'
 
 class SellersCount extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            selected:'bestsellers',
+            amountAll:'27,856',
+            increasement:140
+        };
 
+
+    }
+    getChartData(type){
+        let ajaxData=[];
+        if(type ==="bestsellers"){
+            this.setState({
+                selected:'bestsellers',
+                amountAll:'27,856',
+                increasement:140
+
+            });
+            ajaxData =[2, 6, 5, 9, 7, 8, 7,14];
+            ep.trigger('SellerSelectionChange','bestsellers',ajaxData);
+        }
+        else if(type ==="viewAll"){
+            // console.log('Completed');
+            this.setState({
+                selected:'viewAll',
+                amountAll:'47,888',
+                increasement:121
+            });
+            ajaxData =[12, 21, 50, 39, 17, 18, 7,14];
+            ep.trigger('SellerSelectionChange','viewAll',ajaxData);
+        }
+    }
 
     render() {
         let chartOption={
@@ -62,7 +97,7 @@ class SellersCount extends React.Component {
             ],
             series : [
                 {
-                    name:'最高气温',
+                    name:'销售额',
                     type:'line',
                     symbol:'none',
                     data:[2, 6, 5, 9, 7, 8, 7,14],
@@ -87,10 +122,10 @@ class SellersCount extends React.Component {
             <div>
                 <Row>
                     <Col span={6} offset={8}>
-                        <span style={{fontSize:'.9rem',color:'#1D85B4'}}>Best Sellers</span>
+                        <span className={this.state.selected==='bestsellers'?'title-selected':'title'} onClick={this.getChartData.bind(this,'bestsellers')}>Best Sellers</span>
                     </Col>
                     <Col span={6} >
-                        <span style={{fontSize:'.9rem'}}>View All</span>
+                        <span className={this.state.selected==='viewAll'?'title-selected':'title'} onClick={this.getChartData.bind(this,'viewAll')}>View All</span>
                     </Col>
                     <Col span={4} >
                         <i className="fa fa-edit fa-2x"/>
@@ -100,11 +135,11 @@ class SellersCount extends React.Component {
                 <LineChart chartOption={chartOption}/>
                 <Row>
                     <Col span={12} >
-                        <span className="price">$&nbsp;27,856&nbsp;</span><span className="time">April 2018</span>
+                        <span className="price">$&nbsp;{this.state.amountAll}&nbsp;</span><span className="time">April 2018</span>
                         <i className="fa fa-arrow-up" style={{color:'#0AD02F',marginLeft:'.3rem'}}/>
                     </Col>
                     <Col span={5} offset={7}>
-                        <span className="increase">+140%</span>
+                        <span className="increase">{'+'+this.state.increasement+'%'}</span>
                     </Col>
                 </Row>
 
