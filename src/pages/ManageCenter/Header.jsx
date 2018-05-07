@@ -10,8 +10,8 @@ class Header extends React.Component {
         };
     }
     componentWillReceiveProps(nextProps){
-        console.log("nextProps。。。");
-        console.log(nextProps.selected);
+        // console.log("nextProps。。。");
+        // console.log(nextProps.selected);
         if(nextProps.selected ==='3'){
             this.setState({
                 iconclass:"fa fa-tachometer fa-2x"
@@ -64,7 +64,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <Row className={(this.props.selected ==="3"||this.props.selected ==="4")?'blackHeader':'normalHeader'}>
+            <Row className={(this.props.selected ==="3"||this.props.selected ==="4"||this.props.selected ==="5")?'blackHeader':'normalHeader'}>
                 <Col xs={{span:7}}
                      lg={{span:6}}
                      xl={{span:4}}>

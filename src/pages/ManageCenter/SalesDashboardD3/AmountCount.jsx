@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class AmountCount extends React.Component {
 
 
@@ -7,7 +8,9 @@ class AmountCount extends React.Component {
 
 
         return (
-            <div></div>
+            <div>
+
+            </div>
 
         )
     }

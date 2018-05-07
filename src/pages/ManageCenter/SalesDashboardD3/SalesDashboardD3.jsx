@@ -13,8 +13,31 @@ class SalesDashboardD3 extends React.Component {
 
 
         return (
-            <div>
-                SD3
+            <div style={{color:'#fff',paddingLeft:'0.5rem'}}>
+                <Row gutter={2}>
+                    <Col span={17}>
+                        <MonthlySummary/>
+                    </Col>
+                    <Col span={7}>
+                        <PercentCount/>
+                    </Col>
+                </Row>
+                <Row gutter={2} style={{marginTop:'.8rem'}}>
+                    <Col span={17}>
+                        <OrderLists/>
+                    </Col>
+                    <Col span={7}>
+                        <AmountCount/>
+                    </Col>
+                </Row>
+                <Row gutter={2} style={{marginTop:'.8rem'}}>
+                    <Col span={17}>
+                        <ProductLists/>
+                    </Col>
+                    <Col span={7}>
+                        <SellersCount/>
+                    </Col>
+                </Row>
             </div>
 
         )

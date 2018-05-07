@@ -96,7 +96,7 @@ class ManageCenter extends React.Component {
                             </SubMenu>
                         </Menu>
                     </Col>
-                    <Col xs={{span:21}} lg={{span:21}} style={{height:'1050px'}} className={(this.state.current ==="3"||this.state.current ==="4")?'blackBG':''}>
+                    <Col xs={{span:21}} lg={{span:21}} style={{height:'1050px'}} className={(this.state.current ==="3"||this.state.current ==="4"||this.state.current ==="5")?'blackBG':''}>
                             <div>
                                 <Header title={title} selected={this.state.current}/>
                                 {(this.state.current ==="3"||this.state.current ==="4")?'':''}
