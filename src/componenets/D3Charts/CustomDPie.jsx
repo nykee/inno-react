@@ -6,13 +6,14 @@ class CustomDPie extends React.Component {
         let dataset = this.props.data?this.props.data:[ 35,15,50,];
         let pie = d3.pie();
         let piedata =pie(dataset);
-
+        let svgName =this.props.svgName;
+        console.log(svgName)
         //SVG画布大小
         let width =300;
         let height =300;
 
         //添加一个 SVG 画布
-        var svg = d3.select('.svg-box-pie')
+        var svg = d3.select('#'+svgName)
             .append('svg')
             .attr("width",width)
             .attr("height",height);
@@ -53,7 +54,7 @@ class CustomDPie extends React.Component {
 
 
         return (
-            <div className="svg-box-pie">
+            <div className={this.props.svgName}>
 
             </div>
 

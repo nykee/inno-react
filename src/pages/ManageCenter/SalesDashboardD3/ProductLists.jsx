@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductListsItems from "../SalesDashboardD3/ProductListsItems";
-import CustomDPie from '../../../componenets/D3Charts/CustomDPie'
+
 import {Col, Row} from "antd";
 
 class ProductLists extends React.Component {
@@ -15,11 +15,11 @@ class ProductLists extends React.Component {
                 <Row>
                     <Col span={4} >
                         {/*<h4>HTC</h4>*/}
-                        <ProductListsItems name="HTC" qty="450"  colorLists={colorLists} data={data}/>
+                        <ProductListsItems name="HTC" qty="450"  colorLists={colorLists} data={data} svgName="svg-htc"/>
                     </Col>
                     <Col span={4} offset={1} >
                         {/*<h4>Nokia</h4>*/}
-                        <ProductListsItems name="Nokia" qty="657" colorLists={colorLists} data={data}/>
+                        <ProductListsItems name="Nokia" qty="657" colorLists={colorLists} data={data} svgName="svg-nokia"/>
                     </Col>
                     <Col span={4} offset={1} >
                         {/*<ProductListsItems name="LG" qty="1200" colorLists={colorLists} data={data}/>*/}
