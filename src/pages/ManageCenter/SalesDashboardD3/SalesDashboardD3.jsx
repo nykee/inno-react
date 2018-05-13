@@ -2,7 +2,7 @@ import React from 'react';
 import {Row,Col} from 'antd'
 import MonthlySummary from './MonthlySummary'
 import AmountCount    from './AmountCount'
-import OrderLists     from './OrderLists'
+import OrderLists     from '../SalesDashboard/OrderLists'
 import PercentCount   from './PercentCount'
 import ProductLists   from './ProductLists'
 import SellersCount   from './SellersCount'

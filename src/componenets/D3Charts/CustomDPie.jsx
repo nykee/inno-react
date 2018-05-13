@@ -3,14 +3,16 @@ import * as d3 from 'd3'
 
 class CustomDPie extends React.Component {
     componentDidMount(){
+        // console.log(this.props.data);
         let dataset = this.props.data?this.props.data:[ 35,15,50,];
         let pie = d3.pie();
         let piedata =pie(dataset);
         let svgName =this.props.svgName;
-        console.log(svgName)
+        // console.log(this.props.colorLists);
+        // console.log(svgName);
         //SVG画布大小
-        let width =300;
-        let height =300;
+        let width =200;
+        let height =200;
 
         //添加一个 SVG 画布
         var svg = d3.select('#'+svgName)
@@ -54,7 +56,7 @@ class CustomDPie extends React.Component {
 
 
         return (
-            <div className={this.props.svgName}>
+            <div id={this.props.svgName}>
 
             </div>
 
