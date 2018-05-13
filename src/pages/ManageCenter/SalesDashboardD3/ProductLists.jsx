@@ -27,10 +27,8 @@ class ProductLists extends React.Component {
                                     <ProductListsItems name={pitem.name} qty={pitem.qty}  colorLists={pitem.colorLists}  data={pitem.data} svgName={pitem.svgName}/>
                                 </Col>
                             )
-
                         })
                     }
-
                 </Row>
             </div>
 
