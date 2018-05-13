@@ -23,7 +23,7 @@ class BarChart extends React.Component {
             .attr("height",height);
 
         //数据集
-        var dataset = [ 10, 20, 30, 40, 33, 24, 12, 5];
+        var dataset = this.props.dataset?this.props.dataset:[ 10, 20, 30, 40, 33, 24, 12, 5];
 
 
         //x轴的比例尺,索引比例尺
