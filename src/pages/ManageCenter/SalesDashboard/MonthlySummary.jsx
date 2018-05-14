@@ -31,6 +31,9 @@ class MonthlySummary extends React.Component {
             },*/
             tooltip : {
                 trigger: 'axis',
+                axisPointer:{
+                    type:'line'
+                }
 
             },
             /*legend: {
@@ -59,12 +62,16 @@ class MonthlySummary extends React.Component {
                 {
                     splitLine:{show: false},//去除网格线
                     type : 'category',
+                    triggerEvent:true,
                     boundaryGap : false,
                     data : ['1','2','3','4','5','6','7','8','9','10','11','12','13',
                         '14','15','16','17','18','19','20','21','22','23','24','25','26',
                         '27','28','29','30','31'],
-                    axisLabel: {textStyle: {
-                            color:'#A6AEBF'
+                    axisLabel: {
+                        clickable:true,
+                        textStyle: {
+                            color:'#A6AEBF',
+
                         }},
                     axisLine:{
                         lineStyle:{
@@ -111,7 +118,8 @@ class MonthlySummary extends React.Component {
                                         }
                                     }
                                 },
-                    data:dataFake_1
+                    data:dataFake_1,
+
                 },
                 {
                     name:'在途量',

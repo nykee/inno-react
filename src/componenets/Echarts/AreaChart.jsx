@@ -73,6 +73,16 @@ class AreaChart extends React.Component {
         let option = this.props.chartOption? this.props.chartOption:defaultOption;
         let chart =echarts.init(document.getElementById("Area-E"));
         chart.setOption(option);
+        // chart.on('click',(params)=>{
+        //     console.log(params);
+        //     // if(params.componentType == "xAxis"){
+        //     //     console.log(params)
+        //     // }
+        // });
+        chart.on('hover',(params)=>{
+            // console.log(params);
+
+        })
 
     }
 
