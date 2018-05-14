@@ -1,7 +1,7 @@
 import React from 'react';
 import DPie from '../../../componenets/Echarts/DPieChart'
-import CustomLegend from '../../../componenets/Echarts/CustomLegend'
-import ep from '../../../utils/eventProxy';
+import CustomLegend from './CustomLegend'
+// import ep from '../../../utils/eventProxy';
 class PercentCount extends React.Component {
     constructor() {
         super();
@@ -10,23 +10,23 @@ class PercentCount extends React.Component {
         };
     }
 
-    componentDidMount() {
-        let emphisColor="";
-        ep.on('pieHover',function (v) {
-            // console.log('PercentCount收到事件');
-            // console.log(v);
-            if(v==="Sales"){
-                emphisColor='#49B9E3'
-            }
-            else if(v==="New Customers"){
-                emphisColor='#B29EFF'
-            }
-            else if(v==="Refound"){
-                emphisColor='#3394E7'
-            }
-            ep.trigger('changeLegendColor',emphisColor)
-        })
-    }
+    // componentDidMount() {
+    //     let emphisColor="";
+    //     ep.on('pieHover',function (event) {
+    //         // console.log('PercentCount收到事件');
+    //         // console.log(v);
+    //         if(event==="Sales"){
+    //             emphisColor='#49B9E3'
+    //         }
+    //         else if(event==="New Customers"){
+    //             emphisColor='#B29EFF'
+    //         }
+    //         else if(event==="Refound"){
+    //             emphisColor='#3394E7'
+    //         }
+    //         ep.trigger('changeLegendColor',event,emphisColor)
+    //     })
+    // }
 
     render() {
         let self=this;
@@ -35,7 +35,7 @@ class PercentCount extends React.Component {
             var colorList = self.state.colorList;
             return colorList[params.dataIndex]
         };
-        let seriesData =[
+        var seriesData =[
             {value:'15', name:'New Customers'},
             {value:'20', name:'Sales'},
             {value:'35', name:'Refound'},
@@ -49,23 +49,32 @@ class PercentCount extends React.Component {
                 itemWidth:18,
                 itemHeight:14,
                 padding:0,
-                textStyle:{color:'#8E95A4'},
+                textStyle:{
+                    color:'#8E95A4',
+                    fontSize:14,
+                    textAlign:'left'
+                },
+                align:'left',
         data:[
-            {name:'New Customers',icon:'bar',textStyle:{
-
-                }},
+            {name:'New Customers',icon:'bar'},
             '',
             {name:'Sales',icon:'bar'},
             '',
             {name:'Refound',icon:'bar'}
         ],
-
-                formatter:function (name) {
-                    let res;
-                    console.log(seriesData.length);
-                    for(let i =0;i<seriesData.length;i++){
-                        console.log(seriesData[i].value);
-                        res = name+'           '+seriesData[i].value+'%'
+        formatter:function (name) {
+                    let data=[
+                        {value:'15', name:'New Customers'},
+                        {value:'20', name:'Sales'},
+                        {value:'35', name:'Refound'},
+                    ];
+                    let res ='';
+                    console.log(data.length);
+                    // console.log(seriesData.length);
+                    for(let i =0;i<data.length;i++){
+                        console.log(data[i].value);
+                        res = name+"                   "+data[i].value+'%'
+                        // console.log(res);
 
                     }
                     return res;
@@ -135,9 +144,9 @@ class PercentCount extends React.Component {
         };
         let legendOption={
             items:[
-                {value:'15', name:'New Customers',color:'#9F86FF'},
-                {value:'20', name:'Sales',color:'#1CA8DD'},
-                {value:'35', name:'Refound',color:'#007AE1'},
+                {id:'1',value:'15', name:'New Customers',color:'#9F86FF'},
+                {id:'2',value:'20', name:'Sales',color:'#1CA8DD'},
+                {id:'3',value:'35', name:'Refound',color:'#007AE1'},
             ],
             // color:self.state.colorList
         };
