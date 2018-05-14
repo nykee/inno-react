@@ -1,7 +1,7 @@
 import React from 'react';
 import CommonTitle from './CommonTitle'
 import AreaChart from '../../../componenets/Echarts/AreaChart'
-var Mock = require('mockjs');
+let  Mock = require('mockjs');
 class MonthlySummary extends React.Component {
 
 
