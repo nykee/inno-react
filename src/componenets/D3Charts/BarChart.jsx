@@ -24,7 +24,7 @@ class BarChart extends React.Component {
 
         //数据集
         var dataset = this.props.dataset?this.props.dataset:[ 10, 20, 30, 40, 33, 24, 12, 5];
-
+        console.log(dataset);
 
         //x轴的比例尺,索引比例尺
 
@@ -56,7 +56,7 @@ class BarChart extends React.Component {
 
         //矩形之间的空白
         var rectPadding = 4;
-
+        let color=this.props.colorLists;
         //添加矩形元素
         var rects = svg.selectAll(".LineRect")
             .data(dataset)
@@ -95,14 +95,14 @@ class BarChart extends React.Component {
             .attr("height", function(d){
                 return height - padding.top - padding.bottom - yScale(d);
             })
-            .attr('fill','steelblue')
+            .attr('fill',"steelblue")
 
 
 
         ;
 
         //添加文字元素
-        var texts = svg.selectAll(".MyText")
+        var texts = this.props.text?svg.selectAll(".MyText")
             .data(dataset)
             .enter()
             .append("text")
@@ -129,7 +129,7 @@ class BarChart extends React.Component {
             .duration(2000)
             .attr("y",function(d){
                 return yScale(d);
-            });
+            }):this.props.text;
 
         //添加x轴
         svg.append("g")
