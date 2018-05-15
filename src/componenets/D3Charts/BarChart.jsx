@@ -87,7 +87,7 @@ class BarChart extends React.Component {
             })
             .transition()
             .delay(200)
-            .duration(2000)
+            .duration(1000)
 
             .attr("y",function(d){
                 return yScale(d);

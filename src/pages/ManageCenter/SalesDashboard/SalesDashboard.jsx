@@ -8,13 +8,45 @@ import ProductLists   from './ProductLists'
 import SellersCount   from './SellersCount'
 
 class SalesDashboard extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            isFullScreen:false
+        };
 
+
+
+    }
+    fullScreen  (element) {
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+        }
+
+    };
+componentDidMount(){
+        if(this.state.isFullScreen ===true){
+            document.getElementById("Dash").webkitRequestFullscreen()
+        }
+        else {
+
+        }
+
+}
+    changeFullScreen(){
+        this.state.isFullScreen ===false? this.setState({isFullScreen:true}):this.setState({isFullScreen:false})
+    }
 
     render() {
 
 
         return (
-            <div style={{color:'#fff',paddingLeft:'0.5rem'}}>
+            <div style={{color:'#fff',paddingLeft:'0.5rem'}} id="Dash">
                 <Row gutter={2}>
                     <Col span={17}>
                         <MonthlySummary/>
@@ -39,6 +71,7 @@ class SalesDashboard extends React.Component {
                         <SellersCount/>
                     </Col>
                 </Row>
+                {/*<button onClick={this.changeFullScreen.bind(this)}>全屏</button>*/}
             </div>
 
         )
