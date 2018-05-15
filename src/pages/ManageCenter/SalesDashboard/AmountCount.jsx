@@ -14,7 +14,7 @@ class AmountCount extends React.Component {
     }
     componentWillMount(){
         this.setState({
-            SData:[1200,857,3300,720,3900,1221,590]
+            SData:[120,257,800,1520,2300,1221,590]
         })
     }
 
@@ -25,7 +25,7 @@ class AmountCount extends React.Component {
             this.setState({
                 selected:'pending'
             });
-            ajaxData =[1200,857,3300,720,3900,1221,590];
+            ajaxData =[120,257,800,1520,2300,1221,590];
             ep.trigger('AmountSelectionChange','Pending',ajaxData);
 
         }
@@ -34,7 +34,7 @@ class AmountCount extends React.Component {
             this.setState({
                 selected:'completed'
             });
-            ajaxData =[700,527,3700,620,4100,221,190];
+            ajaxData =[700,1527,3700,620,4100,221,190];
             ep.trigger('AmountSelectionChange','Completed',ajaxData);
             // this.setState({
             //     ajaxData:ajaxData

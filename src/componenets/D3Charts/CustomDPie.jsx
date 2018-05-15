@@ -36,6 +36,12 @@ class CustomDPie extends React.Component {
             .attr('transform','translate('+(width/2)+','+(width/2)+')');
 
         arcs.append('path')
+            .attr("d",(d)=>{
+                return arc(0)
+            })
+            .transition()
+            .delay(200)
+            .duration(1000)
             .attr('fill',(d,i)=>{
                 return color[i]
             })

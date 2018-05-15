@@ -4,10 +4,6 @@ class ProductListsItems extends React.Component {
 
 
     render() {
-        // console.log(this.props.name);
-        // console.log(this.props.qty);
-        // console.log(this.props.svgName);
-        // console.log(this.props.colorLists);
 
 
 
