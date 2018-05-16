@@ -59,6 +59,7 @@ class BarChart extends React.Component {
 
         //矩形之间的空白
         let color=this.props.colorLists;
+        let color2 =d3.schemeCategory10;
         //添加矩形元素
         let rects = svg.selectAll(".LineRect")
             .data(dataset)
@@ -72,7 +73,8 @@ class BarChart extends React.Component {
                 d3.select(this)
                     .transition()
                     .duration(500)
-                    .attr("fill","steelblue");
+                    .attr("fill","steelblue"
+                    );
             })
             .attr("class","LineRect")
             .attr("transform","translate(" + self.padding.left + "," + self.padding.top + ")")
@@ -98,7 +100,9 @@ class BarChart extends React.Component {
                 // console.log(this.padding.top);
                 return self.height - self.padding.top - self.padding.bottom - yScale(d);
             })
-            .attr('fill',"steelblue");
+            .attr('fill',(d,i)=>{
+                return color2[i];
+            });
 
 
         //添加x轴
@@ -133,14 +137,29 @@ class BarChart extends React.Component {
             .range([self.height - self.padding.top - self.padding.bottom, 0]);
         //添加一个 SVG 画布
         let svg = d3.select('#svg-box-bar');
+        let color2 =d3.schemeCategory10;
 
-       let updateRect =svg.selectAll('rect').data(dataset);
+       let updateRect =svg.selectAll('rect').data(dataset).on('mousemove',function (d,i) {
+            d3.select(this)
+                .attr("fill","yellow");
+        })
+            .on('mouseout',function (d,i) {
+                d3.select(this)
+                    .transition()
+                    .duration(500)
+                    .attr("fill",(d,i)=>{
+                        return color2[i]
+                    });
+            });
 
        let enterRect = updateRect.enter();
 
        let exitRect = updateRect.exit();
 
-       updateRect.attr('fill','steelblue')
+       updateRect.attr('fill',(d,i)=>{
+           return color2[i]
+       })
+
            .attr('x',(d,i)=>{
                return xScale(i) + self.rectPadding/2;
            })
@@ -162,6 +181,7 @@ class BarChart extends React.Component {
            .attr("height", function(d){
                return self.height - self.padding.top - self.padding.bottom - yScale(d);
            })
+
     }
     render() {
         return (

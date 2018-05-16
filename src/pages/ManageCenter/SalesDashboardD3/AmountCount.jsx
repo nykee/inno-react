@@ -52,7 +52,7 @@ class AmountCount extends React.Component {
 
 
         render() {
-        let colorLists =['#B29EFF','#1CA8DD','#007AE1','#B29EFF','#1CA8DD','#007AE1','#B29EFF',]
+        let colorLists =['#B29EFF','#1CA8DD','#007AE1','#B29EFF','#1CA8DD','#007AE1','#B29EFF','#1CA8DD','#007AE1','#B29EFF'];
 
         return (
             <div>
