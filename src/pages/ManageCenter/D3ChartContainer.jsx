@@ -24,19 +24,35 @@ class D3ChartContainer extends React.Component {
 
                 <div id="D3-Chart">
                     <Row>
-                        <Col span={12}>
+                        <Col xs={{span:24}}
+                             sm={{span:24}}
+                             md={{span:12}}
+                             lg={{span:12}}
+                             xl={{span:12}}>
                             <D3BarChart/>
                         </Col>
-                        <Col span={12}>
+                        <Col xs={{span:24}}
+                             sm={{span:24}}
+                             md={{span:12}}
+                             lg={{span:12}}
+                             xl={{span:12}}>
                             <D3PieChart/>
                         </Col>
 
                     </Row>
                     <Row>
-                        <Col span={12}>
+                        <Col xs={{span:24}}
+                             sm={{span:24}}
+                             md={{span:12}}
+                             lg={{span:12}}
+                             xl={{span:12}}>
                             <D3ForceChart/>
                         </Col>
-                        <Col span={12}>
+                        <Col xs={{span:24}}
+                             sm={{span:24}}
+                             md={{span:12}}
+                             lg={{span:12}}
+                             xl={{span:12}}>
                             <D3TreeChart/>
                         </Col>
 

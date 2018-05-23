@@ -48,26 +48,26 @@ componentDidMount(){
         return (
             <div style={{color:'#fff',paddingLeft:'0.5rem'}} id="Dash">
                 <Row gutter={2}>
-                    <Col span={17}>
+                    <Col xxl={{span:17}} lg={{span:17}}  md={{span:24}} sm={{span:24}} xs={{span:24}}>
                         <MonthlySummary/>
                     </Col>
-                    <Col span={7}>
+                    <Col xxl={{span:7}} lg={{span:7}}  md={{span:24}} sm={{span:24}} xs={{span:24}}>
                         <PercentCount/>
                     </Col>
                 </Row>
                 <Row gutter={2} style={{marginTop:'.8rem'}}>
-                    <Col span={17}>
+                    <Col xxl={{span:17}} lg={{span:17}}  md={{span:24}} sm={{span:24}} xs={{span:24}}>
                         <OrderLists/>
                     </Col>
-                    <Col span={7}>
+                    <Col xxl={{span:7}} lg={{span:7}}  md={{span:24}} sm={{span:24}} xs={{span:24}}>
                         <AmountCount/>
                     </Col>
                 </Row>
                 <Row gutter={2} style={{marginTop:'.8rem'}}>
-                    <Col span={17}>
+                    <Col xxl={{span:17}} lg={{span:17}}  md={{span:24}} sm={{span:24}} xs={{span:24}}>
                         <ProductLists/>
                     </Col>
-                    <Col span={7}>
+                    <Col xxl={{span:7}} lg={{span:7}}  md={{span:24}} sm={{span:24}} xs={{span:24}}>
                         <SellersCount/>
                     </Col>
                 </Row>

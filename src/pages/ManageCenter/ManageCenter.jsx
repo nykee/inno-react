@@ -77,7 +77,7 @@ class ManageCenter extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col   xs={{span:3}} lg={{span:3}}>
+                    <Col   xs={{span:24}} sm={{span:3}} md={{span:3}} lg={{span:3}}>
                         <Menu
                             mode="inline"
                             openKeys={this.state.openKeys}
@@ -96,7 +96,7 @@ class ManageCenter extends React.Component {
                             </SubMenu>
                         </Menu>
                     </Col>
-                    <Col xs={{span:21}} lg={{span:21}} style={{height:'1050px'}} className={(this.state.current ==="3"||this.state.current ==="4"||this.state.current ==="5")?'blackBG':''}>
+                    <Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className={(this.state.current ==="3"||this.state.current ==="4"||this.state.current ==="5")?'blackBG':''}>
                             <div>
                                 <Header title={title} selected={this.state.current}/>
                                 {(this.state.current ==="3"||this.state.current ==="4")?'':''}

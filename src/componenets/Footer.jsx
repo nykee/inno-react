@@ -47,7 +47,9 @@ class Footer extends React.Component {
                             <li>上海XXXX科技有限公司</li>
                             <li>Copyright © 2012-2017 Shanghai XY Medical Inc. All Rights Reserved</li>
                         </ul></Col>
-                    <Col  span={3} offset={13}><img src={innoLogo} alt=""/></Col>
+                    <Col  span={3} offset={13}>
+                        <img src={innoLogo} alt="" style={{height:'3.5rem',width:'3.5rem'}}/>
+                    </Col>
                 </Row>
             </div>
 

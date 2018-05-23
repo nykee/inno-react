@@ -19,18 +19,34 @@ class HChartContainer extends React.Component {
         return (
             <div id="H-Chart">
                 <Row>
-                    <Col span={12} >
+                    <Col xs={{span:24}}
+                             sm={{span:24}}
+                             md={{span:12}}
+                             lg={{span:12}}
+                             xl={{span:12}} >
                         <HBarchart />
                     </Col>
-                    <Col span={12}>
+                    <Col xs={{span:24}}
+                             sm={{span:24}}
+                             md={{span:12}}
+                             lg={{span:12}}
+                             xl={{span:12}}>
                         <HDpiechart/>
                     </Col>
                 </Row>
                 <Row>
-                    <Col span={12}>
+                    <Col xs={{span:24}}
+                             sm={{span:24}}
+                             md={{span:12}}
+                             lg={{span:12}}
+                             xl={{span:12}}>
                         <HPiechart/>
                     </Col>
-                    <Col span={12}>
+                    <Col xs={{span:24}}
+                             sm={{span:24}}
+                             md={{span:12}}
+                             lg={{span:12}}
+                             xl={{span:12}}>
                         <HLinechart/>
                     </Col>
                 </Row>

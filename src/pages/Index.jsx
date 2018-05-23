@@ -99,8 +99,16 @@ class Index extends React.Component {
                 </Row>
                 <Row type="flex" justify="center"  style={{backgroundColor:'#00c1de',padding:"1rem 1rem"}} >
                     {/*ButtonCol*/}
-                    <Col span={3}><Link to="/multicenter"><CustomButton content="查看XY多中心"></CustomButton></Link></Col>
-                    <Col span={2}><Link to="/login"><CustomButton content="立刻登录"></CustomButton></Link></Col>
+                    <Col     xs={{span:12}}
+                             sm={{span:12}}
+                             md={{span:12}}
+                             lg={{span:3}}
+                             xl={{span:3}}><Link to="/multicenter"><CustomButton content="查看XY多中心"></CustomButton></Link></Col>
+                    <Col     xs={{span:12}}
+                             sm={{span:12}}
+                             md={{span:12}}
+                             lg={{span:3}}
+                             xl={{span:3}}><Link to="/login"><CustomButton content="立刻登录"></CustomButton></Link></Col>
                 </Row>
 
             </div>
