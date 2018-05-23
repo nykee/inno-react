@@ -1,6 +1,6 @@
 import React from 'react';
-import echarts from 'echarts';
-import  'echarts/chart/bar';
+// import echarts from 'echarts';
+// import  'echarts/chart/bar';
 import ep from '../../utils/eventProxy'
 class BarChart extends React.Component {
     constructor() {
@@ -24,6 +24,8 @@ class BarChart extends React.Component {
 
     componentDidMount() {
 
+        var echarts = require('echarts/echarts');
+        require('echarts/chart/bar');
 
         // console.log(this.props.ajaxData);
         let defaultOption ={

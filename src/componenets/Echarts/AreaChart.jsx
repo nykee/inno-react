@@ -1,6 +1,8 @@
 import React from 'react';
-import echarts from "echarts";
-import  'echarts/chart/line';
+// import echarts from "echarts";
+// let echarts =require('echarts/build/echarts-all');
+// import  'echarts/chart/line';
+// require('echarts/chart/line');
 
 class AreaChart extends React.Component {
     constructor() {
@@ -9,6 +11,8 @@ class AreaChart extends React.Component {
     }
 
     componentDidMount() {
+        var echarts = require('echarts/echarts');
+        require('echarts/chart/line');
         let defaultOption = {
             title : {
                 text: '某楼盘销售情况',

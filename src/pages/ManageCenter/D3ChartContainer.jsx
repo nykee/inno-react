@@ -6,6 +6,7 @@ import D3ForceChart from '../../componenets/D3Charts/ForceChart'
 import D3TreeChart from '../../componenets/D3Charts/TreeChart'
 import D3PackChart from '../../componenets/D3Charts/PackChart'
 import D3MapChart from '../../componenets/D3Charts/MapChart'
+import D3ScatterChart from '../../componenets/D3Charts/ScatterChart'
 
 class D3ChartContainer extends React.Component {
     constructor() {
@@ -40,6 +41,11 @@ class D3ChartContainer extends React.Component {
                         </Col>
 
 
+                    </Row>
+                    <Row>
+                        <Col>
+                            <D3ScatterChart/>
+                        </Col>
                     </Row>
                 </div>
 
