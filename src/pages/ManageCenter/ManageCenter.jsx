@@ -83,7 +83,7 @@ class ManageCenter extends React.Component {
                             openKeys={this.state.openKeys}
                             onOpenChange={this.onOpenChange}
                             selectedKeys={[this.state.current]}
-                            style={{ height:900 ,marginRight:0}}
+                            style={{ marginRight:0}}
                             onClick={this.handleClick}
 
                         >

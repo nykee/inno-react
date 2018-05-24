@@ -2,7 +2,7 @@ import React from 'react';
 import {Row,Col} from 'antd'
 
 import ProductListsItems from './ProductListsItems'
-import PieChart from '../../../componenets/Echarts/PieChart'
+
 
 class ProductLists extends React.Component {
 
@@ -63,11 +63,12 @@ class ProductLists extends React.Component {
         };
         var radius = [40, 55];
 
-        let chartOption= {
+
+        let htcOption ={
             series : [
                 {
                     type : 'pie',
-                    center : ['10%', '50%'],
+                    center : ['50%', '50%'],
                     radius : radius,
                     x: '0%', // for funnel
                     // itemStyle : labelFromatter,
@@ -76,9 +77,14 @@ class ProductLists extends React.Component {
                         {name:'HTC', value:450,itemStyle : labelTop}
                     ]
                 },
+
+            ]
+        };
+        let nokiaOption={
+            series : [
                 {
                     type : 'pie',
-                    center : ['30%', '50%'],
+                    center : ['50%', '50%'],
                     radius : radius,
                     x:'20%', // for funnel
                     // itemStyle : labelFromatter,
@@ -101,7 +107,12 @@ class ProductLists extends React.Component {
                                 }
                             }}
                     ]
-                },
+                }
+
+            ]
+        };
+        let lgOption={
+            series : [
                 {
                     type : 'pie',
                     center : ['50%', '50%'],
@@ -128,9 +139,14 @@ class ProductLists extends React.Component {
                             }}
                     ]
                 },
+
+            ]
+        };
+        let samsungOption={
+            series : [
                 {
                     type : 'pie',
-                    center : ['70%', '50%'],
+                    center : ['50%', '50%'],
                     radius : radius,
                     x:'60%', // for funnel
                     // itemStyle : labelFromatter,
@@ -154,9 +170,14 @@ class ProductLists extends React.Component {
                             }}
                     ]
                 },
+
+            ]
+        };
+        let appleOption={
+            series : [
                 {
                     type : 'pie',
-                    center : ['90%', '50%'],
+                    center : ['50%', '50%'],
                     radius : radius,
                     x:'80%', // for funnel
                     // itemStyle : labelFromatter,
@@ -187,24 +208,45 @@ class ProductLists extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col span={4} >
-                        <ProductListsItems name="HTC" qty="450"/>
+                    <Col xs={{span:24}}
+                        sm={{span:24}}
+                         md={{span:24}}
+                        lg={{span:4}}
+                        xl={{span:4}}
+                    >
+                        <ProductListsItems name="HTC" qty="450" chartOption={htcOption} charID="HTC"/>
                     </Col>
-                    <Col span={4} offset={1} >
-                        <ProductListsItems name="Nokia" qty="657"/>
+                    <Col xs={{span:24}}
+                        sm={{span:24}}
+                         md={{span:24}}
+                        lg={{span:4,offset:1}}
+                        xl={{span:4,offset:1}} >
+                        <ProductListsItems name="Nokia" qty="657" chartOption={nokiaOption} charID="Nokia"/>
                     </Col>
-                    <Col span={4} offset={1} >
-                        <ProductListsItems name="LG" qty="1200"/>
+                    <Col xs={{span:24}}
+                        sm={{span:24}}
+                         md={{span:24}}
+                        lg={{span:4,offset:1}}
+                        xl={{span:4,offset:1}} >
+                        <ProductListsItems name="LG" qty="1200" chartOption={lgOption} charID="LG"/>
                     </Col>
-                    <Col span={4} offset={1} >
-                        <ProductListsItems name="Samsung" qty="1800"/>
+                    <Col xs={{span:24}}
+                        sm={{span:24}}
+                         md={{span:24}}
+                        lg={{span:4,offset:1}}
+                        xl={{span:4,offset:1}} >
+                        <ProductListsItems name="Samsung" qty="1800" chartOption={samsungOption} charID="Samsung"/>
                     </Col>
-                    <Col span={4} offset={1} >
-                        <ProductListsItems name="Apple" qty="2400"/>
+                    <Col xs={{span:24}}
+                        sm={{span:24}}
+                         md={{span:24}}
+                        lg={{span:4,offset:1}}
+                        xl={{span:4,offset:1}}>
+                        <ProductListsItems name="Apple" qty="2400" chartOption={appleOption} charID="Apple"/>
                     </Col>
                 </Row>
                 <Row>
-                    <PieChart chartOption={chartOption} />
+                    {/*<PieChart chartOption={chartOption} />*/}
                 </Row>
             </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row,Col} from 'antd'
 import '../../style/SaleDashboard/Header.css'
+import screenfull from 'screenfull'
 
 class Header extends React.Component {
     constructor() {
@@ -8,6 +9,10 @@ class Header extends React.Component {
         this.state = {
             iconclass:''
         };
+    }
+    componentDidMount(){
+
+
     }
     componentWillReceiveProps(nextProps){
         // console.log("nextProps。。。");
@@ -61,25 +66,33 @@ class Header extends React.Component {
         }
     }
 
+    fullScreen(){
+        if(screenfull.enabled){
+            screenfull.request();
+        }
+    }
+
 
     render() {
         return (
             <Row className={(this.props.selected ==="3"||this.props.selected ==="4"||this.props.selected ==="5")?'blackHeader':'normalHeader'}>
-                <Col xs={{span:7}}
-                     sm={{span:7}}
-                     md={{span:7}}
+                <Col xs={{span:6}}
+                     sm={{span:6}}
+                     md={{span:6}}
                      lg={{span:6}}
-                     xl={{span:4}}>
+                     xl={{span:6}}>
                     <span className="title-header">
                         {this.props.title}
                     </span>
                 </Col>
-                <Col xs={{span:5,offset :12}}
-                     sm={{span:5,offset :12}}
-                     md={{span:3,offset :14}}
-                     lg={{span:3,offset :15}}
-                     xl={{span:3,offset:17}}
+
+                <Col xs={{span:5,offset :13}}
+                     sm={{span:5,offset :13}}
+                     md={{span:5,offset :13}}
+                     lg={{span:5,offset :13}}
+                     xl={{span:5,offset :13}}
                      style={{textAlign:'right'}}>
+                    <i className="fa fa-expand fa-2x" style={{paddingRight:'.3rem',marginRight:'.6rem'}}  onClick={this.fullScreen.bind(this)} />
                     <i className={this.state.iconclass} style={{paddingRight:'.3rem'}}/>
                 </Col>
             </Row>

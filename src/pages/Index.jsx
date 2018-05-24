@@ -60,7 +60,7 @@ class Index extends React.Component {
                 <Row>
                     云计算、云存储、神经网络介绍
                 </Row>
-                <Row>
+                <Row style={{marginTop:'.6rem'}}>
                     {/*服务介绍*/}
                     <Col  span={10} offset={7} style={{fontSize:'1.2rem',fontWeight:'bold',lineHeight:'1.3rem'}}>精确定位，发散市场，XY云能为各种类型的市场提供服务</Col>
                     <Row>
@@ -90,10 +90,14 @@ class Index extends React.Component {
 
                 </Row>
 
-                <Row style={{backgroundColor:'#F2F3F3'}}>
+                <Row style={{backgroundColor:'#F2F3F3',marginTop:'.6rem'}}>
                     {/*mapChart*/}
-                    <Col span={6} offset={9}><h3>XY云分布全国的骨科中心--数据更可靠</h3></Col>
-                    <Col span={14} offset={5}><MapChartIndex></MapChartIndex></Col>
+                    <Col span={6} offset={9}>
+                        <h3>XY云分布全国的骨科中心--数据更可靠</h3>
+                    </Col>
+                    <Col span={14} offset={5}>
+                        <MapChartIndex/>
+                    </Col>
 
 
                 </Row>
