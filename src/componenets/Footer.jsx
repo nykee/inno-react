@@ -44,8 +44,8 @@ class Footer extends React.Component {
                          xl={{span:8}}>
                         <ul>
                             <li style={{fontWeight:'bold',fontSize:'1.0rem'}}>联系我们</li>
-                            <li>地址：上海市XXXXXXX高科技园
-                                XX公路XX18号X栋X室</li>
+                            <li>地址：上海市XXXXXXXX科技园
+                                XXX路XXX号X栋X室</li>
                             <li>电话：021-XXXXXX XXXXXY</li>
                             <li>传真：021-XXX1111</li>
                             <li>E-mail：info@XXXXX.com</li>
