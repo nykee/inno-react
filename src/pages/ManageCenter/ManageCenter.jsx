@@ -55,11 +55,11 @@ class ManageCenter extends React.Component {
         let title,
             chartContainer;
         if(this.state.current === '1'){
-            title ="数据图表分析-D3";
+            title ="数据图表示例-D3";
             chartContainer =<D3ChartContainer/>
         }
         else if(this.state.current === '2'){
-            title ="数据图表分析-Highcharts";
+            title ="数据图表示例-Highcharts";
             chartContainer = <HChartContainer/>
         }
         else if(this.state.current === '3'){

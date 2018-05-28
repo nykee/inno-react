@@ -1,6 +1,7 @@
 import React from 'react';
 import echarts from 'echarts'
 import 'echarts/chart/map'
+import ep from '../../utils/eventProxy'
 
 class MapChartMcenter extends React.Component {
     componentDidMount(){
@@ -253,12 +254,28 @@ class MapChartMcenter extends React.Component {
                 }
             ]
 
+        });
+        myChart.on('hover',(o)=>{
+            // console.log(o);
+            if(o.name ==="广州"){
+                // console.log("广州");
+                ep.trigger('makePointHover','GZ')
+            }
+            else if(o.name ==="上海"){
+                ep.trigger('makePointHover','SH')
+
+            }else if(o.name ==="北京"){
+                ep.trigger('makePointHover','BJ')
+            }
+            else {
+                ep.trigger('makePointHover','OTHERS');
+            }
         })
     }
 
     render() {
         return (
-            <div id="mapChart" style={{height:600}}></div>
+            <div id="mapChart" style={{height:600}}/>
 
         )
     }

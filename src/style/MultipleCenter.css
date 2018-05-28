@@ -1,0 +1,28 @@
+.centerListsTitle{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #027bbb;
+    text-align: left;
+}
+.centerListsItems{
+    text-align: left;
+}
+.centerListsItems-img{
+    width: 3.125rem;
+    height: 3.125rem;
+    vertical-align: middle;
+}
+.centerListsItems-text{
+    color:#000;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 2%;
+}
+.border1{
+    border:2px dotted #000;
+}
+.border2 { border:2px dotted #003156;}
+.borderNormal{
+    border: 2px solid transparent;
+}
