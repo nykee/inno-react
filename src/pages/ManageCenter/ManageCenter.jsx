@@ -8,6 +8,7 @@ import D3ChartContainer from './D3ChartContainer'
 import HChartContainer from './HChartContainer'
 import SalesDashboard from './SalesDashboard/SalesDashboard'
 import SalesDashboardD3 from './SalesDashboardD3/SalesDashboardD3'
+import SalesDashboardRe from './SalesDashboardRechart/SalesDashboardRechart'
 import Header from './Header'
 
 import '../../style/ManageCenter.css'
@@ -73,6 +74,10 @@ class ManageCenter extends React.Component {
             title ="销售业务监控-DashBoard-D3";
             chartContainer =<SalesDashboardD3/>
         }
+        else if(this.state.current === '6'){
+            title ="销售业务监控-DashBoard-Rechart";
+            chartContainer =<SalesDashboardRe/>
+        }
 
         return (
             <div>
@@ -93,10 +98,11 @@ class ManageCenter extends React.Component {
                                 <Menu.Item key="3">客户端连接监控DashBoard</Menu.Item>
                                 <Menu.Item key="4">echarts-销售业务监控DashBoard</Menu.Item>
                                 <Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>
+                                <Menu.Item key="6">Rechart-销售业务监控DashBoard</Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Col>
-                    <Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className={(this.state.current ==="3"||this.state.current ==="4"||this.state.current ==="5")?'blackBG':''}>
+                    <Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className={(this.state.current ==="3"||this.state.current ==="4"||this.state.current ==="5"||this.state.current ==="6")?'blackBG':''}>
                             <div>
                                 <Header title={title} selected={this.state.current}/>
                                 {(this.state.current ==="3"||this.state.current ==="4")?'':''}

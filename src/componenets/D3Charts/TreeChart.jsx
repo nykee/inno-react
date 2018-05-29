@@ -90,17 +90,17 @@ class TreeChart extends React.Component {
             "                ]\n" +
             "        }";
         var root = JSON.parse(CityTreedata);
-        console.log(root);
+        // console.log(root);
         let nodes = d3.hierarchy(root);
-        console.log(nodes);
+        // console.log(nodes);
         let haveDeal = tree(nodes);
-        console.log(haveDeal);
+        // console.log(haveDeal);
 
         /**
          * 所有节点
          * */
         let lastAfterEdit = haveDeal.descendants();
-        console.log("lastAfterEdit:",lastAfterEdit);
+        // console.log("lastAfterEdit:",lastAfterEdit);
 
         /**
          * 所有连线

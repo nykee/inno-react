@@ -4,7 +4,7 @@ import PieChart from '../../../componenets/Echarts/PieChart'
 
 class ProductListsItems extends React.Component {
     componentDidMount(){
-        console.log(this.props.chartOption);
+        // console.log(this.props.chartOption);
     }
 
     render() {
