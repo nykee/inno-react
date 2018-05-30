@@ -2,7 +2,7 @@ import React from 'react';
 // import BarChart from '../../../componenets/D3Charts/BarChart'
 import {Row,Col} from 'antd'
 import ep from "../../../utils/eventProxy";
-import {BarChart,Bar, XAxis, YAxis,  Tooltip} from 'recharts'
+import {BarChart, Bar, XAxis, YAxis, Tooltip,Cell} from 'recharts';
 
 class AmountCount extends React.Component {
     constructor() {
@@ -96,11 +96,23 @@ class AmountCount extends React.Component {
                 </Row>
 
                 <BarChart width={300} height={300} data={this.state.sData}
-                          margin={{top: 5, right: 5, left: 5, bottom: 5}}>
-                    <XAxis dataKey="name"/>
-                    <YAxis/>
+                          margin={{top: 10, right: 5, left: 5, bottom: 5}}>
+                    <XAxis dataKey="name" tickLine={false} axisLine={false}/>
+                    <YAxis tickLine={false} axisLine={false} tickFormatter={(v)=>{
+                        console.log(v);
+                        if(v/1000>0){v = parseInt(v/1000)+'K'}
+                        return '¥ '+v
+                    }}/>
                     <Tooltip/>
-                    <Bar dataKey="value" fill="#8884d8" />
+                    <Bar style={{cursor:'pointer'}} dataKey="value"   >
+                        {this.state.sData.map((entry,i)=>{
+                            // console.log(this.state.sData);
+                            console.log(colorLists);
+                            console.log(i);
+                            console.log(colorLists[i]);
+                            return<Cell  key={'cell'+i} stroke={colorLists[i]}  fill={colorLists[i]}/>
+                        })}
+                    </Bar>
                 </BarChart>
             </div>
 

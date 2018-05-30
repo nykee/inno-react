@@ -84,7 +84,7 @@ class SellersCount extends React.Component {
                                 <YAxis />
                                 {/*<Tooltip/>
                     <Legend />*/}
-                                <CartesianGrid vertical={false} horizontal={true} />
+                                <CartesianGrid vertical={false} horizontal={true}  strokeWidth={1}/>
                                 {/*<CartesianAxis/>*/}
                                 <Line type="linear" dataKey="val" stroke="#0D76DF" dot={false} strokeWidth={4}/>
                                 {/*<Line type="monotone" dataKey="uv" stroke="#82ca9d" />*/}

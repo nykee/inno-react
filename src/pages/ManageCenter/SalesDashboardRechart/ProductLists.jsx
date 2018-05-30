@@ -2,6 +2,7 @@ import React from 'react';
 import ProductListsItems from "./ProductListsItems";
 
 import {Col, Row} from "antd";
+import CommonTitle from "../SalesDashboard/CommonTitle";
 
 class ProductLists extends React.Component {
 
@@ -18,6 +19,7 @@ class ProductLists extends React.Component {
         return (
             <div>
                 <Row>
+                    <CommonTitle titleName="Monthly Summary"/>
                     {
                         productItems.map((pitem)=>{
                             // console.log(pitem.data);

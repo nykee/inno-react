@@ -75,7 +75,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <Row className={(this.props.selected ==="3"||this.props.selected ==="4"||this.props.selected ==="5")?'blackHeader':'normalHeader'}>
+            <Row className={(this.props.selected ==="3"||this.props.selected ==="4"||this.props.selected ==="5"||this.props.selected ==="6")?'blackHeader':'normalHeader'}>
                 <Col xs={{span:6}}
                      sm={{span:6}}
                      md={{span:6}}
