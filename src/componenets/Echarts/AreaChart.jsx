@@ -7,7 +7,18 @@ import React from 'react';
 class AreaChart extends React.Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {
+            height:300
+        };
+    }
+    componentWillMount(){
+        console.log(this.props.chartHeight);
+        // this.setState()
+        if(this.props.chartHeight){
+            this.setState({
+                height:this.props.chartHeight
+            })
+        }
     }
 
     componentDidMount() {
@@ -92,7 +103,7 @@ class AreaChart extends React.Component {
 
     render() {
         return (
-            <div id="Area-E" style={{width:'100%',height:300}}>
+            <div id="Area-E" style={{width:'100%',height:this.state.height}}>
             </div>
 
         )

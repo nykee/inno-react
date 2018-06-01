@@ -9,6 +9,7 @@ import HChartContainer from './HChartContainer'
 import SalesDashboard from './SalesDashboard/SalesDashboard'
 import SalesDashboardD3 from './SalesDashboardD3/SalesDashboardD3'
 import SalesDashboardRe from './SalesDashboardRechart/SalesDashboardRechart'
+import ServerDashboard from './ServerDashboard/ServerDashboard'
 import Header from './Header'
 
 import '../../style/ManageCenter.css'
@@ -64,7 +65,8 @@ class ManageCenter extends React.Component {
             chartContainer = <HChartContainer/>
         }
         else if(this.state.current === '3'){
-            title ="客户端连接监控-DashBoard"
+            title ="echarts-服务端监控DashBoard"
+            chartContainer =<ServerDashboard/>
         }
         else if(this.state.current === '4'){
             title ="销售业务监控-DashBoard-echarts";
@@ -78,6 +80,7 @@ class ManageCenter extends React.Component {
             title ="销售业务监控-DashBoard-Rechart";
             chartContainer =<SalesDashboardRe/>
         }
+
 
         return (
             <div>
@@ -95,7 +98,7 @@ class ManageCenter extends React.Component {
                             <SubMenu key="sub1" title={<span><Icon type="mail" /><span>运动学图表分析</span></span>}>
                                 <Menu.Item key="1" >D3.js图表</Menu.Item>
                                 <Menu.Item key="2">HighChart图表</Menu.Item>
-                                <Menu.Item key="3">客户端连接监控DashBoard</Menu.Item>
+                                <Menu.Item key="3">echarts-服务端监控DashBoard</Menu.Item>
                                 <Menu.Item key="4">echarts-销售业务监控DashBoard</Menu.Item>
                                 <Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>
                                 <Menu.Item key="6">Rechart-销售业务监控DashBoard</Menu.Item>

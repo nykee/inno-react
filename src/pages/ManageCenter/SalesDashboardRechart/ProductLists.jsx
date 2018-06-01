@@ -19,7 +19,7 @@ class ProductLists extends React.Component {
         return (
             <div>
                 <Row>
-                    <CommonTitle titleName="Monthly Summary"/>
+                    <CommonTitle titleName="Products"/>
                     {
                         productItems.map((pitem)=>{
                             // console.log(pitem.data);

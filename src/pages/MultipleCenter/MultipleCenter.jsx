@@ -93,7 +93,7 @@ class MultipleCenter extends React.Component {
             {name:'广州军区总医院',value:'GZJQ'},
             {name:'华南理工大学',value:'HNLG'},
             {name:'香港威尔士亲王医院',value:'XGZW'},
-        ]
+        ];
         let options =[];
         for (let ops of hospLists) {
             options.push(

@@ -81,7 +81,7 @@ class SellersCount extends React.Component {
                             <LineChart  data={this.state.chartData}
                                         margin={{top: 5, right: 5, left: 5, bottom: 5}}>
                                 <XAxis dataKey={[]} tickLine={false}/>
-                                <YAxis />
+                                <YAxis  />
                                 {/*<Tooltip/>
                     <Legend />*/}
                                 <CartesianGrid vertical={false} horizontal={true}  strokeWidth={1}/>
