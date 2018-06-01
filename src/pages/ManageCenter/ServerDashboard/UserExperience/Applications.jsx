@@ -3,6 +3,7 @@ import CommonHeader from "../CommonHeader";
 import {Col, Row} from "antd";
 import CustomLegend from "../CustomLegend";
 import AreaChart from "../../../../componenets/Echarts/AreaChart";
+let  Mock = require('mockjs');
 
 class Applications extends React.Component {
     constructor() {
