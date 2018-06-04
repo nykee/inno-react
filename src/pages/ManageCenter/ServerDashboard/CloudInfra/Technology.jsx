@@ -19,7 +19,7 @@ class Technology extends React.Component {
     render() {
         return (
             <div className="box-container" style={{height:'8.125rem'}}>
-                <CommonHeader title="TECHNOLOGIES"/>
+                <CommonHeader title="TECHNOLOGIES" titleSpan={20} lineSpan={4}/>
                 <Row className="box-body">
                     <Col span={12}><img src={T} alt=""/></Col>
                     <Col span={12}><img src={L} alt=""/></Col>

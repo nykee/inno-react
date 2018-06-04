@@ -14,7 +14,7 @@ class Applications extends React.Component {
     render() {
         return (
             <div className="box-container" style={{height:'8.125rem'}}>
-                <CommonHeader title="APPLICATIONS"/>
+                <CommonHeader title="APPLICATIONS" titleSpan={12} lineSpan={12}/>
                 <Row className="box-body">
                     <Col span={14} style={{textAlign:'center',height:'6rem',lineHeight:'6rem'}}>
                         <span style={{fontSize:'0.8rem'}}>All fine</span>

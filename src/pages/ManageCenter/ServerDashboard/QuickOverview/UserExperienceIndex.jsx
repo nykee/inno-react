@@ -278,19 +278,23 @@ class UserExperienceIndex extends React.Component {
     render() {
         return (
             <div className="box-container" style={{marginBottom:'.5rem'}}>
-                <CommonHeader title="USER EXPERIENCE INDEX"/>
+                <CommonHeader title="USER EXPERIENCE INDEX" titleSpan={14} lineSpan={10}/>
                 <Row className="box-body">
                     <Col span={24}>
-                        <Select defaultValue="SH" width="100%"  onChange={this.handleChange.bind(this)}>
+                        <Select defaultValue="SH"
+                                style={{width:'90%'}}
+                                onChange={this.handleChange.bind(this)}
+                               >
                             <Option value="SH">上海</Option>
                             <Option value="BJ">北京</Option>
                             <Option value="GZ">广州</Option>
                         </Select>
                     </Col>
+                    <div>
+                        <div id="UEI-map" style={{height:'16rem'}}/>
+                    </div>
                 </Row>
-                <div>
-                    <div id="UEI-map" style={{height:'16rem'}}/>
-                </div>
+
             </div>
 
         )

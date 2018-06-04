@@ -15,7 +15,7 @@ class VMware extends React.Component {
     render() {
         return (
             <div className="box-container">
-                <CommonHeader title="VMware | 2 vCenters"/>
+                <CommonHeader title="VMware | 2 vCenters" titleSpan={12} lineSpan={12}/>
                 <Row className="box-body">
                     <Row>
                         <Col span={6} className="border-right-dotted">
@@ -62,7 +62,7 @@ class VMware extends React.Component {
                             </ul>
                         </Col>
                     </Row>
-                    <Row style={{marginTop:'1.2rem',marginBottom:'1.4rem'}}>
+                    <Row style={{marginTop:'0.3rem'}}>
                         <Col span={14 } offset={10}>
                             <span style={{color:'#0CC1FB',cursor:'pointer'}}>Start VMware monitoring</span>
                         </Col>

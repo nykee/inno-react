@@ -5,7 +5,7 @@ import CustomLegend from "../CustomLegend";
 import AreaChart from "../../../../componenets/Echarts/AreaChart";
 let  Mock = require('mockjs');
 
-class Applications extends React.Component {
+class ThirdParty extends React.Component {
     constructor() {
         super();
         this.state = {};
@@ -16,18 +16,12 @@ class Applications extends React.Component {
     }
 
     render() {
-        let legends=[
-            {color:'#0CBFF8',name:'community.ru.com',value:4.5},
-            {color:'#A17171',name:'www.ru.com',value:4},
-            {color:'#3165CD',name:'support.ru.com',value:1},
-        ];
         let dataFake_1 =[];
         for(let i =0;i<4;i++){
             dataFake_1.push(Mock.mock(
                 {"number|60-70":70}
             ).number);
         }
-
         let chartOption={
             backgroundColor:'#303030',
             tooltip : {
@@ -114,22 +108,29 @@ class Applications extends React.Component {
 
             ]
         };
+        let legends=[
+            {color:'#0CBFF8',name:'wista',value:12.5},
+            {color:'#A17171',name:'google.com',value:9.75},
+            {color:'#3165CD',name:'typekit.com',value:4.25},
+        ];
         return (
             <div className="box-container">
-                <CommonHeader title="APPLICATIONS | 3 MOST ACTIVE" titleSpan={18} lineSpan={6}/>
+                <CommonHeader title="3RD PARTY PROVIDERS | 3 MOST USED" titleSpan={22} lineSpan={2}/>
                 <Row className="box-body">
-                    <Col span={5} offset={19}>
-                        <span>Reload</span>
-                    </Col>
-                    <Col span={24}>
-                        <CustomLegend legends={legends}/>
+                    <Row>
+                        <Col span={5} offset={19}>
+                            <span>Reload</span>
+                        </Col>
+                        <Col span={24}>
+                            <CustomLegend legends={legends}/>
 
-                    </Col>
-                    <Col span={24}>
-                        <AreaChart chartOption={chartOption} chartHeight={200} chartID="APP-Area"/>
+                        </Col>
+                    </Row>
 
-                    </Col>
+                    <Row>
+                        <AreaChart chartOption={chartOption} chartHeight={200} chartID="3RD-Area"/>
 
+                    </Row>
                 </Row>
             </div>
 
@@ -137,4 +138,4 @@ class Applications extends React.Component {
     }
 }
 
-export default Applications;
+export default ThirdParty;

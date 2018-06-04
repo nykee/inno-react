@@ -15,10 +15,10 @@ class CommonHeader extends React.Component {
     render() {
         return (
             <Row className="common-header">
-                <Col span={12} >
+                <Col span={this.props.titleSpan} >
                     <span>{this.props.title}</span>
                 </Col>
-                <Col span={12}>
+                <Col span={this.props.lineSpan}>
                    <span className="under-line">
             </span>
                 </Col>

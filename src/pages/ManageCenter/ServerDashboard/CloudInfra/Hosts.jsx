@@ -15,7 +15,7 @@ class Hosts extends React.Component {
     render() {
         return (
             <div className="box-container" style={{height:'8.125rem'}}>
-                <CommonHeader title="HOSTS"/>
+                <CommonHeader title="HOSTS" titleSpan={12} lineSpan={12}/>
                 <Row className="box-body">
                     <Col span={14} style={{textAlign:'center',height:'6rem',lineHeight:'6rem'}}>
                         <span style={{fontSize:'0.8rem'}}>All fine</span>

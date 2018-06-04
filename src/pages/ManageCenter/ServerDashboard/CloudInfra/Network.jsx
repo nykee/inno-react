@@ -111,23 +111,23 @@ class Network extends React.Component {
 
         return (
             <div className="box-container">
-                <CommonHeader title="NETWORK"/>
+                <CommonHeader title="NETWORK" titleSpan={12} lineSpan={12}/>
                 <Row className="box-body">
-                    <Row>
+                    <Row  style={{padding:'0 .5rem'}}>
                         <Col span={10} className="text-align-left"><span className="param-items-name text-align-left">Traffic</span></Col>
                         <Col span={8} offset={6} className="text-align-right">
                             <span className="param-items-value">974</span>
                             <span className="param-items-unit">kbit/s</span>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row style={{padding:'0 .5rem'}}>
                         <Col span={10} className="text-align-left"><span className="param-items-name text-align-left">Retransmissions</span></Col>
                         <Col span={8} offset={6}  className="text-align-right">
                             <span className="param-items-value">0.03</span>
                             <span className="param-items-unit">%</span>
                         </Col>
                     </Row>
-                    <Row style={{borderBottom:'1px dotted #3D3D3D',paddingBottom:'.5rem'}}>
+                    <Row style={{borderBottom:'1px dotted #3D3D3D',padding:'0 .5rem .5rem .5rem'}}>
                         <Col span={10} className="text-align-left"><span className="param-items-name ">Connectivity</span></Col>
                         <Col span={8} offset={6} className="text-align-right">
                             <span className="param-items-value">67</span>
@@ -135,7 +135,7 @@ class Network extends React.Component {
                         </Col>
                     </Row>
                     <Row>
-                        <AreaChart chartOption={chartOption} chartHeight={240}/>
+                        <AreaChart chartOption={chartOption} chartHeight={200} chartID="Network-Area"/>
 
                     </Row>
 

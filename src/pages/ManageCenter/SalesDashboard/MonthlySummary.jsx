@@ -166,7 +166,7 @@ class MonthlySummary extends React.Component {
         return (
             <div>
                 <CommonTitle titleName="Monthly Summary"/>
-                <AreaChart chartOption={chartOption}/>
+                <AreaChart chartOption={chartOption} chartID="MonthlySummary"/>
             </div>
 
         )

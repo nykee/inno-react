@@ -17,7 +17,7 @@ class SmartScape extends React.Component {
 
         return (
             <div className="box-container" style={{height:'12.5rem'}}>
-                <CommonHeader title="SMARTSCAPE"/>
+                <CommonHeader title="SMARTSCAPE" titleSpan={12} lineSpan={12}/>
                 <Row className="box-body">
                     <Col span={10}>
                         <img src={imgSrc} alt=""/>

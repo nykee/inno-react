@@ -12,24 +12,20 @@ class CustomLegend extends React.Component {
     }
 
     render() {
-        let legends=[
-            {color:'#0CBFF8',name:'community.ru.com',value:4.5},
-            {color:'#A17171',name:'www.ru.com',value:4},
-            {color:'#3165CD',name:'support.ru.com',value:1},
-            ];
+        let legends=this.props.legends;
         let legendItems=[];
-        legends.map((leg)=>{
+        this.props.legends.map((leg)=>{
             legendItems.push(
                 <Row>
                     <Col span={4}>
-                        <span style={{display:'inline-block',borderBottom:'1px solid'+leg.color}}/>
+                        <span style={{display:'inline-block',borderBottom:'3px solid'+leg.color,width:'80%'}}/>
                     </Col>
-                    <Col span={8}>
+                    <Col span={8} className="gray-color">
                         <span>{leg.name}</span>
                     </Col>
                     <Col span={6} offset={6}>
                         <span>{leg.value}</span>
-                        <span>/min</span>
+                        <span className="gray-color">/min</span>
                     </Col>
                 </Row>
             )

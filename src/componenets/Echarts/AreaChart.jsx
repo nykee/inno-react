@@ -8,7 +8,8 @@ class AreaChart extends React.Component {
     constructor() {
         super();
         this.state = {
-            height:300
+            height:300,
+
         };
     }
     componentWillMount(){
@@ -86,7 +87,7 @@ class AreaChart extends React.Component {
             ]
         };
         let option = this.props.chartOption? this.props.chartOption:defaultOption;
-        let chart =echarts.init(document.getElementById("Area-E"));
+        let chart =echarts.init(document.getElementById(this.props.chartID));
         chart.setOption(option);
         // chart.on('click',(params)=>{
         //     console.log(params);
@@ -103,7 +104,7 @@ class AreaChart extends React.Component {
 
     render() {
         return (
-            <div id="Area-E" style={{width:'100%',height:this.state.height}}>
+            <div id={this.props.chartID} style={{width:'100%',height:this.state.height}}>
             </div>
 
         )

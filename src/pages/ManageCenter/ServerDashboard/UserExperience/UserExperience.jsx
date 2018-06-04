@@ -2,6 +2,7 @@ import React from 'react';
 import SectionTitle from "../SectionTitle";
 import {Col, Row} from "antd";
 import Applications from "./Applications";
+import ThirdParty from "./ThirdParty";
 
 class UserExperience extends React.Component {
     constructor() {
@@ -20,6 +21,11 @@ class UserExperience extends React.Component {
                 <Row className="items">
                     <Col span={24}>
                         <Applications/>
+                    </Col>
+                </Row>
+                <Row className="items">
+                    <Col span={24}>
+                        <ThirdParty/>
                     </Col>
                 </Row>
             </div>
