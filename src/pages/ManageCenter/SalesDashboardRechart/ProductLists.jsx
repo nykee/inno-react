@@ -25,7 +25,11 @@ class ProductLists extends React.Component {
                             // console.log(pitem.data);
                             // console.log(pitem.colorLists)
                             return(
-                                <Col span={4} offset={pitem.offset}>
+                                <Col xs={{span:24}}
+                                     sm={{span:24}}
+                                     md={{span:24}}
+                                     lg={{span:4}}
+                                     xl={{span:4}} offset={pitem.offset}>
                                     <ProductListsItems  name={pitem.name} qty={pitem.qty}  colorLists={pitem.colorLists}  data={pitem} endAngle={pitem.endAngle} startAngle={pitem.startAngle}/>
                                 </Col>
                             )
