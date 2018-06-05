@@ -22,9 +22,21 @@ class Applications extends React.Component {
             {color:'#3165CD',name:'support.ru.com',value:1},
         ];
         let dataFake_1 =[];
+        let dataFake_2 =[];
+        let dataFake_3 =[];
         for(let i =0;i<4;i++){
             dataFake_1.push(Mock.mock(
-                {"number|60-70":70}
+                {"number|2-40":40}
+            ).number);
+        }
+        for(let i =0;i<4;i++){
+            dataFake_2.push(Mock.mock(
+                {"number|10-40":40}
+            ).number);
+        }
+        for(let i =0;i<4;i++){
+            dataFake_3.push(Mock.mock(
+                {"number|20-70":70}
             ).number);
         }
 
@@ -100,16 +112,54 @@ class Applications extends React.Component {
                             {
                                 areaStyle: {
                                     type: 'default',
-                                    color:'rgba(35,106,128,.7)'
+                                    color:'rgba(42,82,95,1)'
                                 },
                                 lineStyle:{
-                                    color:'transparent'
+                                    color:'#0CBFF8'
                                 }
                             }
                     },
                     data:dataFake_1,
 
                 },
+                {
+                    name:'在途量',
+                    type:'line',
+                    symbol:'none', //去掉折线上的点标注
+                    smooth:false,
+                    itemStyle: {
+                        normal:
+                            {
+                                areaStyle: {
+                                    type: 'default',
+                                    color:'rgba(66,59,59,1)'},
+                                lineStyle:{
+                                    color:'#A17171'
+                                }
+                            }
+                    }
+                    ,
+                    data:dataFake_2
+                },
+                {
+                    name:'库存量',
+                    type:'line',
+                    symbol:'none', //去掉折线上的点标注
+                    smooth:false,
+                    itemStyle: {
+                        normal:
+                            {
+                                areaStyle: {
+                                    type: 'default',
+                                    color:'rgba(56,70,83,1)'},
+                                lineStyle:{
+                                    color:'#3165CD'
+                                }
+                            }
+                    },
+
+                    data:dataFake_3
+                }
 
 
             ]

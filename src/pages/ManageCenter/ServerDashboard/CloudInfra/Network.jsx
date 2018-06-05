@@ -97,7 +97,7 @@ class Network extends React.Component {
                                     color:'rgba(35,106,128,.7)'
                                 },
                                 lineStyle:{
-                                    color:'transparent'
+                                    color:'#0CC1FB'
                                 }
                             }
                     },

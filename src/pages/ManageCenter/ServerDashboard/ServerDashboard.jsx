@@ -19,7 +19,7 @@ class ServerDashboard extends React.Component {
 
     render() {
         return (
-            <Row style={{paddingLeft:'.8rem',color:'#fff',paddingRight:'.8rem'}} gutter={15}>
+            <Row style={{padding:'.8rem',color:'#fff',marginLeft:0,marginRight:0}} gutter={15} id="serverDash">
                 <Col
                     xs={{span:24}}
                     sm={{span:24}}

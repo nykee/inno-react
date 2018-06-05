@@ -7,7 +7,12 @@ class Database extends React.Component {
     constructor() {
         super();
         this.state = {
-            selected:'react_SSR'
+            selected:'react_SSR',
+            comment:1.67,
+            statement:1.75,
+            responsetime:0.4
+
+
         };
     }
 
@@ -19,6 +24,27 @@ class Database extends React.Component {
         this.setState({
             selected:value
         })
+        if(value ==='react_SSR'){
+            this.setState({
+                comment:1.67,
+                statement:1.75,
+                responsetime:0.4
+            })
+        }
+        else if(value ==='vue_SSR'){
+            this.setState({
+                comment:2.02,
+                statement:3.75,
+                responsetime:0.56
+            })
+        }
+        else {
+            this.setState({
+                comment:3.67,
+                statement:2.25,
+                responsetime:0.25
+            })
+        }
     }
 
     render() {
@@ -38,11 +64,11 @@ class Database extends React.Component {
                             </Select>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row style={{paddingTop:'.2rem'}}>
                         <Col span={8}>
                             <ul>
                                 <li>
-                                    <span className="perfor-number">1.67</span>
+                                    <span className="perfor-number">{this.state.comment}</span>
                                     <span className='gray-color'>k/min</span>
                                 </li>
                                 <li>
@@ -53,7 +79,7 @@ class Database extends React.Component {
                         <Col span={8}>
                             <ul>
                                 <li>
-                                    <span className="perfor-number">1.75</span>
+                                    <span className="perfor-number">{this.state.statement}</span>
                                     <span className='gray-color'>k/min</span>
                                 </li>
                                 <li>
@@ -64,7 +90,7 @@ class Database extends React.Component {
                         <Col span={8}>
                             <ul>
                                 <li>
-                                    <span  className="perfor-number">0.4</span>
+                                    <span  className="perfor-number">{this.state.responsetime}</span>
                                     <span className='gray-color'>ms</span>
                                 </li>
                                 <li>

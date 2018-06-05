@@ -25,12 +25,21 @@ class ManageCenter extends React.Component {
         super();
         this.state ={
             openKeys: ['sub1'],
+            collapsed: false,
             current:'1'
         }
     }
     componentDidMount(){
 
-
+   /* var aw =window.screen.availWidth;
+    console.log(aw);*/
+    console.log(document.body.clientWidth );
+    if(document.body.clientWidth <500){
+        console.log("屏幕小于500px!");
+        this.setState({
+            collapsed:true
+        })
+    }
 
 
     }
@@ -93,6 +102,7 @@ class ManageCenter extends React.Component {
                             selectedKeys={[this.state.current]}
                             style={{ marginRight:0}}
                             onClick={this.handleClick}
+                            inlineCollapsed={this.state.collapsed}
 
                         >
                             <SubMenu key="sub1" title={<span><Icon type="mail" /><span>运动学图表分析</span></span>}>
@@ -100,7 +110,7 @@ class ManageCenter extends React.Component {
                                 <Menu.Item key="2">HighChart图表</Menu.Item>
                                 <Menu.Item key="3">echarts-服务端监控DashBoard</Menu.Item>
                                 <Menu.Item key="4">echarts-销售业务监控DashBoard</Menu.Item>
-                                <Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>
+                                {/*<Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>*/}
                                 <Menu.Item key="6">Rechart-销售业务监控DashBoard</Menu.Item>
                             </SubMenu>
                         </Menu>

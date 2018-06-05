@@ -116,7 +116,7 @@ class BarChart extends React.Component {
             .attr("class","axis")
             .attr("transform","translate(" + self.padding.left + "," + self.padding.top + ")")
             .call(yAxis);
-        
+
 
 
     }
@@ -124,10 +124,10 @@ class BarChart extends React.Component {
         /*在componentWillReceiveProps使用从父组件获取到的nextProps进行重绘*/
         // console.log(nextProps.dataset);
         let self =this; //使用self绑定this！！！达到在组件中进行属性提取的作用
-        this.reDraw(nextProps.dataset,self)
+        // this.reDraw(nextProps.dataset,self)
 
     }
-    reDraw(dataset,self){
+   /* reDraw(dataset,self){
         let xScale = d3.scaleBand()
             .domain(d3.range(dataset.length))
             .rangeRound([0, self.width - self.padding.left - self.padding.right]);
@@ -182,7 +182,7 @@ class BarChart extends React.Component {
                return self.height - self.padding.top - self.padding.bottom - yScale(d);
            })
 
-    }
+    }*/
     render() {
         return (
             <div id="svg-box-bar">

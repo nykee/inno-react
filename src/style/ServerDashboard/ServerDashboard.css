@@ -23,7 +23,7 @@
     padding-right: .8rem;
 }
 .box-body{
-    /*padding-top: 1rem;*/
+    padding-top: .6rem;
     padding-bottom: 1rem;
 }
 
@@ -55,4 +55,8 @@ font-size: 1.1rem;
 .perfor-number{
     font-size: 1.2rem;
     color: #fff;
+}
+#box{height: 140px; overflow: hidden;}
+#serverDash{
+    background-color: #262626;
 }
