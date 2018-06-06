@@ -13,7 +13,7 @@ class AreaChart extends React.Component {
         };
     }
     componentWillMount(){
-        console.log(this.props.chartHeight);
+        // console.log(this.props.chartHeight);
         // this.setState()
         if(this.props.chartHeight){
             this.setState({

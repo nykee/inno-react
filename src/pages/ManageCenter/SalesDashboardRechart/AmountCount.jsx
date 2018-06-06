@@ -99,7 +99,7 @@ class AmountCount extends React.Component {
                           margin={{top: 10, right: 5, left: 5, bottom: 5}}>
                     <XAxis dataKey="name" tickLine={false} axisLine={false}/>
                     <YAxis tickLine={false} axisLine={false} tickFormatter={(v)=>{
-                        console.log(v);
+                        // console.log(v);
                         if(v/1000>0){v = parseInt(v/1000)+'K'}
                         return '¥ '+v
                     }}/>
@@ -107,9 +107,9 @@ class AmountCount extends React.Component {
                     <Bar style={{cursor:'pointer'}} dataKey="value"   >
                         {this.state.sData.map((entry,i)=>{
                             // console.log(this.state.sData);
-                            console.log(colorLists);
-                            console.log(i);
-                            console.log(colorLists[i]);
+                            // console.log(colorLists);
+                            // console.log(i);
+                            // console.log(colorLists[i]);
                             return<Cell  key={'cell'+i} stroke={colorLists[i]}  fill={colorLists[i]}/>
                         })}
                     </Bar>

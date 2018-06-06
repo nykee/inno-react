@@ -60,3 +60,8 @@ font-size: 1.1rem;
 #serverDash{
     background-color: #262626;
 }
+#bmap-container{
+    height: 9rem;
+    width: 90%;
+    margin: .8rem;
+}

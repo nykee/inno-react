@@ -33,7 +33,7 @@ class ManageCenter extends React.Component {
 
    /* var aw =window.screen.availWidth;
     console.log(aw);*/
-    console.log(document.body.clientWidth );
+    // console.log(document.body.clientWidth );
     if(document.body.clientWidth <500){
         console.log("屏幕小于500px!");
         this.setState({
@@ -89,6 +89,7 @@ class ManageCenter extends React.Component {
             title ="销售业务监控-DashBoard-Rechart";
             chartContainer =<SalesDashboardRe/>
         }
+
 
 
         return (
