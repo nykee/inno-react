@@ -7,20 +7,51 @@ let  Mock = require('mockjs');
 class Network extends React.Component {
     constructor() {
         super();
-        this.state = {};
-    }
-
-    componentDidMount() {
-
-    }
-
-    render() {
         let dataFake_1 =[];
         for(let i =0;i<4;i++){
             dataFake_1.push(Mock.mock(
                 {"number|60-70":70}
             ).number);
         }
+        this.state = {
+            seriesData:dataFake_1
+        };
+    }
+    componentWillMount(){
+
+    }
+
+    componentDidMount() {
+
+
+        setInterval(()=>{
+            let sDataArray= this.state.seriesData;
+            let mockData =Mock.mock(
+                {"number|60-70":70}
+            ).number;
+            sDataArray.push(mockData);
+            // console.log(sDataArray);
+            sDataArray =sDataArray.slice(1,sDataArray.length);
+            // console.log(sDataArray);
+            // console.log(sDataArray);
+
+
+
+            this.setState({
+                seriesData:sDataArray
+            })
+
+
+        },500);
+
+
+
+    }
+
+    render() {
+
+
+
 
         let chartOption={
             backgroundColor:'#303030',
@@ -101,13 +132,14 @@ class Network extends React.Component {
                                 }
                             }
                     },
-                    data:dataFake_1,
+                    data:this.state.seriesData,
 
                 },
 
 
             ]
         };
+
 
         return (
             <div className="box-container">
@@ -130,7 +162,7 @@ class Network extends React.Component {
                     <Row style={{borderBottom:'1px dotted #3D3D3D',padding:'0 .5rem .5rem .5rem'}}>
                         <Col span={10} className="text-align-left"><span className="param-items-name ">Connectivity</span></Col>
                         <Col span={8} offset={6} className="text-align-right">
-                            <span className="param-items-value">67</span>
+                            <span className="param-items-value">{this.state.seriesData[this.state.seriesData.length-1]}</span>
                             <span className="param-items-unit">%</span>
                         </Col>
                     </Row>

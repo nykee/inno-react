@@ -15,7 +15,8 @@ class UserExperienceIndex extends React.Component {
         this.state = {
             selectedCity:'上海',
             lat:0,
-            lon:0
+            lon:0,
+            hospName:''
         };
     }
 
@@ -31,19 +32,22 @@ class UserExperienceIndex extends React.Component {
         if(value ==="上海"){
             this.setState({
                 lat:121.429,
-                lon:31.184
+                lon:31.184,
+                hospName:'上海市第六人民医院'
             });
         }
         else if(value ==="北京"){
             this.setState({
                 lat:116.283,
-                lon:39.911
+                lon:39.911,
+                hospName:'中国人民解放军总医院'
             });
         }
         else {
             this.setState({
                 lat:113.263,
-                lon:23.148
+                lon:23.148,
+                hospName:'广州军区广州总医院'
             });
         }
     }
@@ -68,7 +72,7 @@ class UserExperienceIndex extends React.Component {
                         <div id="UEI-map" style={{height:'16rem'}}/>
                     </div>*/}
                     <Col span={24}>
-                        <BMap city={this.state.selectedCity} lat={this.state.lat} lon={this.state.lon}></BMap>
+                        <BMap city={this.state.selectedCity} lat={this.state.lat} lon={this.state.lon} hospName={this.state.hospName}></BMap>
                     </Col>
                 </Row>
 

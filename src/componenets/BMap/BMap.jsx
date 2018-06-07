@@ -6,7 +6,8 @@ class BMap extends React.Component {
         this.state = {
             city:'上海',
             lat:121.429,
-            lon:31.184
+            lon:31.184,
+            hosName:'上海市第六人民医院'
         };
 
     }
@@ -26,7 +27,18 @@ class BMap extends React.Component {
         map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
 
         var marker = new BMap.Marker(point);
-        map.addOverlay(marker)
+        map.addOverlay(marker);
+
+        marker.addEventListener("click", ()=>{
+            var opts = {
+                width : 250,     // 信息窗口宽度
+                height: 100,     // 信息窗口高度
+                title : nextProps.city  // 信息窗口标题
+            };
+
+            var infoWindow = new BMap.InfoWindow(nextProps.hospName, opts);
+            map.openInfoWindow(infoWindow, point);      // 打开信息窗口
+        });
     }
     componentWillMount(){
         /*this.setState({
@@ -36,11 +48,11 @@ class BMap extends React.Component {
         });*/
     }
     componentDidMount() {
-        this.setState({
+        /*this.setState({
             city:this.props.city,
             lat:this.props.lat,
             lon:this.props.lon
-        });
+        });*/
 
 
         var BMap = window.BMap ;//取出window中的BMap对象
@@ -52,7 +64,19 @@ class BMap extends React.Component {
         map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
         var point = new BMap.Point(this.state.lat, this.state.lon);
         var marker = new BMap.Marker(point);
-        map.addOverlay(marker)
+        map.addOverlay(marker);
+
+
+        marker.addEventListener("click", ()=>{
+            var opts = {
+                width : 250,     // 信息窗口宽度
+                height: 100,     // 信息窗口高度
+                title : this.state.city  // 信息窗口标题
+            };
+
+            var infoWindow = new BMap.InfoWindow(this.state.hosName, opts);
+            map.openInfoWindow(infoWindow, point);      // 打开信息窗口
+        });
 
 
     }

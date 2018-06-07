@@ -8,37 +8,69 @@ let  Mock = require('mockjs');
 class Applications extends React.Component {
     constructor() {
         super();
-        this.state = {};
-    }
-
-    componentDidMount() {
-
-    }
-
-    render() {
-        let legends=[
-            {color:'#0CBFF8',name:'community.ru.com',value:4.5},
-            {color:'#A17171',name:'www.ru.com',value:4},
-            {color:'#3165CD',name:'support.ru.com',value:1},
-        ];
         let dataFake_1 =[];
         let dataFake_2 =[];
         let dataFake_3 =[];
         for(let i =0;i<4;i++){
             dataFake_1.push(Mock.mock(
-                {"number|2-40":40}
+                {"number|10-20":20}
             ).number);
         }
         for(let i =0;i<4;i++){
             dataFake_2.push(Mock.mock(
-                {"number|10-40":40}
+                {"number|30-40":40}
             ).number);
         }
         for(let i =0;i<4;i++){
             dataFake_3.push(Mock.mock(
-                {"number|20-70":70}
+                {"number|60-70":70}
             ).number);
         }
+        this.state = {
+            sData_1:dataFake_1,
+            sData_2:dataFake_2,
+            sData_3:dataFake_3,
+        };
+    }
+
+    componentDidMount() {
+        setInterval(()=>{
+            let sData_1 = this.state.sData_1,
+                sData_2 = this.state.sData_2,
+                sData_3 = this.state.sData_3;
+            let mockData_1 =Mock.mock(
+                {"number|10-20":20}
+            ).number;
+            let mockData_2 =Mock.mock(
+                {"number|30-40":40}
+            ).number;
+            let mockData_3 =Mock.mock(
+                {"number|60-70":70}
+            ).number;
+            function processArray(array,data) {
+                array.push(data);
+                array =array.slice(1,array.length);
+                return array;
+            }
+            sData_1 = processArray(sData_1,mockData_1);
+            sData_2 = processArray(sData_2,mockData_2);
+            sData_3 = processArray(sData_3,mockData_3);
+            this.setState({
+                sData_1:sData_1,
+                sData_2:sData_2,
+                sData_3:sData_3
+            })
+        },500)
+
+    }
+
+    render() {
+        let legends=[
+            {color:'#0CBFF8',name:'community.ru.com',value:this.state.sData_1[this.state.sData_1.length-1]},
+            {color:'#A17171',name:'www.ru.com',value:this.state.sData_2[this.state.sData_2.length-1]},
+            {color:'#3165CD',name:'support.ru.com',value:this.state.sData_3[this.state.sData_3.length-1]},
+        ];
+
 
         let chartOption={
             backgroundColor:'#303030',
@@ -119,7 +151,7 @@ class Applications extends React.Component {
                                 }
                             }
                     },
-                    data:dataFake_1,
+                    data:this.state.sData_1,
 
                 },
                 {
@@ -139,7 +171,7 @@ class Applications extends React.Component {
                             }
                     }
                     ,
-                    data:dataFake_2
+                    data:this.state.sData_2
                 },
                 {
                     name:'库存量',
@@ -158,7 +190,7 @@ class Applications extends React.Component {
                             }
                     },
 
-                    data:dataFake_3
+                    data:this.state.sData_3
                 }
 
 
