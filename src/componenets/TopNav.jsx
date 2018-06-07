@@ -38,7 +38,7 @@ class TopNav extends React.Component {
                      md={{span:6}}
                      lg={{span:6}}
                      xl={{span:6}}>
-                    <img src={innoLogo} alt="" style={{height:'3.5rem',width:'8rem'}}/>
+                    <img src={innoLogo} alt="" style={{height:'3.5rem',width:'3.5rem'}}/>
                 </Col>
                 <Col xs={{span:16}}
                      sm={{span:14}}

@@ -39,16 +39,32 @@ class OrderLists extends React.Component {
        function PushData(array,index) {
            array.push(
                <Row style={{marginTop:'.7rem'}}>
-                   <Col span={6} className="tbody-item">
+                   <Col  xl={{span:6}}
+                         lg={{span:6}}
+                         md={{span:6}}
+                         sm={{span:6}}
+                         xs={{span:6}} className="tbody-item">
                        <span>{orders[index].item}</span>
                    </Col>
-                   <Col span={4} offset={6} className="tbody-item">
+                   <Col xl={{span:4}}
+                        lg={{span:4}}
+                        md={{span:5,offset:4}}
+                        sm={{span:5,offset:4}}
+                        xs={{span:6,offset:3}}  className="tbody-item">
                        <span >{orders[index].Costumer}</span>
                    </Col>
-                   <Col span={4} className="tbody-item-price">
+                   <Col xl={{span:4}}
+                        lg={{span:4}}
+                        md={{span:4}}
+                        sm={{span:4}}
+                        xs={{span:4}} className="tbody-item-price">
                        <span>{orders[index].price}</span>
                    </Col>
-                   <Col span={4} className="tbody-item">
+                   <Col xl={{span:4}}
+                        lg={{span:4}}
+                        md={{span:4}}
+                        sm={{span:4}}
+                        xs={{span:4}} className="tbody-item">
                        <span>{orders[index].Product}</span>
                    </Col>
                </Row>
@@ -70,10 +86,43 @@ class OrderLists extends React.Component {
                 </div>
                 <div>
                     <Row>
-                        <Col span={6} className="thead">Item</Col>
-                        <Col span={4} offset={6} className="thead">Costumer</Col>
-                        <Col span={4} className="thead">Price</Col>
-                        <Col span={4} className="thead">Product</Col>
+                        <Col
+                            xl={{span:6}}
+                            lg={{span:6}}
+                            md={{span:6}}
+                            sm={{span:6}}
+                            xs={{span:6}}
+                            className="thead"
+                        >
+                            Item
+                        </Col>
+                        <Col xl={{span:4}}
+                             lg={{span:4}}
+                             md={{span:5,offset:4}}
+                             sm={{span:5,offset:4}}
+                             xs={{span:6,offset:3}}
+                             className="thead"
+                        >
+                            Costumer
+                        </Col>
+                        <Col xl={{span:4}}
+                             lg={{span:4}}
+                             md={{span:4}}
+                             sm={{span:4}}
+                             xs={{span:4}}
+                             className="thead"
+                        >
+                            Price
+                        </Col>
+                        <Col xl={{span:4}}
+                             lg={{span:4}}
+                             md={{span:4}}
+                             sm={{span:4}}
+                             xs={{span:4}}
+                             className="thead"
+                        >
+                            Product
+                        </Col>
                     </Row>
                     {this.state.pageShow === 1?page1:page2 }
                 </div>

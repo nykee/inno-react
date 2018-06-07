@@ -63,17 +63,19 @@ class PercentCount extends React.Component {
         let data3 =[{name: 'Refound', value: 400},];
         // let svgName ="cPie";
         return (
-            <div>
-                {/*<CustomDPie colorLists={colorLists} data={data} svgName={svgName}/>*/}
-                <PieChart width={300} height={300}>
-                    <Pie style={{cursor:'pointer'}} data={data1} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius1} stroke={this.state.color1} fill={this.state.color1} startAngle={0} endAngle={170} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
-                    <Pie style={{cursor:'pointer'}} data={data2} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius2} stroke={this.state.color2} fill={this.state.color2} startAngle={170} endAngle={280} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
-                    <Pie style={{cursor:'pointer'}} data={data3} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius3} stroke={this.state.color3} fill={this.state.color3} startAngle={280} endAngle={360} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
-                    <g>
-                        <text x={"50%"} y={"50%"} dy={8} textAnchor="middle" fill={this.state.activeColor}>{this.state.activeItem}</text>
-                    </g>
-                    <Legend/>
-                </PieChart>
+            <div >
+                <ResponsiveContainer width='100%' height={300}>
+                    <PieChart  style={{margin:'0 auto'}}>
+                        <Pie style={{cursor:'pointer'}} data={data1} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius1} stroke={this.state.color1} fill={this.state.color1} startAngle={0} endAngle={170} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
+                        <Pie style={{cursor:'pointer'}} data={data2} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius2} stroke={this.state.color2} fill={this.state.color2} startAngle={170} endAngle={280} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
+                        <Pie style={{cursor:'pointer'}} data={data3} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius3} stroke={this.state.color3} fill={this.state.color3} startAngle={280} endAngle={360} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
+                        <g>
+                            <text x={"50%"} y={"50%"} dy={8} textAnchor="middle" fill={this.state.activeColor}>{this.state.activeItem}</text>
+                        </g>
+                        <Legend/>
+                    </PieChart>
+                </ResponsiveContainer>
+
             </div>
 
         )

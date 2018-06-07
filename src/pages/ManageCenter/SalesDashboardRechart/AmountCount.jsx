@@ -2,7 +2,7 @@ import React from 'react';
 // import BarChart from '../../../componenets/D3Charts/BarChart'
 import {Row,Col} from 'antd'
 import ep from "../../../utils/eventProxy";
-import {BarChart, Bar, XAxis, YAxis, Tooltip,Cell} from 'recharts';
+import {BarChart, Bar, XAxis, YAxis, Tooltip, Cell, ResponsiveContainer} from 'recharts';
 
 class AmountCount extends React.Component {
     constructor() {
@@ -87,33 +87,35 @@ class AmountCount extends React.Component {
         render() {
         let colorLists =['#B29EFF','#1CA8DD','#007AE1','#B29EFF','#1CA8DD','#007AE1','#B29EFF','#1CA8DD','#007AE1','#B29EFF'];
         return (
-            <div style={{margin:'0 auto'}}>
+            <div >
                 <Row>
                     <Col span={4} offset={2}><span className={this.state.selected==="pending"?'title-selected':'title'}  onClick={this.getChartData.bind(this,'Pending')}>Pending</span></Col>
                     <Col span={6}><span className={this.state.selected==="completed"?'title-selected':'title'} style={{marginLeft:'.5rem'}} onClick={this.getChartData.bind(this,'Completed')}>Completed</span></Col>
                     <Col span={6}><span className={this.state.selected==="refounded"?'title-selected':'title'} style={{marginLeft:'.5rem'}} onClick={this.getChartData.bind(this,'Refounded')}>Refounded</span></Col>
                     <Col span={4} offset={2}><i className="fa fa-edit fa-2x"/></Col>
                 </Row>
+                <ResponsiveContainer width='100%' height={300}>
+                    <BarChart  data={this.state.sData}
+                              style={{margin:'0 auto'}}>
+                        <XAxis dataKey="name" tickLine={false} axisLine={false}/>
+                        <YAxis tickLine={false} axisLine={false} tickFormatter={(v)=>{
+                            // console.log(v);
+                            if(v/1000>0){v = parseInt(v/1000)+'K'}
+                            return '¥ '+v
+                        }}/>
+                        <Tooltip/>
+                        <Bar style={{cursor:'pointer'}} dataKey="value"   >
+                            {this.state.sData.map((entry,i)=>{
+                                // console.log(this.state.sData);
+                                // console.log(colorLists);
+                                // console.log(i);
+                                // console.log(colorLists[i]);
+                                return<Cell  key={'cell'+i} stroke={colorLists[i]}  fill={colorLists[i]}/>
+                            })}
+                        </Bar>
+                    </BarChart>
+                </ResponsiveContainer>
 
-                <BarChart width={300} height={300} data={this.state.sData}
-                          margin={{top: 10, right: 5, left: 5, bottom: 5}}>
-                    <XAxis dataKey="name" tickLine={false} axisLine={false}/>
-                    <YAxis tickLine={false} axisLine={false} tickFormatter={(v)=>{
-                        // console.log(v);
-                        if(v/1000>0){v = parseInt(v/1000)+'K'}
-                        return '¥ '+v
-                    }}/>
-                    <Tooltip/>
-                    <Bar style={{cursor:'pointer'}} dataKey="value"   >
-                        {this.state.sData.map((entry,i)=>{
-                            // console.log(this.state.sData);
-                            // console.log(colorLists);
-                            // console.log(i);
-                            // console.log(colorLists[i]);
-                            return<Cell  key={'cell'+i} stroke={colorLists[i]}  fill={colorLists[i]}/>
-                        })}
-                    </Bar>
-                </BarChart>
             </div>
 
         )
