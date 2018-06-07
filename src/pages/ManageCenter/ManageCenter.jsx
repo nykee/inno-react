@@ -1,9 +1,8 @@
 import React from 'react';
-import Mock from 'mockjs';
-import axios from 'axios'
-import {Row,Col,Menu,Icon,Select,Button} from 'antd';
+import {Row,Col,Menu,Icon} from 'antd';
 
-import SelectPanel from './SelectPanel'
+
+
 import D3ChartContainer from './D3ChartContainer'
 import HChartContainer from './HChartContainer'
 import SalesDashboard from './SalesDashboard/SalesDashboard'
@@ -55,6 +54,7 @@ class ManageCenter extends React.Component {
         }
     };
 
+
     handleClick = (e) => {
         // console.log('click ', e);
         this.setState({
@@ -92,6 +92,7 @@ class ManageCenter extends React.Component {
 
 
 
+
         return (
             <div>
                 <Row>
@@ -114,7 +115,10 @@ class ManageCenter extends React.Component {
                                 {/*<Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>*/}
                                 <Menu.Item key="6">Rechart-销售业务监控DashBoard</Menu.Item>
                             </SubMenu>
+
                         </Menu>
+                        {/*<MobileMenu></MobileMenu>*/}
+
                     </Col>
                     <Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className={(this.state.current ==="3"||this.state.current ==="4"||this.state.current ==="5"||this.state.current ==="6")?'blackBG':''}>
                             <div>

@@ -41,6 +41,7 @@ class LoginBtn extends React.Component {
             <Button  onMouseEnter={this.onMouserEnter}
                      onMouseLeave={this.onMouseLeave}
                      style={this.state.hover?this.activeBtnStyle:this.normalBtnStyle}
+                     size="small"
             >
                 登录
             </Button>

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'font-awesome/css/font-awesome.min.css';
+import 'antd-mobile/dist/antd-mobile.css';
 import App from './App';
 import Index from '../src/pages/Index'
 import MultipleCenter from './pages/MultipleCenter/MultipleCenter'

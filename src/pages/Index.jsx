@@ -24,7 +24,7 @@ class Index extends React.Component {
                             <div style={{position:'relative'}}>
                                 <div style={{position:'absolute',bottom:'8%',left:'40%',color:'#fff '}}>
                                     <h2 style={{color:'#fff'}}>XY多中心</h2>
-                                    <p>XY医学依托北上广及全国各地的多中心建立骨科、关节大数据！</p>
+                                    <p>XY医学依托北上广及全国各地的多中心建立医疗、大数据！</p>
                                 </div>
                                 <img src={BG1} alt="" style={{maxWidth:'100%'}}/>
                                 {/*<h2>轮播1</h2>*/}
@@ -32,7 +32,7 @@ class Index extends React.Component {
                             <div style={{position:'relative'}}>
                                 <div style={{position:'absolute',bottom:'8%',left:'40%',color:'#fff'}}>
                                     <h2 style={{color:'#fff'}}>XY大数据</h2>
-                                    <p>建立骨科关节测试模型，数据分析更科学高效！</p>
+                                    <p>建立医疗测试模型，数据分析更科学高效！</p>
                                 </div>
                                 <img src={BG2} alt="" style={{maxWidth:'100%'}}/>
                                 {/*<h2>轮播2</h2>*/}
@@ -54,7 +54,7 @@ class Index extends React.Component {
                 <Row  type="flex" justify="start" style={{marginTop:'1.5rem'}}>
                     <Col  span={10} offset={7}>
                         <h3>XY云平台--安全、稳定的云平台</h3>
-                        <span>依托XY多中心架设，集云计算、云存储、网络、安全、大数据与神经网络，让骨科诊疗更快速有效</span>
+                        <span>依托XY多中心架设，集云计算、云存储、网络、安全、大数据与神经网络，让医疗诊疗更快速有效</span>
                     </Col>
                 </Row>
                 <Row>
@@ -68,7 +68,7 @@ class Index extends React.Component {
                             <ServiceNameComponent sName="科研评估" imgSrc={ky}></ServiceNameComponent>
                         </Col>
                         <Col  span={8}>
-                            <ServiceNameComponent sName="关节康复" imgSrc={kf}></ServiceNameComponent>
+                            <ServiceNameComponent sName="康复" imgSrc={kf}></ServiceNameComponent>
                         </Col>
                         <Col span={8} >
                             <ServiceNameComponent sName="门诊辅助" imgSrc={mz}></ServiceNameComponent>
@@ -93,7 +93,7 @@ class Index extends React.Component {
                 <Row style={{backgroundColor:'#F2F3F3',marginTop:'.6rem'}}>
                     {/*mapChart*/}
                     <Col span={6} offset={9}>
-                        <h3>XY云分布全国的骨科中心--数据更可靠</h3>
+                        <h3>XY云分布全国的医疗中心--数据更可靠</h3>
                     </Col>
                     <Col span={14} offset={5}>
                         <MapChartIndex/>
