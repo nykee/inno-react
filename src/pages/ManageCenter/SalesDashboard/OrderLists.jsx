@@ -39,32 +39,40 @@ class OrderLists extends React.Component {
        function PushData(array,index) {
            array.push(
                <Row style={{marginTop:'.7rem'}}>
-                   <Col  xl={{span:6}}
-                         lg={{span:6}}
-                         md={{span:6}}
-                         sm={{span:6}}
-                         xs={{span:6}} className="tbody-item">
+                   <Col
+                         xxl={{span:8}}
+                         xl={{span:8}}
+                         lg={{span:8}}
+                         md={{span:8}}
+                         sm={{span:8}}
+                         xs={{span:8}} className="tbody-item">
                        <span>{orders[index].item}</span>
                    </Col>
-                   <Col xl={{span:4}}
-                        lg={{span:4}}
-                        md={{span:5,offset:4}}
-                        sm={{span:5,offset:4}}
-                        xs={{span:6,offset:3}}  className="tbody-item">
+                   <Col
+                       xxl={{span:5,offset:1}}
+                       xl={{span:5,offset:1}}
+                        lg={{span:5,offset:1}}
+                        md={{span:5,offset:1}}
+                        sm={{span:5,offset:1}}
+                        xs={{span:5,offset:1}}  className="tbody-item">
                        <span >{orders[index].Costumer}</span>
                    </Col>
-                   <Col xl={{span:4}}
-                        lg={{span:4}}
-                        md={{span:4}}
-                        sm={{span:4}}
-                        xs={{span:4}} className="tbody-item-price">
+                   <Col
+                       xxl={{span:4,offset:1}}
+                        xl={{span:4,offset:1}}
+                        lg={{span:4,offset:1}}
+                        md={{span:4,offset:1}}
+                        sm={{span:4,offset:1}}
+                        xs={{span:4,offset:1}} className="tbody-item-price">
                        <span>{orders[index].price}</span>
                    </Col>
-                   <Col xl={{span:4}}
-                        lg={{span:4}}
-                        md={{span:4}}
-                        sm={{span:4}}
-                        xs={{span:4}} className="tbody-item">
+                   <Col
+                       xxl={{span:4,offset:1}}
+                       xl={{span:4,offset:1}}
+                        lg={{span:4,offset:1}}
+                        md={{span:4,offset:1}}
+                        sm={{span:4,offset:1}}
+                        xs={{span:4,offset:1}} className="tbody-item">
                        <span>{orders[index].Product}</span>
                    </Col>
                </Row>
@@ -87,38 +95,42 @@ class OrderLists extends React.Component {
                 <div>
                     <Row>
                         <Col
-                            xl={{span:6}}
-                            lg={{span:6}}
-                            md={{span:6}}
-                            sm={{span:6}}
-                            xs={{span:6}}
+                            xxl={{span:8}}
+                            xl={{span:8}}
+                            lg={{span:8}}
+                            md={{span:8}}
+                            sm={{span:8}}
+                            xs={{span:8}}
                             className="thead"
                         >
                             Item
                         </Col>
-                        <Col xl={{span:4}}
-                             lg={{span:4}}
-                             md={{span:5,offset:4}}
-                             sm={{span:5,offset:4}}
-                             xs={{span:6,offset:3}}
+                        <Col   xxl={{span:5,offset:1}}
+                               xl={{span:5,offset:1}}
+                               lg={{span:5,offset:1}}
+                               md={{span:5,offset:1}}
+                               sm={{span:5,offset:1}}
+                               xs={{span:5,offset:1}}
                              className="thead"
                         >
                             Costumer
                         </Col>
-                        <Col xl={{span:4}}
-                             lg={{span:4}}
-                             md={{span:4}}
-                             sm={{span:4}}
-                             xs={{span:4}}
+                        <Col  xxl={{span:4,offset:1}}
+                              xl={{span:4,offset:1}}
+                              lg={{span:4,offset:1}}
+                              md={{span:4,offset:1}}
+                              sm={{span:4,offset:1}}
+                              xs={{span:4,offset:1}}
                              className="thead"
                         >
                             Price
                         </Col>
-                        <Col xl={{span:4}}
-                             lg={{span:4}}
-                             md={{span:4}}
-                             sm={{span:4}}
-                             xs={{span:4}}
+                        <Col  xxl={{span:4,offset:1}}
+                              xl={{span:4,offset:1}}
+                              lg={{span:4,offset:1}}
+                              md={{span:4,offset:1}}
+                              sm={{span:4,offset:1}}
+                              xs={{span:4,offset:1}}
                              className="thead"
                         >
                             Product

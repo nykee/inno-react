@@ -28,23 +28,6 @@ class ProductLists extends React.Component {
                 }
             }
         };
-        // var lableTop_2 =labelTop;
-        // console.log(lableTop_2.normal.color);
-        // lableTop_2.normal.color ="#0475D5";
-        // console.log(lableTop_2.normal.color);
-        /*var labelFromatter = {
-            normal : {
-                label : {
-                    formatter : function (params){
-                        console.log(params.data);
-                        return params.value
-                    },
-                    textStyle: {
-                        baseline : 'top'
-                    }
-                }
-            },
-        }*/
 
         var labelBottom = {
             normal : {
