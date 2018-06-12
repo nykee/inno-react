@@ -40,14 +40,14 @@ class TopNav extends React.Component {
         return (
 
             <Row style={{backgroundColor:'rgba(2,123,187,0.6)'}}>
-                <Col xs={{span:24}}
+                <Col xs={{span:3}}
                      sm={{span:6}}
                      md={{span:6}}
                      lg={{span:6}}
                      xl={{span:6}}>
                     <img src={innoLogo} alt="" style={{height:'3.5rem',width:'6rem'}}/>
                 </Col>
-                <Col xs={{span:24}}
+                <Col xs={{span:17}}
                      sm={{span:14}}
                      md={{span:14}}
                      lg={{span:14}}
@@ -79,7 +79,7 @@ class TopNav extends React.Component {
 
                 </Col>
 
-                <Col xs={{span:24}}
+                <Col xs={{span:4}}
                      sm={{span:4}}
                      md={{span:4}}
                      lg={{span:4}}
