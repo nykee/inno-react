@@ -2,6 +2,7 @@ import React from 'react';
 import {Row,Col} from 'antd'
 
 import ProductListsItems from './ProductListsItems'
+import CommonTitle from "./CommonTitle";
 
 
 class ProductLists extends React.Component {
@@ -191,6 +192,7 @@ class ProductLists extends React.Component {
         return (
             <div>
                 <Row>
+                    <CommonTitle titleName="Products"/>
                     <Col xs={{span:24}}
                         sm={{span:24}}
                          md={{span:24}}
@@ -227,9 +229,6 @@ class ProductLists extends React.Component {
                         xl={{span:4,offset:1}}>
                         <ProductListsItems name="Apple" qty="2400" chartOption={appleOption} charID="Apple"/>
                     </Col>
-                </Row>
-                <Row>
-                    {/*<PieChart chartOption={chartOption} />*/}
                 </Row>
             </div>
 

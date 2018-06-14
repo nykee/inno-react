@@ -18,8 +18,12 @@ class ServerDashboard extends React.Component {
     }
 
     render() {
+        //style={{padding:'.8rem',color:'#fff',marginLeft:0,marginRight:0}}
         return (
-            <Row style={{padding:'.8rem',color:'#fff',marginLeft:0,marginRight:0}} gutter={15} id="serverDash">
+            <Row className="serverDash-container"
+                 gutter={15}
+                 id="serverDash"
+            >
                 <Col
                     xs={{span:24}}
                     sm={{span:24}}

@@ -52,6 +52,42 @@ class PercentCount extends React.Component {
             outerRadius3:80,
         })
     }
+    handleTouchStart(data){
+        console.log("touch start");
+
+        this.setState({
+            activeItem:data.name,
+
+        });
+
+        data.name ==="New Customers"? this.setState({
+            color1:'#B29EFF',
+            activeColor:'#B29EFF',
+            outerRadius1:85,
+        }):'';
+        data.name ==="Sales"? this.setState({
+            color2:'#3394E7',
+            activeColor:'#3394E7',
+            outerRadius2:85,
+        }):'';
+        data.name ==="Refound"? this.setState({
+            color3:'#49B9E3',
+            activeColor:'#49B9E3',
+            outerRadius3:85,
+        }):'';
+    }
+    handleTouchEnd(){
+        console.log("touch end");
+        this.setState({
+            activeItem:'',
+            color1:'#9F86FF',
+            color2:'#007AE1',
+            color3:'#1CA8DD',
+            outerRadius1:80,
+            outerRadius2:80,
+            outerRadius3:80,
+        })
+    }
 
     render() {
         // let colorLists=['#9F86FF','#1CA8DD','#007AE1'];
@@ -66,9 +102,59 @@ class PercentCount extends React.Component {
             <div >
                 <ResponsiveContainer width='100%' height={300}>
                     <PieChart  style={{margin:'0 auto'}}>
-                        <Pie style={{cursor:'pointer'}} data={data1} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius1} stroke={this.state.color1} fill={this.state.color1} startAngle={0} endAngle={170} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
-                        <Pie style={{cursor:'pointer'}} data={data2} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius2} stroke={this.state.color2} fill={this.state.color2} startAngle={170} endAngle={280} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
-                        <Pie style={{cursor:'pointer'}} data={data3} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={this.state.outerRadius3} stroke={this.state.color3} fill={this.state.color3} startAngle={280} endAngle={360} onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}/>
+                        <Pie
+                            style={{cursor:'pointer'}}
+                            data={data1}
+                            dataKey="value"
+                            nameKey="name"
+                            cx="50%"
+                            cy="50%"
+                            innerRadius={60}
+                            outerRadius={this.state.outerRadius1}
+                            stroke={this.state.color1}
+                            fill={this.state.color1}
+                            startAngle={0}
+                            endAngle={170}
+                            onMouseOver={this.onMouseOver.bind(this)}
+                            onMouseOut={this.onMouseOut.bind(this)}
+                            onTouchStart={this.handleTouchStart.bind(this)}
+                            onTouchEnd ={this.handleTouchEnd.bind(this)}
+                        />
+                        <Pie
+                            style={{cursor:'pointer'}}
+                            data={data2}
+                            dataKey="value"
+                            nameKey="name"
+                            cx="50%"
+                            cy="50%"
+                            innerRadius={60}
+                            outerRadius={this.state.outerRadius2}
+                            stroke={this.state.color2}
+                            fill={this.state.color2}
+                            startAngle={170}
+                            endAngle={280}
+                            onMouseOver={this.onMouseOver.bind(this)}
+                            onMouseOut={this.onMouseOut.bind(this)}
+                            onTouchStart={this.handleTouchStart.bind(this)}
+                            onTouchEnd ={this.handleTouchEnd.bind(this)}
+                        />
+                        <Pie
+                            style={{cursor:'pointer'}}
+                            data={data3}
+                            dataKey="value"
+                            nameKey="name"
+                            cx="50%"
+                            cy="50%"
+                            innerRadius={60}
+                            outerRadius={this.state.outerRadius3}
+                            stroke={this.state.color3}
+                            fill={this.state.color3}
+                            startAngle={280}
+                            endAngle={360}
+                            onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}
+                            onTouchStart={this.handleTouchStart.bind(this)}
+                            onClickCapture ={this.handleTouchEnd.bind(this)}
+                        />
                         <g>
                             <text x={"50%"} y={"50%"} dy={8} textAnchor="middle" fill={this.state.activeColor}>{this.state.activeItem}</text>
                         </g>

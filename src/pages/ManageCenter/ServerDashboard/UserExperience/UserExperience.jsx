@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionTitle from "../SectionTitle";
 import {Col, Row} from "antd";
-import Applications from "./Applications";
+import Applications from "./ApplicationsUE";
 import ThirdParty from "./ThirdParty";
 
 class UserExperience extends React.Component {

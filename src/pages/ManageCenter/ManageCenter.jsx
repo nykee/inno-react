@@ -25,7 +25,7 @@ class ManageCenter extends React.Component {
         this.state ={
             openKeys: ['sub1'],
             collapsed: false,
-            current:'1'
+            current:'4'
         }
     }
     componentDidMount(){
@@ -66,15 +66,15 @@ class ManageCenter extends React.Component {
         let title,
             chartContainer;
         if(this.state.current === '1'){
-            title ="数据图表示例-D3";
-            chartContainer =<D3ChartContainer/>
+            // title ="数据图表示例-D3";
+            // chartContainer =<D3ChartContainer/>
         }
         else if(this.state.current === '2'){
-            title ="数据图表示例-Highcharts";
-            chartContainer = <HChartContainer/>
+           /* title ="数据图表示例-Highcharts";
+            chartContainer = <HChartContainer/>*/
         }
         else if(this.state.current === '3'){
-            title ="echarts-服务端监控DashBoard"
+            title ="echarts-服务端监控DashBoard";
             chartContainer =<ServerDashboard/>
         }
         else if(this.state.current === '4'){
@@ -108,8 +108,8 @@ class ManageCenter extends React.Component {
 
                         >
                             <SubMenu key="sub1" title={<span><Icon type="mail" /><span>运动学图表分析</span></span>}>
-                                <Menu.Item key="1" >D3.js图表</Menu.Item>
-                                <Menu.Item key="2">HighChart图表</Menu.Item>
+                                {/*<Menu.Item key="1" >D3.js图表</Menu.Item>*/}
+                                {/*<Menu.Item key="2">HighChart图表</Menu.Item>*/}
                                 <Menu.Item key="3">echarts-服务端监控DashBoard</Menu.Item>
                                 <Menu.Item key="4">echarts-销售业务监控DashBoard</Menu.Item>
                                 {/*<Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>*/}

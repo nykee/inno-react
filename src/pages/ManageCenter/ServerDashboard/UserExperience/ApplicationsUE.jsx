@@ -5,7 +5,7 @@ import CustomLegend from "../CustomLegend";
 import AreaChart from "../../../../componenets/Echarts/AreaChart";
 let  Mock = require('mockjs');
 
-class Applications extends React.Component {
+class ApplicationsUE extends React.Component {
     constructor() {
         super();
         let dataFake_1 =[];
@@ -60,7 +60,7 @@ class Applications extends React.Component {
                 sData_2:sData_2,
                 sData_3:sData_3
             })
-        },500)
+        },2000)
 
     }
 
@@ -219,4 +219,4 @@ class Applications extends React.Component {
     }
 }
 
-export default Applications;
+export default ApplicationsUE;

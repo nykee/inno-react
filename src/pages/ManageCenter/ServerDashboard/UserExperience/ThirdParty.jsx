@@ -60,7 +60,7 @@ class ThirdParty extends React.Component {
                 sData_2:sData_2,
                 sData_3:sData_3
             })
-        },500)
+        },2000)
 
     }
 
