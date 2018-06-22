@@ -148,22 +148,36 @@ class MultipleCenter extends React.Component {
                 </Row>
                 <Row>
                     <Col><h2>XY医疗致力于关节功能多中心的建立，在北京上海广州香港等地均建立了多中心</h2></Col>
-                    <Col>
+                    <Col style={{marginTop:'.8rem'}}>
                         <span>请选择你需要查看数据的医院或机构： </span>
                         <Select  style={{ width: '12.5rem' }}
                                  defaultValue="301"
                                  onSelect={this.handleSelect}>
                             {options}
                         </Select>
-                        <Button type="primary" onClick={this.chkCenterDetail}>查看</Button>
+                        <Button type="primary" onClick={this.chkCenterDetail} style={{marginLeft:'.3rem'}}>查看</Button>
                     </Col>
                 </Row>
-                <Row>
-                    <Col span={14}>
+                <Row style={{marginTop:'.8rem'}}>
+                    <Col
+                        xxl={{span:14}}
+                        xl={{span:14}}
+                        lg={{span:14}}
+                        md={{span:14}}
+                        sm={{span:14}}
+                        xs={{span:24}}
+                        >
                         <MapChartMcenter></MapChartMcenter>
                     </Col>
-                    <Col span={8} offset={2} >
-                            <ul >
+                    <Col
+                        xxl={{span:8,offset:2}}
+                        xl={{span:8,offset:2}}
+                        lg={{span:8,offset:2}}
+                        md={{span:8,offset:2}}
+                        sm={{span:8,offset:2}}
+                        xs={{span:20,offset:4}}
+                         >
+                            <ul style={{textAlign:'center',margin:'0 auto'}} >
                                 <li >
                                     {beijing}
                                 </li>

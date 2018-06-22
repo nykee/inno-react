@@ -275,7 +275,7 @@ class MapChartMcenter extends React.Component {
 
     render() {
         return (
-            <div id="mapChart" style={{height:600}}/>
+            <div id="mapChart" style={{height:500}}/>
 
         )
     }
