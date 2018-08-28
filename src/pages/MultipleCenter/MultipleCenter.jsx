@@ -140,7 +140,7 @@ class MultipleCenter extends React.Component {
                     <HospItems src={h_WERS} name ="香港威尔士亲王医院"/>
                 </li>
             </ul>
-        ]
+        ];
         return (
             <div>
                 <Row>

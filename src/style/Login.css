@@ -1,0 +1,21 @@
+ .login-form {
+    max-width: 300px;
+}
+ .login-form-forgot {
+    float: right;
+}
+.login-form-button {
+    width: 100%;
+}
+
+.login-container{
+    margin-top:45%;
+    background-color: rgba(134, 117, 117, 0.10);
+    padding: 40px;
+    border: 2px ridge rgba(238, 238, 238, 0.13);
+    border-radius: 5px;
+    -moz-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+    -webkit-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+    box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+    border-bottom: none;
+}
