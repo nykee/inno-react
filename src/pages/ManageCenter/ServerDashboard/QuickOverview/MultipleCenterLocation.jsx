@@ -55,7 +55,7 @@ class UserExperienceIndex extends React.Component {
     render() {
         return (
             <div className="box-container" style={{marginBottom:'.5rem'}}>
-                <CommonHeader title="USER EXPERIENCE INDEX" titleSpan={14} lineSpan={10}/>
+                <CommonHeader title="MULTIPLE CENTER LOCATION" titleSpan={18} lineSpan={6}/>
                 <Row className="box-body">
                     <Col span={24}>
                         <Select defaultValue="上海"

@@ -4,7 +4,7 @@ import {Row,Col} from 'antd'
 import Problems from "./Problems";
 import Applications from "./Applications";
 import SmartScape from "./SmartScape";
-import UseExperienceIndex from './UserExperienceIndex'
+import UseExperienceIndex from './MultipleCenterLocation'
 
 class QuickOverview extends React.Component {
     constructor() {
