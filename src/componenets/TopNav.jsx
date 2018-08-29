@@ -83,7 +83,7 @@ class TopNav extends React.Component {
                      sm={{span:4}}
                      md={{span:4}}
                      lg={{span:4}}
-                     xl={{span:4}}><Link to="/login"><LoginBtn /> </Link>  </Col>
+                     xl={{span:4}}><Link to="/login" ><LoginBtn /> </Link>  </Col>
 
 
 

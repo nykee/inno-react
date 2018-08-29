@@ -11,8 +11,9 @@ class LoginBtn extends React.Component {
             color:'#fff',
             height:'2rem',
             fontSize:'1rem',
+            lineHeight:'2rem',
             marginTop:'5%',
-            border:'1px solid #fff'
+            // border:'1px solid #fff'
         };
         this.activeBtnStyle ={
             color:'#00C1DE',
@@ -20,6 +21,7 @@ class LoginBtn extends React.Component {
             height:'2rem',
             fontSize:'1rem',
             border:'transparent',
+            /*lineHeight:'2rem',*/
             marginTop:'5%',
         };
         this.onMouseLeave =this.onMouseLeave.bind(this);
