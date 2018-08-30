@@ -167,7 +167,7 @@ class MultipleCenter extends React.Component {
                         sm={{span:14}}
                         xs={{span:24}}
                         >
-                        <MapChartMcenter></MapChartMcenter>
+                        <MapChartMcenter/>
                     </Col>
                     <Col
                         xxl={{span:8,offset:2}}

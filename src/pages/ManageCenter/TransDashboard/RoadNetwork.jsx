@@ -1,12 +1,21 @@
 import React from 'react';
-import echarts from 'echarts'
-import 'echarts/chart/map'
-import ep from '../../utils/eventProxy'
+import CommonTitle from '../SalesDashboard/CommonTitle'
+import CommonMap from '../../../componenets/Echarts/CommonMap'
+import {Row,Col} from 'antd'
+// import MapChartMcenter from '../../../componenets/Echarts/MapChartMcenter'
 
-class MapChartMcenter extends React.Component {
-    componentDidMount(){
-        let  myChart = echarts.init(document.getElementById('mapChart'));
-        myChart.setOption({
+class RoadNetwork extends React.Component {
+    constructor() {
+        super();
+        this.state = {};
+    }
+
+    componentDidMount() {
+
+    }
+
+    render() {
+        let chartOption ={
             /*地图用到的数据，Object形式*/
             series: [
                 {
@@ -254,31 +263,20 @@ class MapChartMcenter extends React.Component {
                 }
             ]
 
-        });
-        myChart.on('hover',(o)=>{
-            // console.log(o);
-            if(o.name ==="广州"){
-                // console.log("广州");
-                ep.trigger('makePointHover','GZ')
-            }
-            else if(o.name ==="上海"){
-                ep.trigger('makePointHover','SH')
-
-            }else if(o.name ==="北京"){
-                ep.trigger('makePointHover','BJ')
-            }
-            else {
-                ep.trigger('makePointHover','OTHERS');
-            }
-        })
-    }
-
-    render() {
+        };
         return (
-            <div id="mapChart" style={{height:500}}/>
+            <div>
+                <Row>
+                    <Col lg={{span:12}}>
+                        <CommonTitle titleName="全国公路路网概况"/>
+                        <CommonMap domId="RoadNetwork" chartOption={chartOption}/>
+                    </Col>
+                </Row>
+
+            </div>
 
         )
     }
 }
 
-export default MapChartMcenter;
+export default RoadNetwork;

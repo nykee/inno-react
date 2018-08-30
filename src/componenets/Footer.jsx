@@ -57,17 +57,17 @@ class Footer extends React.Component {
                     <Col xs={{span:10}}
                          sm={{span:8}}
                          md={{span:8}}
-                         lg={{span:8}}
-                         xl={{span:8}}>
+                         lg={{span:7,offset:1}}
+                         xl={{span:7,offset:1}}>
                         <ul>
                             <li>上海XXXX科技有限公司</li>
                             <li>Copyright © 2012-2017 Shanghai XY Medical Inc. All Rights Reserved</li>
                         </ul></Col>
                     <Col  xs={{span:8,offset:6}}
-                          sm={{span:3}}
-                          md={{span:3}}
-                          lg={{span:3}}
-                          xl={{span:3}}>
+                          sm={{span:3,offset:13}}
+                          md={{span:3,offset:13}}
+                          lg={{span:2,offset:14}}
+                          xl={{span:2,offset:14}}>
                         <img src={innoLogo} alt="" style={{height:'3.5rem',width:'8rem'}}/>
                     </Col>
                 </Row>
