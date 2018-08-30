@@ -42,7 +42,7 @@ class Network extends React.Component {
             })
 
 
-        },2000);
+        },1000);
 
 
 

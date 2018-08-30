@@ -12,9 +12,9 @@ class CustomLegend extends React.Component {
     }
 
     render() {
-        let legends=this.props.legends;
+        // let legends=this.props.legends;
         let legendItems=[];
-        this.props.legends.map((leg)=>{
+        this.props.legends.map((leg,i)=>{
             legendItems.push(
                 <Row>
                     <Col span={4}>

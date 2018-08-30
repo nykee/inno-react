@@ -15,13 +15,9 @@ class Services extends React.Component {
             dataFake_1.push(Mock.mock(
                 {"number|10-20":20}
             ).number);
-        }
-        for(let i =0;i<4;i++){
             dataFake_2.push(Mock.mock(
                 {"number|30-40":40}
             ).number);
-        }
-        for(let i =0;i<4;i++){
             dataFake_3.push(Mock.mock(
                 {"number|60-70":70}
             ).number);
@@ -60,7 +56,7 @@ class Services extends React.Component {
                 sData_2:sData_2,
                 sData_3:sData_3
             })
-        },2000)
+        },1000)
     }
 
     render() {
