@@ -3,12 +3,13 @@ import {Row,Col,Menu,Icon} from 'antd';
 
 
 
-import D3ChartContainer from './D3ChartContainer'
-import HChartContainer from './HChartContainer'
+// import D3ChartContainer from './D3ChartContainer'
+// import HChartContainer from './HChartContainer'
 import SalesDashboard from './SalesDashboard/SalesDashboard'
-import SalesDashboardD3 from './SalesDashboardD3/SalesDashboardD3'
+// import SalesDashboardD3 from './SalesDashboardD3/SalesDashboardD3'
 import SalesDashboardRe from './SalesDashboardRechart/SalesDashboardRechart'
 import ServerDashboard from './ServerDashboard/ServerDashboard'
+import TransDash from './TransDashboard/TransDash'
 import Header from './Header'
 
 import '../../style/ManageCenter.css'
@@ -65,15 +66,8 @@ class ManageCenter extends React.Component {
     render() {
         let title,
             chartContainer;
-        if(this.state.current === '1'){
-            // title ="数据图表示例-D3";
-            // chartContainer =<D3ChartContainer/>
-        }
-        else if(this.state.current === '2'){
-           /* title ="数据图表示例-Highcharts";
-            chartContainer = <HChartContainer/>*/
-        }
-        else if(this.state.current === '3'){
+
+        if(this.state.current === '3'){
             title ="echarts-服务端监控DashBoard";
             chartContainer =<ServerDashboard/>
         }
@@ -81,13 +75,17 @@ class ManageCenter extends React.Component {
             title ="销售业务监控-DashBoard-echarts";
             chartContainer =<SalesDashboard/>
         }
-        else if(this.state.current === '5'){
+       /* else if(this.state.current === '5'){
             title ="销售业务监控-DashBoard-D3";
             chartContainer =<SalesDashboardD3/>
-        }
+        }*/
         else if(this.state.current === '6'){
             title ="销售业务监控-DashBoard-Rechart";
             chartContainer =<SalesDashboardRe/>
+        }
+        else if(this.state.current === '7'){
+            title ="物流运输监控-DashBoard-Rechart";
+            chartContainer =<TransDash/>
         }
 
 
@@ -107,23 +105,24 @@ class ManageCenter extends React.Component {
                             inlineCollapsed={this.state.collapsed}
 
                         >
-                            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>运动学图表分析</span></span>}>
+                            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Dashboard图表分析</span></span>}>
                                 {/*<Menu.Item key="1" >D3.js图表</Menu.Item>*/}
                                 {/*<Menu.Item key="2">HighChart图表</Menu.Item>*/}
-                                <Menu.Item key="3">echarts-服务端监控DashBoard</Menu.Item>
-                                <Menu.Item key="4">echarts-销售业务监控DashBoard</Menu.Item>
+                                <Menu.Item key="3">服务端监控DashBoard-echarts</Menu.Item>
+                                <Menu.Item key="4">销售业务监控DashBoard-echarts</Menu.Item>
                                 {/*<Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>*/}
-                                <Menu.Item key="6">Rechart-销售业务监控DashBoard</Menu.Item>
+                                <Menu.Item key="6">销售业务监控DashBoard-Rechart</Menu.Item>
+                                <Menu.Item key="7">物流运输监控DashBoard-Rechart</Menu.Item>
                             </SubMenu>
 
                         </Menu>
                         {/*<MobileMenu></MobileMenu>*/}
 
                     </Col>
-                    <Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className={(this.state.current ==="3"||this.state.current ==="4"||this.state.current ==="5"||this.state.current ==="6")?'blackBG':''}>
+                    <Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className="blackBG">
                             <div>
                                 <Header title={title} selected={this.state.current}/>
-                                {(this.state.current ==="3"||this.state.current ==="4")?'':''}
+                                {(this.state.current.toString() ==="3"||this.state.current.toString() ==="4")?'':''}
                                 {chartContainer}
 
                             </div>
