@@ -2,6 +2,7 @@ import React from 'react';
 import {Row,Col} from 'antd'
 import RoadNetwork from './RoadNetwork'
 import Cargo from './Cargo'
+import PlatformSummary from './PlatformSummary'
 
 class TransDash extends React.Component {
     constructor() {
@@ -19,7 +20,7 @@ class TransDash extends React.Component {
         };
         return (
             <Row style={transdashContainer}>
-                <Col lg={{span:16}}>
+                <Col lg={{span:14}}>
                     <Row>
                         <Col lg={{span:24}}>
                             <RoadNetwork/>
@@ -31,8 +32,12 @@ class TransDash extends React.Component {
                         </Col>
                     </Row>
                 </Col>
-                <Col lg={{span:8}}>
-                    中
+                <Col lg={{span:10}}>
+                    <Row>
+                        <Col lg={{span:24}}>
+                            <PlatformSummary/>
+                        </Col>
+                    </Row>
                 </Col>
                 {/*<Col lg={{span:8}}>*/}
                     {/*右*/}

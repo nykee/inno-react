@@ -1,6 +1,6 @@
 import React from 'react';
 import {Row,Col} from 'antd'
-import CommonTitle from './CommonTitle'
+import CommonTitle from '../../../componenets/common/CommonTitle'
 import '../../../style/SaleDashboard/OrderLists.css'
 class OrderLists extends React.Component {
     constructor(){

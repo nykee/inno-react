@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../style/SaleDashboard/CommonTitle.css'
+import '../../style/common/CommonTitle.css'
 class CommonTitle extends React.Component {
 
 

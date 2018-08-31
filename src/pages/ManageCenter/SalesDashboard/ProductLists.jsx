@@ -2,7 +2,7 @@ import React from 'react';
 import {Row,Col} from 'antd'
 
 import ProductListsItems from './ProductListsItems'
-import CommonTitle from "./CommonTitle";
+import CommonTitle from "../../../componenets/common/CommonTitle";
 
 
 class ProductLists extends React.Component {

@@ -20,7 +20,9 @@ class CloudInfra extends React.Component {
         return (
             <div >
                 <SectionTitle titleName="Cloud&infrastructure"/>
-                <Row gutter={10} className="items">
+                <Row
+                    gutter={10}
+                    className="items">
                     <Col span={12}>
                         <Hosts amount={4}/>
                     </Col>

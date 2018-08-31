@@ -1,6 +1,6 @@
 import React from 'react';
 import {AreaChart, Area, XAxis, YAxis, Tooltip,ResponsiveContainer} from 'recharts'
-import CommonTitle from "../SalesDashboard/CommonTitle";
+import CommonTitle from "../../../componenets/common/CommonTitle";
 
 let  Mock = require('mockjs');
 class MonthlySummary extends React.Component {

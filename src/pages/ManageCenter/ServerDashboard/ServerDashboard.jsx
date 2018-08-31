@@ -18,10 +18,9 @@ class ServerDashboard extends React.Component {
     }
 
     render() {
-        //style={{padding:'.8rem',color:'#fff',marginLeft:0,marginRight:0}}
         return (
             <Row className="serverDash-container"
-                 gutter={15}
+                 gutter={10}
                  id="serverDash"
             >
                 <Col
@@ -30,6 +29,7 @@ class ServerDashboard extends React.Component {
                     md={{span:24}}
                     lg={{span:6}}
                     xl={{span:6}}
+                    xxl={{span:6}}
                 >
                     <QuickOverview/>
                 </Col>
@@ -39,6 +39,7 @@ class ServerDashboard extends React.Component {
                     md={{span:24}}
                     lg={{span:6}}
                     xl={{span:6}}
+                    xxl={{span:6}}
 
                 >
                     <CloudInfra/>
@@ -49,6 +50,7 @@ class ServerDashboard extends React.Component {
                     md={{span:24}}
                     lg={{span:6}}
                     xl={{span:6}}
+                    xxl={{span:6}}
 
                 >
                     <UserExperience/>
@@ -59,6 +61,7 @@ class ServerDashboard extends React.Component {
                     md={{span:24}}
                     lg={{span:6}}
                     xl={{span:6}}
+                    xxl={{span:6}}
 
                 >
                     <ApplicationHealth/>

@@ -6,19 +6,13 @@ class BarChart extends React.Component {
     constructor() {
         super();
         this.state = {
-            // chartOption:{},
-            // seriesData:[]
         };
     }
     componentWillReceiveProps(nextProps){
-        // console.log("componentWillReceiveProps!!!");
-        // console.log(nextProps);
+
     }
     componentWillMount(){
-        // console.log(this.props.ajaxData);
-        // this.setState({
-        //     chartOption:this.props.chartOption
-        // });
+
 
     }
 

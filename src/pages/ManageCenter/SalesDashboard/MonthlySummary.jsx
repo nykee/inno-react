@@ -1,5 +1,5 @@
 import React from 'react';
-import CommonTitle from './CommonTitle'
+import CommonTitle from '../../../componenets/common/CommonTitle'
 import AreaChart from '../../../componenets/Echarts/AreaChart'
 let  Mock = require('mockjs');
 class MonthlySummary extends React.Component {
@@ -24,11 +24,7 @@ class MonthlySummary extends React.Component {
         console.log(dataFake_2);
         console.log(dataFake_3);*/
         let chartOption={
-            backgroundColor:'#262626',
-            /*title : {
-                text: '某楼盘销售情况',
-                subtext: '纯属虚构'
-            },*/
+            backgroundColor:'#1F242A',
             tooltip : {
                 trigger: 'axis',
                 axisPointer:{
@@ -36,19 +32,6 @@ class MonthlySummary extends React.Component {
                 }
 
             },
-            /*legend: {
-                data:['意向','预购','成交']
-            },*/
-           /* toolbox: {
-                show : false,
-                feature : {
-                    mark : {show: true},
-                    dataView : {show: true, readOnly: false},
-                    magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-                    restore : {show: true},
-                    saveAsImage : {show: true}
-                }
-            },*/
            grid:{
                x:25,
                y:25,

@@ -16,7 +16,7 @@ class CustomLegend extends React.Component {
         let legendItems=[];
         this.props.legends.map((leg,i)=>{
             legendItems.push(
-                <Row>
+                <Row key={i}>
                     <Col span={4}>
                         <span style={{display:'inline-block',borderBottom:'3px solid'+leg.color,width:'80%'}}/>
                     </Col>

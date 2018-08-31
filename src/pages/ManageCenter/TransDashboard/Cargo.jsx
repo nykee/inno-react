@@ -51,7 +51,7 @@ class Cargo extends React.Component {
             {
                 carNum:'沪B2638',
                 warehouseNum:'G仓',
-                loadingStatus:'已到达，未卸货',
+                loadingStatus:'未卸货',
                 finishTime:'16:00'
             },
             {

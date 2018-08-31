@@ -20,7 +20,9 @@ class QuickOverview extends React.Component {
         return (
             <div >
                 <SectionTitle titleName="Quick OverView" />
-                <Row gutter={10} className="items">
+                <Row
+                    gutter={10}
+                     className="items">
                     <Col
                         xs={{span:12 }}
                         sm={{span:12 }}

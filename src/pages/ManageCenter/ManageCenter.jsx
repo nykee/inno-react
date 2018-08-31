@@ -68,7 +68,7 @@ class ManageCenter extends React.Component {
             chartContainer;
 
         if(this.state.current.toString() === '3'){
-            title ="服务端监控DashBoard";
+            title ="服务器端监控DashBoard";
             chartContainer =<ServerDashboard/>
         }
         else if(this.state.current.toString() === '4'){
@@ -106,7 +106,7 @@ class ManageCenter extends React.Component {
 
                             >
                                 <SubMenu key="sub1" title={<span><i className="fa fa-tachometer fa-lg"  /><span>Dashboard图表分析</span></span>}>
-                                    <Menu.Item key="3">服务端监控DashBoard</Menu.Item>
+                                    <Menu.Item key="3">服务器端监控DashBoard</Menu.Item>
                                     <Menu.Item key="4">销售业务监控DashBoard</Menu.Item>
                                     <Menu.Item key="6">销售业务监控DashBoard</Menu.Item>
                                     <Menu.Item key="7">物流运输监控DashBoard</Menu.Item>

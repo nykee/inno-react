@@ -17,7 +17,7 @@ class Header extends React.Component {
     componentWillReceiveProps(nextProps){
         // console.log("nextProps。。。");
         // console.log(nextProps.selected);
-        if(nextProps.selected ==='3'){
+       /* if(nextProps.selected ==='3'){
             this.setState({
                 iconclass:"fa fa-tachometer fa-2x"
             })
@@ -34,13 +34,13 @@ class Header extends React.Component {
                 iconclass:"fa fa-bar-chart fa-2x"
             })
 
-        }
+        }*/
 
     }
     componentWillMount(){
         // console.log(typeof this.props.selected)
 
-        if(this.props.selected ==='3'){
+        /*if(this.props.selected ==='3'){
             this.setState({
                 iconclass:"fa fa-tachometer fa-2x"
             })
@@ -63,7 +63,7 @@ class Header extends React.Component {
                 iconclass:"fa fa-tachometer-alt fa-2x"
             })
 
-        }
+        }*/
     }
 
     fullScreen(){
@@ -93,7 +93,6 @@ class Header extends React.Component {
                      xl={{span:5,offset :13}}
                      style={{textAlign:'right'}}>
                     <i className="fa fa-expand fa-2x" style={{paddingRight:'.3rem',marginRight:'.6rem'}}  onClick={this.fullScreen.bind(this)} />
-                    <i className={this.state.iconclass} style={{paddingRight:'.3rem'}}/>
                 </Col>
             </Row>
 

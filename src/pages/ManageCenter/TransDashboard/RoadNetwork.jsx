@@ -1,7 +1,7 @@
 import React from 'react';
-import CommonTitle from '../SalesDashboard/CommonTitle'
+import CommonTitle from '../../../componenets/common/CommonTitle'
 import CommonMap from '../../../componenets/Echarts/CommonMap'
-import {Row,Col} from 'antd'
+// import {Row,Col} from 'antd'
 // import MapChartMcenter from '../../../componenets/Echarts/MapChartMcenter'
 
 class RoadNetwork extends React.Component {
