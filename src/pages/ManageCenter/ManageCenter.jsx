@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row,Col,Menu,Icon} from 'antd';
+import {Row,Col,Menu,Layout, Icon} from 'antd';
 
 
 
@@ -14,7 +14,7 @@ import Header from './Header'
 
 import '../../style/ManageCenter.css'
 
-
+const {Sider, Content} =Layout;
 
 
 const SubMenu = Menu.SubMenu;
@@ -25,7 +25,7 @@ class ManageCenter extends React.Component {
         super();
         this.state ={
             openKeys: ['sub1'],
-            collapsed: false,
+            // collapsed: false,
             current:'4'
         }
     }
@@ -34,12 +34,12 @@ class ManageCenter extends React.Component {
    /* var aw =window.screen.availWidth;
     console.log(aw);*/
     // console.log(document.body.clientWidth );
-    if(document.body.clientWidth <500){
+   /* if(document.body.clientWidth <500){
         console.log("屏幕小于500px!");
         this.setState({
             collapsed:true
         })
-    }
+    }*/
 
 
     }
@@ -67,24 +67,20 @@ class ManageCenter extends React.Component {
         let title,
             chartContainer;
 
-        if(this.state.current === '3'){
-            title ="echarts-服务端监控DashBoard";
+        if(this.state.current.toString() === '3'){
+            title ="服务端监控DashBoard";
             chartContainer =<ServerDashboard/>
         }
-        else if(this.state.current === '4'){
-            title ="销售业务监控-DashBoard-echarts";
+        else if(this.state.current.toString() === '4'){
+            title ="销售业务监控DashBoard";
             chartContainer =<SalesDashboard/>
         }
-       /* else if(this.state.current === '5'){
-            title ="销售业务监控-DashBoard-D3";
-            chartContainer =<SalesDashboardD3/>
-        }*/
-        else if(this.state.current === '6'){
-            title ="销售业务监控-DashBoard-Rechart";
+        else if(this.state.current.toString() === '6'){
+            title ="销售业务监控DashBoard";
             chartContainer =<SalesDashboardRe/>
         }
-        else if(this.state.current === '7'){
-            title ="物流运输监控-DashBoard-Rechart";
+        else if(this.state.current.toString() === '7'){
+            title ="物流运输监控DashBoard";
             chartContainer =<TransDash/>
         }
 
@@ -92,43 +88,47 @@ class ManageCenter extends React.Component {
 
 
         return (
-            <div>
-                <Row>
-                    <Col   xs={{span:24}} sm={{span:3}} md={{span:3}} lg={{span:3}}>
-                        <Menu
-                            mode="inline"
-                            openKeys={this.state.openKeys}
-                            onOpenChange={this.onOpenChange}
-                            selectedKeys={[this.state.current]}
-                            style={{ marginRight:0}}
-                            onClick={this.handleClick}
-                            inlineCollapsed={this.state.collapsed}
+            <Layout>
+                {/*<Row>*/}
+                    <Sider breakpoint="lg"
+                           collapsedWidth="0"
+                           width="10rem"
+                           // onBreakpoint={(broken) => { console.log(broken); }}
+                           onCollapse={(collapsed, type) => { console.log(collapsed, type); }}>
+                        {/*<Col   xs={{span:24}} sm={{span:3}} md={{span:3}} lg={{span:3}}>*/}
+                            <Menu
+                                mode="inline"
+                                openKeys={this.state.openKeys}
+                                onOpenChange={this.onOpenChange}
+                                selectedKeys={[this.state.current]}
+                                style={{ marginRight:0}}
+                                onClick={this.handleClick}
 
-                        >
-                            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Dashboard图表分析</span></span>}>
-                                {/*<Menu.Item key="1" >D3.js图表</Menu.Item>*/}
-                                {/*<Menu.Item key="2">HighChart图表</Menu.Item>*/}
-                                <Menu.Item key="3">服务端监控DashBoard-echarts</Menu.Item>
-                                <Menu.Item key="4">销售业务监控DashBoard-echarts</Menu.Item>
-                                {/*<Menu.Item key="5">D3-销售业务监控DashBoard</Menu.Item>*/}
-                                <Menu.Item key="6">销售业务监控DashBoard-Rechart</Menu.Item>
-                                <Menu.Item key="7">物流运输监控DashBoard-Rechart</Menu.Item>
-                            </SubMenu>
+                            >
+                                <SubMenu key="sub1" title={<span><i className="fa fa-tachometer fa-lg"  /><span>Dashboard图表分析</span></span>}>
+                                    <Menu.Item key="3">服务端监控DashBoard</Menu.Item>
+                                    <Menu.Item key="4">销售业务监控DashBoard</Menu.Item>
+                                    <Menu.Item key="6">销售业务监控DashBoard</Menu.Item>
+                                    <Menu.Item key="7">物流运输监控DashBoard</Menu.Item>
+                                </SubMenu>
 
-                        </Menu>
-                        {/*<MobileMenu></MobileMenu>*/}
+                            </Menu>
 
-                    </Col>
-                    <Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className="blackBG">
-                            <div>
+                        {/*</Col>*/}
+                    </Sider>
+
+                    <Layout>
+                        {/*<Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className="blackBG">*/}
+                            <Content className="blackBG">
                                 <Header title={title} selected={this.state.current}/>
-                                {(this.state.current.toString() ==="3"||this.state.current.toString() ==="4")?'':''}
                                 {chartContainer}
 
-                            </div>
-                    </Col>
-                </Row>
-            </div>
+                            </Content>
+                        {/*</Col>*/}
+                    </Layout>
+
+                {/*</Row>*/}
+            </Layout>
 
         )
     }

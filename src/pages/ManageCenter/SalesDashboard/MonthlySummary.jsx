@@ -24,7 +24,7 @@ class MonthlySummary extends React.Component {
         console.log(dataFake_2);
         console.log(dataFake_3);*/
         let chartOption={
-            backgroundColor:'#2F323A',
+            backgroundColor:'#262626',
             /*title : {
                 text: '某楼盘销售情况',
                 subtext: '纯属虚构'

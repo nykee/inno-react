@@ -13,7 +13,7 @@ const {  Sider } = Layout;
 class TopNav extends React.Component {
     state = {
         current: '/',
-        collapsed: false,
+        // collapsed: false,
     };
     handleClick = (e) => {
         // console.log('click ', e);
@@ -58,7 +58,7 @@ class TopNav extends React.Component {
                         selectedKeys={[this.state.current]}
                         mode="horizontal"
                         style={{backgroundColor:'rgba(2,123,187,0.0)'}}
-                        inlineCollapsed={this.state.collapsed}
+                        // inlineCollapsed={this.state.collapsed}
                     >
                         <Menu.Item key="/">
                             <i className="fa fa-home">首页</i>

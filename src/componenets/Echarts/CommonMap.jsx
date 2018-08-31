@@ -1,6 +1,6 @@
 import React from 'react';
-import echarts from 'echarts'
-import 'echarts/chart/map'
+// import echarts from 'echarts'
+// import 'echarts/chart/map'
 
 class CommonMap extends React.Component {
     constructor() {
@@ -9,14 +9,16 @@ class CommonMap extends React.Component {
     }
 
     componentDidMount() {
-        let  myChart = echarts.init(document.getElementById(this.props.domID));
+        var echarts = require('echarts/echarts');
+        require('echarts/chart/map');
+        let  myChart = echarts.init(document.getElementById(this.props.DomID));
         myChart.setOption(this.props.chartOption);
 
     }
 
     render() {
         return (
-            <div id={this.props.domId} style={{height:400}}>
+            <div id={this.props.DomID} style={{height:400}}>
             </div>
 
         )

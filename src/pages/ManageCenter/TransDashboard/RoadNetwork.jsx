@@ -22,15 +22,15 @@ class RoadNetwork extends React.Component {
                     name: 'Map',
                     type: 'map',
                     // roam: true,//鼠标滚轮缩放
-                    // hoverable:true,//鼠标经过高亮
+                    hoverable:false,//鼠标经过高亮
                     mapLocation: {
                         x: 'center',
                         y: 'center',
-                        height: 500
+                        // height: 500
                     },
 
 
-                    selectedMode: 'single',
+                    selectedMode: false,
                     itemStyle: {
                         normal: {
                             borderWidth: 2,
@@ -40,21 +40,10 @@ class RoadNetwork extends React.Component {
                                 show: false
                             }
                         },
-                        emphasis: { // 选中样式
-                            borderWidth: 2,
-                            borderColor: '#fff',
-                            color: '#32cd32',
-                            label: {
-                                show: true,
-                                textStyle: {
-                                    color: '#fff'
-                                }
-                            }
-                        }
                     },
                     data: [
                         {
-                            name: '广东',
+                            name: '',
                             itemStyle: {
                                 normal: {
                                     color: '#2F99E5',
@@ -66,21 +55,10 @@ class RoadNetwork extends React.Component {
                                         }
                                     }
                                 },
-                                emphasis: { // 选中样式
-                                    borderWidth: 2,
-                                    borderColor: '#fff',
-                                    color: '#32cd32',
-                                    label: {
-                                        show: true,
-                                        textStyle: {
-                                            color: '#fff'
-                                        }
-                                    }
-                                }
                             }
                         },
                         {
-                            name: '上海',
+                            name: '',
                             itemStyle: {
                                 normal: {
                                     color: '#2F99E5',
@@ -92,21 +70,11 @@ class RoadNetwork extends React.Component {
                                         }
                                     }
                                 },
-                                emphasis: { // 选中样式
-                                    borderWidth: 2,
-                                    borderColor: '#fff',
-                                    color: '#32cd32',
-                                    label: {
-                                        show: true,
-                                        textStyle: {
-                                            color: '#fff'
-                                        }
-                                    }
-                                }
+
                             }
                         },
                         {
-                            name: '北京',
+                            name: '',
                             itemStyle: {
                                 normal: {
                                     color: '#2F99E5',
@@ -118,17 +86,7 @@ class RoadNetwork extends React.Component {
                                         }
                                     }
                                 },
-                                emphasis: { // 也是选中样式
-                                    borderWidth: 2,
-                                    borderColor: '#fff',
-                                    color: '#32cd32',
-                                    label: {
-                                        show: true,
-                                        textStyle: {
-                                            color: '#fff'
-                                        }
-                                    }
-                                }
+
                             }
                         },
 
@@ -145,7 +103,7 @@ class RoadNetwork extends React.Component {
                             type: 'scale',
                             loop: true,
                             period: 15,
-                            scaleSize : 2,
+                            scaleSize : 3,
                             bounceDistance: 10,
                             color : null,
                             shadowColor : null,
@@ -266,13 +224,8 @@ class RoadNetwork extends React.Component {
         };
         return (
             <div>
-                <Row>
-                    <Col lg={{span:12}}>
                         <CommonTitle titleName="全国公路路网概况"/>
-                        <CommonMap domId="RoadNetwork" chartOption={chartOption}/>
-                    </Col>
-                </Row>
-
+                        <CommonMap DomID="RoadNetwork" chartOption={chartOption}/>
             </div>
 
         )

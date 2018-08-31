@@ -32,7 +32,7 @@ class ProductLists extends React.Component {
 
         var labelBottom = {
             normal : {
-                color: '#2F323A',
+                color: '#1F242A',
                 label : {
                     show : false,
                     position : 'center'
