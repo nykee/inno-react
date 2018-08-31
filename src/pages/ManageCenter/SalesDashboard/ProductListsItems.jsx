@@ -12,7 +12,7 @@ class ProductListsItems extends React.Component {
         return (
            <div  >
                <span style={{fontSize:'.9rem',fontWeight:'bold',textAlign:'left'}}>{this.props.name}</span>
-               <PieChart chartOption={this.props.chartOption} charID={this.props.charID}/>
+               <PieChart chartOption={this.props.chartOption} chartID={this.props.chartID}/>
            </div>
 
         )

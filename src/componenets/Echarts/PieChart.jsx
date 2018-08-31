@@ -10,7 +10,7 @@ class PieChart extends React.Component {
     componentDidMount() {
         var echarts = require('echarts/echarts');
         require('echarts/chart/pie');
-        let chart =echarts.init(document.getElementById(this.props.DomID));
+        let chart =echarts.init(document.getElementById(this.props.chartID));
         chart.setOption(this.props.chartOption);
 
     }
@@ -18,7 +18,7 @@ class PieChart extends React.Component {
     render() {
         return (
 
-                <div id={this.props.DomID} style={{width:'100%',height:220}}>
+                <div id={this.props.chartID} style={{width:'100%',height:220}}>
                 </div>
 
 

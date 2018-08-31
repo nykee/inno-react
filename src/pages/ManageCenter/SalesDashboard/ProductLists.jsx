@@ -199,35 +199,35 @@ class ProductLists extends React.Component {
                         lg={{span:4}}
                         xl={{span:4}}
                     >
-                        <ProductListsItems name="HTC" qty="450" chartOption={htcOption} charID="HTC"/>
+                        <ProductListsItems name="HTC" qty="450" chartOption={htcOption} chartID="HTC"/>
                     </Col>
                     <Col xs={{span:24}}
                         sm={{span:24}}
                          md={{span:24}}
                         lg={{span:4,offset:1}}
                         xl={{span:4,offset:1}} >
-                        <ProductListsItems name="Nokia" qty="657" chartOption={nokiaOption} charID="Nokia"/>
+                        <ProductListsItems name="Nokia" qty="657" chartOption={nokiaOption} chartID="Nokia"/>
                     </Col>
                     <Col xs={{span:24}}
                         sm={{span:24}}
                          md={{span:24}}
                         lg={{span:4,offset:1}}
                         xl={{span:4,offset:1}} >
-                        <ProductListsItems name="LG" qty="1200" chartOption={lgOption} charID="LG"/>
+                        <ProductListsItems name="LG" qty="1200" chartOption={lgOption} chartID="LG"/>
                     </Col>
                     <Col xs={{span:24}}
                         sm={{span:24}}
                          md={{span:24}}
                         lg={{span:4,offset:1}}
                         xl={{span:4,offset:1}} >
-                        <ProductListsItems name="Samsung" qty="1800" chartOption={samsungOption} charID="Samsung"/>
+                        <ProductListsItems name="Samsung" qty="1800" chartOption={samsungOption} chartID="Samsung"/>
                     </Col>
                     <Col xs={{span:24}}
                         sm={{span:24}}
                          md={{span:24}}
                         lg={{span:4,offset:1}}
                         xl={{span:4,offset:1}}>
-                        <ProductListsItems name="Apple" qty="2400" chartOption={appleOption} charID="Apple"/>
+                        <ProductListsItems name="Apple" qty="2400" chartOption={appleOption} chartID="Apple"/>
                     </Col>
                 </Row>
             </div>
