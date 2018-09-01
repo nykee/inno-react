@@ -1,0 +1,15 @@
+.plat-item-title{
+    color:#fff;
+    background: #0F2C42;
+    text-align: left;
+    padding: .5rem 0 .5rem .5rem;
+    border: 1px solid #1C2E3B;
+}
+.plat-item-content{
+    background-color: #1C252B;
+    color:#489872;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: .4rem 0 .4rem .4rem;
+    border: 1px solid #20282A;
+}

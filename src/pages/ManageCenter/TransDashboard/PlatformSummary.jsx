@@ -18,7 +18,9 @@ class PlatformSummary extends React.Component {
             {value:135, name:'淘宝'},
             {value:1548, name:'亚马逊'}];
         pieChartOption.toolbox.show=false;
-        pieChartOption.title.text =pieChartOption.series[0].name= '各平台运单分布';
+        pieChartOption.title.text ='';
+        pieChartOption.series[0].name= '各平台运单分布';
+        pieChartOption.tooltip.show =false;
 
     }
     componentDidMount() {

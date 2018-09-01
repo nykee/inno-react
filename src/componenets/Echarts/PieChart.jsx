@@ -12,6 +12,9 @@ class PieChart extends React.Component {
         require('echarts/chart/pie');
         let chart =echarts.init(document.getElementById(this.props.chartID));
         chart.setOption(this.props.chartOption);
+        chart.on('HOVER',(d)=>{
+            console.log(d);
+        }).on('CLICK',(d)=>{console.log(d)})
 
     }
 

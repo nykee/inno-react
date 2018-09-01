@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../../style/TransDash/PlatDetailItems.css'
 class PlatDetailItems extends React.Component {
 
 
@@ -8,8 +8,8 @@ class PlatDetailItems extends React.Component {
 
         return (
             <div>
-                <div >{this.props.itemTitle}</div>
-                <div >{this.props.itemContent}</div>
+                <div className="plat-item-title">{this.props.itemTitle}</div>
+                <div className="plat-item-content">{this.props.itemContent}</div>
             </div>
 
         )
