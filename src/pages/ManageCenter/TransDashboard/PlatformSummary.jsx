@@ -1,6 +1,7 @@
 import React from 'react';
 import CommonTitle from '../../../componenets/common/CommonTitle'
 import PieChart from '../../../componenets/Echarts/PieChart'
+import PlatDetail from './PlatDetail'
 import {pieChartOption} from '../../../chartConfig/commonEchartsConifg'
 import {Row,Col} from 'antd'
 
@@ -34,7 +35,7 @@ class PlatformSummary extends React.Component {
                         <PieChart chartID="PlatSummary" chartOption={pieChartOption}/>
                     </Col>
                     <Col lg={{span:12}}>
-
+                        <PlatDetail/>
                     </Col>
                 </Row>
 
