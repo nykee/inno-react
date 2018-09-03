@@ -33,12 +33,15 @@ class PlatformSummary extends React.Component {
             <div>
                 <CommonTitle titleName="各平台运单统计"/>
                 <Row>
-                    <Col lg={{span:12}}>
+                    <Col lg={{span:10}}>
                         <PieChart chartID="PlatSummary" chartOption={pieChartOption}/>
                     </Col>
-                    <Col lg={{span:12}}>
+                    <Col lg={{span:14}}>
                         <PlatDetail/>
                     </Col>
+                </Row>
+                <Row>
+                    <span style={{color:'#fff',height:'12.5rem',display:'inline-block'}}>Bar LINE 混合图</span>
                 </Row>
 
             </div>

@@ -12,6 +12,10 @@ import Login from '../src/pages/Login'
 import Container from '../src/componenets/Container'
 import { Router, Route,  browserHistory,IndexRoute  } from 'react-router';
 import registerServiceWorker from './registerServiceWorker';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux'
+
+
 
 
 const routes =
@@ -34,10 +38,16 @@ const routes =
 
     </Route>
 ;
-
+/*{/* <Provider store={store}>
+        <Router history={browserHistory}>
+            {routes}
+        </Router>
+    </Provider>,*/
 ReactDOM.render(
-    <Router history={browserHistory}>
-        {routes}
-    </Router>,
+
+<Router history={browserHistory}>
+    {routes}
+</Router>,
+
     document.getElementById('root'));
 registerServiceWorker();

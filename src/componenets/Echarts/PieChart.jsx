@@ -1,5 +1,5 @@
 import React from 'react';
-
+import EP from '../../utils/eventProxy';
 
 class PieChart extends React.Component {
     constructor() {
@@ -10,11 +10,17 @@ class PieChart extends React.Component {
     componentDidMount() {
         var echarts = require('echarts/echarts');
         require('echarts/chart/pie');
+        let ecConfig = require('echarts/config');
         let chart =echarts.init(document.getElementById(this.props.chartID));
         chart.setOption(this.props.chartOption);
-        chart.on('HOVER',(d)=>{
-            console.log(d);
-        }).on('CLICK',(d)=>{console.log(d)})
+        chart.on(
+            ecConfig.EVENT.CLICK,(d)=>{
+                console.log(d);
+                EP.trigger("PIE_CLICK",d);
+
+            });
+
+
 
     }
 

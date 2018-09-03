@@ -2,9 +2,13 @@
     color:#fff;
     background: #0F2C42;
     text-align: left;
-    padding: .5rem 0 .5rem .5rem;
+    padding: .5rem 0 .5rem .2rem;
     border: 1px solid #1C2E3B;
+    /*height: .8rem;*/
+    /*line-height: .8rem;*/
+    font-size: .2rem;
 }
+
 .plat-item-content{
     background-color: #1C252B;
     color:#489872;

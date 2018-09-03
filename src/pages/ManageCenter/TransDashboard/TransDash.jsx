@@ -3,6 +3,7 @@ import {Row,Col} from 'antd'
 import RoadNetwork from './RoadNetwork'
 import Cargo from './Cargo'
 import PlatformSummary from './PlatformSummary'
+import ConsolePanel from "./ConsolePanel";
 
 class TransDash extends React.Component {
     constructor() {
@@ -36,6 +37,9 @@ class TransDash extends React.Component {
                     <Row>
                         <Col lg={{span:24}}>
                             <PlatformSummary/>
+                        </Col>
+                        <Col>
+                            <ConsolePanel/>
                         </Col>
                     </Row>
                 </Col>
