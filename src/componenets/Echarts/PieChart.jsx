@@ -8,6 +8,7 @@ class PieChart extends React.Component {
     }
 
     componentDidMount() {
+        console.log(this.props.chartOption);
         var echarts = require('echarts/echarts');
         require('echarts/chart/pie');
         let ecConfig = require('echarts/config');
@@ -15,7 +16,7 @@ class PieChart extends React.Component {
         chart.setOption(this.props.chartOption);
         chart.on(
             ecConfig.EVENT.CLICK,(d)=>{
-                console.log(d);
+                // console.log(d);
                 EP.trigger("PIE_CLICK",d);
 
             });

@@ -21,7 +21,7 @@ class PlatDetail extends React.Component {
         }
     }
     componentDidMount(){
-        console.log(this.state.dItems);
+        // console.log(this.state.dItems);
         let self =this;
         EP.on('PIE_CLICK',(d)=>{
             console.log(d);
