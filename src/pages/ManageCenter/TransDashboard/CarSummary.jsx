@@ -20,6 +20,11 @@ class CarSummary extends React.Component {
             {name:'异常',icon:'rect',textStyle:{color:'#fff'}},
             {name:'已返回',icon:'rect',textStyle:{color:'#fff'}}
         ];
+        config.pieChartOption.series[0].itemStyle.normal.color =function (params) {
+            let color =['#1CBA4D','#008ED0','#F7413F','#FACF4D'];
+            return color[params.dataIndex]
+        };
+        config.pieChartOption.title.x = "center";
         config.pieChartOption.title.textStyle={
             //文字颜色
             color:'#FFB95A',
@@ -40,7 +45,7 @@ class CarSummary extends React.Component {
         config.pieChartOption.toolbox.show=false;
         config.pieChartOption.title.text ='车辆统计';
         config.pieChartOption.series[0].name= '车辆统计';
-        config.pieChartOption.tooltip.show =false;
+        // config.pieChartOption.tooltip.show =false;
         config.pieChartOption.series[0].itemStyle.normal.label.show =
             config.pieChartOption.series[0].itemStyle.normal.labelLine.show=false;
         return (

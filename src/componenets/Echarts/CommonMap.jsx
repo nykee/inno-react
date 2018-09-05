@@ -13,6 +13,9 @@ class CommonMap extends React.Component {
         require('echarts/chart/map');
         let  myChart = echarts.init(document.getElementById(this.props.DomID));
         myChart.setOption(this.props.chartOption);
+        window.onresize= ()=>{
+            myChart.resize()
+        }
 
     }
 

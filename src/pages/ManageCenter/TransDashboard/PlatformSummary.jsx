@@ -4,6 +4,7 @@ import PieChart from '../../../componenets/Echarts/PieChart'
 import PlatDetail from './PlatDetail'
 import {PieConfig} from '../../../chartConfig/pieConifg'
 import {Row,Col} from 'antd'
+import BarLineCombine from "./BarLineCombine";
 
 class PlatformSummary extends React.Component {
     constructor() {
@@ -65,7 +66,8 @@ class PlatformSummary extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <span style={{color:'#fff',height:'12.5rem',display:'inline-block'}}>Bar LINE 混合图</span>
+                    {/*<span style={{color:'#fff',height:'12.5rem',display:'inline-block'}}>Bar LINE 混合图</span>*/}
+                    <BarLineCombine/>
                 </Row>
 
             </div>

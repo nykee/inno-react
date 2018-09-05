@@ -16,6 +16,7 @@ class DeliverySummary extends React.Component {
     render() {
         let config =new PieConfig();
         config.pieChartOption.title.text = "运单统计";
+        config.pieChartOption.title.x = "center";
         config.pieChartOption.title.textStyle={
             //文字颜色
             color:'#FFB95A',

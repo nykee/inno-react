@@ -15,11 +15,14 @@ class PieChart extends React.Component {
         let chart =echarts.init(document.getElementById(this.props.chartID));
         chart.setOption(this.props.chartOption);
         chart.on(
-            ecConfig.EVENT.CLICK,(d)=>{
+            ecConfig.EVENT.HOVER,(d)=>{
                 // console.log(d);
                 EP.trigger("PIE_CLICK",d);
 
             });
+        window.onresize =function () {
+            chart.resize();
+        }
 
 
 
