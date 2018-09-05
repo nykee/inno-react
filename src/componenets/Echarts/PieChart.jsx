@@ -8,7 +8,7 @@ class PieChart extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props.chartOption);
+        // console.log(this.props.chartOption);
         var echarts = require('echarts/echarts');
         require('echarts/chart/pie');
         let ecConfig = require('echarts/config');
