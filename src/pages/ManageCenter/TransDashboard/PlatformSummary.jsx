@@ -58,10 +58,10 @@ class PlatformSummary extends React.Component {
             <div>
                 <CommonTitle titleName="各平台运单统计"/>
                 <Row>
-                    <Col lg={{span:10}}>
+                    <Col lg={{span:10}} xs={{span:24}}>
                         <PieChart chartID="PlatSummary" chartOption={config.pieChartOption}/>
                     </Col>
-                    <Col lg={{span:14}}>
+                    <Col lg={{span:14}} xs={{span:24}}>
                         <PlatDetail/>
                     </Col>
                 </Row>

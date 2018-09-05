@@ -12,6 +12,9 @@ class BarLine extends React.Component {
         require('echarts/chart/line');
         let chart =echarts.init(document.getElementById(this.props.chartID));
         chart.setOption(this.props.chartOption);
+        window.onresize = ()=>{
+            chart.resize()
+        }
 
     }
 

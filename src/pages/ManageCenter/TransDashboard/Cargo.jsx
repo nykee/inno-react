@@ -2,6 +2,7 @@ import React from 'react';
 import {Row,Col} from 'antd';
 import CargoTable from './CargoTable'
 import '../../../style/TransDash/Cargo.css'
+import CommonTitle from "../../../componenets/common/CommonTitle";
 
 class Cargo extends React.Component {
     constructor() {
@@ -107,6 +108,7 @@ class Cargo extends React.Component {
         ];
         return (
             <div>
+                <CommonTitle titleName="车辆出入库管理"/>
                 <Row gutter={12}>
                     <Col lg={{span:12}}>
                         <CargoTable title="入库管控" columns={columns} dataSource={cargo_in_data}/>
