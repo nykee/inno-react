@@ -4,7 +4,7 @@ import PieChart from '../../../componenets/Echarts/PieChart'
 import PlatDetail from './PlatDetail'
 import {PieConfig} from '../../../chartConfig/pieConifg'
 import {Row,Col} from 'antd'
-import BarLineCombine from "./BarLineCombine";
+import BarLineCombine from "./AreaSummary";
 
 class PlatformSummary extends React.Component {
     constructor() {

@@ -13,7 +13,7 @@ class PlatDetail extends React.Component {
                 ALL_SUM_TODAY:'1489',
                 COMPLETED_SUM_TODAY:'1433',
                 UNUSUAL_SUM_TODAY:'20',
-                ACCURACY:'1%',
+                ACCURACY:'94.3%',
                 SORT_COMPLETED_SUM_TODAY:'2000',
                 SORT_COMPLETED_RATE_TODAY:'1%',
                 STOCK_SUM_TODAY:'1',
@@ -24,7 +24,7 @@ class PlatDetail extends React.Component {
         // console.log(this.state.dItems);
         let self =this;
         EP.on('PIE_CLICK',(d)=>{
-            console.log(d);
+            // console.log(d);
             switch (d.name){
                 case "亚马逊":
                     self.setState(
@@ -35,7 +35,7 @@ class PlatDetail extends React.Component {
                                 ALL_SUM_TODAY:'1489',
                                 COMPLETED_SUM_TODAY:'1433',
                                 UNUSUAL_SUM_TODAY:'20',
-                                ACCURACY:'1%',
+                                ACCURACY:'94.3%',
                                 SORT_COMPLETED_SUM_TODAY:'2000',
                                 SORT_COMPLETED_RATE_TODAY:'1%',
                                 STOCK_SUM_TODAY:'1',
@@ -55,7 +55,7 @@ class PlatDetail extends React.Component {
                             ALL_SUM_TODAY:'4074',
                             COMPLETED_SUM_TODAY:'2088',
                             UNUSUAL_SUM_TODAY:'21',
-                            ACCURACY:'101%',
+                            ACCURACY:'93.1%',
                             SORT_COMPLETED_SUM_TODAY:'2001',
                             SORT_COMPLETED_RATE_TODAY:'81%',
                             STOCK_SUM_TODAY:'21',
@@ -75,7 +75,7 @@ class PlatDetail extends React.Component {
                                 ALL_SUM_TODAY:'3002',
                                 COMPLETED_SUM_TODAY:'2052',
                                 UNUSUAL_SUM_TODAY:'22',
-                                ACCURACY:'102%',
+                                ACCURACY:'92%',
                                 SORT_COMPLETED_SUM_TODAY:'2002',
                                 SORT_COMPLETED_RATE_TODAY:'82%',
                                 STOCK_SUM_TODAY:'22',
@@ -95,7 +95,7 @@ class PlatDetail extends React.Component {
                                 ALL_SUM_TODAY:'2389',
                                 COMPLETED_SUM_TODAY:'2103',
                                 UNUSUAL_SUM_TODAY:'23',
-                                ACCURACY:'103%',
+                                ACCURACY:'93%',
                                 SORT_COMPLETED_SUM_TODAY:'2003',
                                 SORT_COMPLETED_RATE_TODAY:'83%',
                                 STOCK_SUM_TODAY:'23',
@@ -115,7 +115,7 @@ class PlatDetail extends React.Component {
                                 ALL_SUM_TODAY:'23409',
                                 COMPLETED_SUM_TODAY:'21004',
                                 UNUSUAL_SUM_TODAY:'24',
-                                ACCURACY:'104%',
+                                ACCURACY:'94%',
                                 SORT_COMPLETED_SUM_TODAY:'2004',
                                 SORT_COMPLETED_RATE_TODAY:'84%',
                                 STOCK_SUM_TODAY:'24',

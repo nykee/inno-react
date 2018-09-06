@@ -15,7 +15,7 @@ class PieChart extends React.Component {
         let chart =echarts.init(document.getElementById(this.props.chartID));
         chart.setOption(this.props.chartOption);
         chart.on(
-            ecConfig.EVENT.HOVER,(d)=>{
+            ecConfig.EVENT.CLICK,(d)=>{
                 // console.log(d);
                 EP.trigger("PIE_CLICK",d);
 

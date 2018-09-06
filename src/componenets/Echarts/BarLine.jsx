@@ -1,15 +1,17 @@
 import React from 'react';
-
+var echarts = require('echarts/echarts');
+require('echarts/chart/bar');
+require('echarts/chart/line');
 class BarLine extends React.Component {
     constructor() {
         super();
+        // let chart =echarts.init(document.getElementById(this.props.chartID));
+        // this.chart =echarts.init(document.getElementById(this.props.chartID));
         this.state = {};
     }
 
     componentDidMount() {
-        var echarts = require('echarts/echarts');
-        require('echarts/chart/bar');
-        require('echarts/chart/line');
+
         let chart =echarts.init(document.getElementById(this.props.chartID));
         chart.setOption(this.props.chartOption);
         window.onresize = ()=>{
@@ -17,6 +19,13 @@ class BarLine extends React.Component {
         }
 
     }
+    componentWillReceiveProps(nextProps){
+        let chart =echarts.init(document.getElementById(this.props.chartID));
+        chart.setOption(nextProps.chartOption)
+    }
+    /*setOption(){
+        this.chart.setOption(this.props.chartOption);
+    }*/
 
     render() {
         return (

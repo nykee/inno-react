@@ -1,14 +1,61 @@
 import React from 'react';
 import BarLine from "../../../componenets/Echarts/BarLine";
 import {barlineConfig} from "../../../chartConfig/barlineConfig";
-
-class BarLineCombine extends React.Component {
+import EP from "../../../utils/eventProxy";
+let Mock =require('mockjs');
+class AreaSummary extends React.Component {
     constructor() {
         super();
-        this.state = {};
+
+        this. Sdata_1 =[];
+        this.Sdata_2 =[];
+        for(let i=0;i<12;i++){
+            this.Sdata_1.push(
+                Mock.mock(
+                    {"number|10000-20000":20000}
+                ).number
+            );
+            this.Sdata_2.push(
+                Mock.mock(
+                    {"number|1000-2000":2000}
+                ).number
+            )
+        }
+
+        this.state = {
+            seriesData_1:this.Sdata_1,
+            seriesData_2:this.Sdata_2
+
+        };
     }
 
     componentDidMount() {
+        let self =this;
+        EP.on('PIE_CLICK',(d)=>{
+            switch (d.name){
+                case "亚马逊":
+                    self.Sdata_1=[];
+                    self.Sdata_2=[];
+                    for(let i=0;i<12;i++){
+                        this.Sdata_1.push(
+                            Mock.mock(
+                                {"number|10000-20000":20000}
+                            ).number
+                        );
+                        this.Sdata_2.push(
+                            Mock.mock(
+                                {"number|1000-2000":2000}
+                            ).number
+                        )
+                    }
+                    self.setState({
+                        seriesData_1:this.Sdata_1,
+                        seriesData_2:this.Sdata_2
+                    });
+                    // self.$ref.setOption()
+
+            }
+        })
 
     }
 
@@ -44,14 +91,16 @@ class BarLineCombine extends React.Component {
         config.barlineConfig.yAxis[1].show = false;
         config.barlineConfig.yAxis[0].splitLine = {show: false};
         config.barlineConfig.yAxis[1].splitLine = {show: false};
-        config.barlineConfig.yAxis[0].name ="总运单量";
-        config.barlineConfig.yAxis[1].name ="待运单量";
-        config.barlineConfig.series[0].name ="总运单量";
-        config.barlineConfig.series[1].name ="待运单量";
+        config.barlineConfig.yAxis[0].name ="月度运单量";
+        config.barlineConfig.yAxis[1].name ="当日累计运单";
+        config.barlineConfig.series[0].name ="月度运单量";
+        config.barlineConfig.series[0].data =this.state.seriesData_1;
+        config.barlineConfig.series[1].data =this.state.seriesData_2;
+        config.barlineConfig.series[1].name ="当日累计运单量";
         config.barlineConfig.toolbox.show = false;
         config.barlineConfig.grid = {show: true, borderWidth: '0'};
         config.barlineConfig.legend.data =
-            [{name: "总运单量", textStyle: {color: '#fff'}}, {name: "待运单量", textStyle: {color: '#fff'}}];
+            [{name: "月度运单量", textStyle: {color: '#fff'}}, {name: "当日累计运单量", textStyle: {color: '#fff'}}];
         config.barlineConfig.title={
             text:'各地区运单统计',
             x:'left',
@@ -72,11 +121,11 @@ class BarLineCombine extends React.Component {
 
         return (
             <div>
-                <BarLine chartID="barLineCombine" chartOption={config.barlineConfig}/>
+                <BarLine ref="barLineChart" chartID="barLineCombine" chartOption={config.barlineConfig}/>
             </div>
 
         )
     }
 }
 
-export default BarLineCombine;
+export default AreaSummary;
