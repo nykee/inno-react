@@ -66,7 +66,6 @@ class PlatformSummary extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    {/*<span style={{color:'#fff',height:'12.5rem',display:'inline-block'}}>Bar LINE 混合图</span>*/}
                     <BarLineCombine/>
                 </Row>
 

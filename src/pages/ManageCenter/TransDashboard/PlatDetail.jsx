@@ -9,9 +9,9 @@ class PlatDetail extends React.Component {
         this.state ={
             dItems:{
                 name:"亚马逊",
-                ALL_SUM:'200000',
-                ALL_SUM_TODAY:'20000',
-                COMPLETED_SUM_TODAY:'2000',
+                ALL_SUM_MONTH:'22801',
+                ALL_SUM_TODAY:'1489',
+                COMPLETED_SUM_TODAY:'1433',
                 UNUSUAL_SUM_TODAY:'20',
                 ACCURACY:'1%',
                 SORT_COMPLETED_SUM_TODAY:'2000',
@@ -31,9 +31,9 @@ class PlatDetail extends React.Component {
                         {
                             dItems:{
                                 name:d.name,
-                                ALL_SUM:'200000',
-                                ALL_SUM_TODAY:'20000',
-                                COMPLETED_SUM_TODAY:'2000',
+                                ALL_SUM_MONTH:'22801',
+                                ALL_SUM_TODAY:'1489',
+                                COMPLETED_SUM_TODAY:'1433',
                                 UNUSUAL_SUM_TODAY:'20',
                                 ACCURACY:'1%',
                                 SORT_COMPLETED_SUM_TODAY:'2000',
@@ -51,9 +51,9 @@ class PlatDetail extends React.Component {
                         {
                             dItems:{
                             name:'天猫',
-                            ALL_SUM:'200001',
-                            ALL_SUM_TODAY:'20001',
-                            COMPLETED_SUM_TODAY:'2001',
+                            ALL_SUM_MONTH:'14555',
+                            ALL_SUM_TODAY:'4074',
+                            COMPLETED_SUM_TODAY:'2088',
                             UNUSUAL_SUM_TODAY:'21',
                             ACCURACY:'101%',
                             SORT_COMPLETED_SUM_TODAY:'2001',
@@ -71,9 +71,9 @@ class PlatDetail extends React.Component {
                         {
                             dItems:{
                                 name:'一号店',
-                                ALL_SUM:'200002',
-                                ALL_SUM_TODAY:'20002',
-                                COMPLETED_SUM_TODAY:'2002',
+                                ALL_SUM_MONTH:'10005',
+                                ALL_SUM_TODAY:'3002',
+                                COMPLETED_SUM_TODAY:'2052',
                                 UNUSUAL_SUM_TODAY:'22',
                                 ACCURACY:'102%',
                                 SORT_COMPLETED_SUM_TODAY:'2002',
@@ -91,9 +91,9 @@ class PlatDetail extends React.Component {
                         {
                             dItems:{
                                 name:'京东',
-                                ALL_SUM:'200003',
-                                ALL_SUM_TODAY:'20003',
-                                COMPLETED_SUM_TODAY:'2003',
+                                ALL_SUM_MONTH:'15333',
+                                ALL_SUM_TODAY:'2389',
+                                COMPLETED_SUM_TODAY:'2103',
                                 UNUSUAL_SUM_TODAY:'23',
                                 ACCURACY:'103%',
                                 SORT_COMPLETED_SUM_TODAY:'2003',
@@ -111,9 +111,9 @@ class PlatDetail extends React.Component {
                         {
                             dItems:{
                                 name:'淘宝',
-                                ALL_SUM:'200004',
-                                ALL_SUM_TODAY:'20004',
-                                COMPLETED_SUM_TODAY:'2004',
+                                ALL_SUM_MONTH:'254485',
+                                ALL_SUM_TODAY:'23409',
+                                COMPLETED_SUM_TODAY:'21004',
                                 UNUSUAL_SUM_TODAY:'24',
                                 ACCURACY:'104%',
                                 SORT_COMPLETED_SUM_TODAY:'2004',
@@ -135,7 +135,7 @@ class PlatDetail extends React.Component {
     render() {
         let datas = [
             {itemTitle:"平台名称",itemContent:this.state.dItems.name},
-            {itemTitle:"总运单量",itemContent:this.state.dItems.ALL_SUM},
+            {itemTitle:"月度运单量",itemContent:this.state.dItems.ALL_SUM_MONTH},
             {itemTitle:"当日累计运单",itemContent:this.state.dItems.ALL_SUM_TODAY},
             {itemTitle:"完成件数量",itemContent:this.state.dItems.COMPLETED_SUM_TODAY},
             {itemTitle:"异常件数量",itemContent:this.state.dItems.UNUSUAL_SUM_TODAY},
