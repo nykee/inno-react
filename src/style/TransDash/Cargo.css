@@ -6,3 +6,11 @@
     font-size: 1rem;
     color: #F5AE46;
 }
+
+.tableBodyStyle{
+    color: #fff;
+    padding:.3rem;
+    border-top: none;
+    border-right: 1px solid #363B41;
+    border-bottom:1px solid #363B41;
+}

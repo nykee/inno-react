@@ -17,7 +17,7 @@ class CargoTableHeader extends React.Component {
             backgroundColor:'#193C64',
             border:'1px solid #363B41',
             borderLeft:'none',
-            padding:'.5rem 0'
+            padding:'.5rem 0',
         };
         return (
             <Row >

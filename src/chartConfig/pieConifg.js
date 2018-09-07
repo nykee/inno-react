@@ -32,7 +32,7 @@ class PieConfig{
                 orient: 'horizontal',
                 x:'center',
                 y:'bottom',
-                itemWidth:25,
+                itemWidth:16,
                 itemHeight:14,
                 padding:3,
                 data:[],
