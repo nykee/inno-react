@@ -45,7 +45,7 @@ class CarSummary extends React.Component {
         config.pieChartOption.toolbox.show=false;
         config.pieChartOption.title.text ='车辆统计';
         config.pieChartOption.series[0].name= '车辆统计';
-        // config.pieChartOption.tooltip.show =false;
+        config.pieChartOption.tooltip.show =false;
         config.pieChartOption.series[0].itemStyle.normal.label.show =
             config.pieChartOption.series[0].itemStyle.normal.labelLine.show=false;
         return (

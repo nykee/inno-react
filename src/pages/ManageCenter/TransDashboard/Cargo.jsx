@@ -15,40 +15,16 @@ class Cargo extends React.Component {
     }
 
     render() {
-        let columns =[
-            {
-                title: '车牌',
-                dataIndex: 'carNum',
-                key: 'carNum',
-                className:'tBody'
-            },
-            {
-                title:'卸货仓位',
-                dataIndex:'warehouseNum',
-                key:'warehouseNum',
-                className:'tBody'
-            },
-            {
-                title:'卸货情况',
-                dataIndex:'loadingStatus',
-                key:'loadingStatus',
-                className:'tBody'
-            },
-            {
-                title:'预计完成',
-                dataIndex:'finishTime',
-                key:'finishTime',
-                className:'tBody'
-            },
-
-        ];
         let cargo_in_data =[
-            {
+
+                {
                 carNum:'沪E0037A',
                 warehouseNum:'T仓',
                 loadingStatus:'卸货中',
                 finishTime:'14:00'
-            },
+
+                }
+             ,
             {
                 carNum:'沪B2638',
                 warehouseNum:'G仓',
@@ -111,10 +87,10 @@ class Cargo extends React.Component {
                 <CommonTitle titleName="车辆出入库管理"/>
                 <Row gutter={12}>
                     <Col lg={{span:12}}>
-                        <CargoTable title="入库管控" columns={columns} dataSource={cargo_in_data}/>
+                        <CargoTable title="入库管控"  datasource={cargo_in_data}/>
                     </Col>
                     <Col lg={{span:12}}>
-                        <CargoTable title="出库管控" columns={columns} dataSource={cargo_out_data}/>
+                        <CargoTable title="出库管控"  datasource={cargo_out_data}/>
                     </Col>
                 </Row>
             </div>

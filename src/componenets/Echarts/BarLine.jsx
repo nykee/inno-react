@@ -20,8 +20,8 @@ class BarLine extends React.Component {
 
     }
     componentWillReceiveProps(nextProps){
-        let chart =echarts.init(document.getElementById(this.props.chartID));
-        chart.setOption(nextProps.chartOption)
+        // let chart =echarts.init(document.getElementById(this.props.chartID));
+        // chart.setOption(nextProps.chartOption)
     }
     /*setOption(){
         this.chart.setOption(this.props.chartOption);

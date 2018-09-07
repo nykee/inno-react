@@ -17,8 +17,8 @@ class TransDash extends React.Component {
 
     render() {
         let transdashContainer={
-            paddingLeft:'.5rem',
-            paddingRight:'.3rem'
+            padding:'.8rem',
+
         };
         return (
             <div style={transdashContainer}>
@@ -44,29 +44,4 @@ class TransDash extends React.Component {
         )
     }
 }
-/*
-* *<Row style={transdashContainer}>
-                <Col lg={{span:14}}>
-                    <Row>
-                        <Col lg={{span:24}}>
-                            <RoadNetwork/>
-                        </Col>
-                    </Row>
-                    <Row style={{paddingTop:'.3rem'}}>
-                        <Col lg={{span:24}}>
-                            <Cargo/>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col lg={{span:10}}>
-                    <Row>
-                        <Col lg={{span:24}}>
-                            <PlatformSummary/>
-                        </Col>
-                        <Col>
-                            <ConsolePanel/>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>*/
 export default TransDash;
