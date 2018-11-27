@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'font-awesome/css/font-awesome.min.css';
-import 'antd-mobile/dist/antd-mobile.css';
+// import 'antd-mobile/dist/antd-mobile.css';
 import App from './App';
 import Index from '../src/pages/Index'
 import MultipleCenter from './pages/MultipleCenter/MultipleCenter'
@@ -13,9 +13,9 @@ import Container from '../src/componenets/Container'
 import { Router, Route,  browserHistory,IndexRoute  } from 'react-router';
 import registerServiceWorker from './registerServiceWorker';
 import {createStore} from 'redux';
-import {Provider} from 'react-redux'
+// import {Provider} from 'react-redux'
 
-
+// serviceWorker.unregister();
 
 
 const routes =
@@ -50,4 +50,4 @@ ReactDOM.render(
 </Router>,
 
     document.getElementById('root'));
-registerServiceWorker();
+registerServiceWorker().unregister();

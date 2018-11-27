@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Col, Row, Select} from "antd";
-
+import axios from "axios"
 import {
     LineChart, Line, ResponsiveContainer, BarChart, XAxis, YAxis, Tooltip, Bar, Cell,
     CartesianGrid, Legend, PieChart, Pie, ScatterChart, ZAxis, Scatter, RadialBarChart, RadialBar
@@ -70,7 +70,26 @@ class BasicChartAnalyze extends React.Component {
     }
 
     componentDidMount() {
-
+        axios.get('/user/fetchAgeData').then((data)=> {
+            console.log(data);
+        }).catch((err)=>{
+            console.log(err);
+        });
+        axios.get('/user/fetchTypeData').then((data)=> {
+            console.log(data);
+        }).catch((err)=>{
+            console.log(err);
+        });
+        axios.get('/user/fetchSexData').then((data)=> {
+            console.log(data);
+        }).catch((err)=>{
+            console.log(err);
+        });
+        axios.get('/user/fetchMonthData2016').then((data)=> {
+            console.log(data);
+        }).catch((err)=>{
+            console.log(err);
+        });
 
     }
     handleChange =(value)=>{
