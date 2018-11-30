@@ -16,7 +16,7 @@ import BasicChartAnalyze from "./SportsAnyalyze/BasicChartAnalyze"
 
 import '../../style/ManageCenter.css'
 
-const { Content} =Layout;
+// const { Content} =Layout;
 
 
 const SubMenu = Menu.SubMenu;
@@ -129,11 +129,11 @@ class ManageCenter extends React.Component {
 
 
                         <Col xs={{span:24}} sm={{span:21}} md={{span:21}} lg={{span:21}}  className="blackBG">
-                            <Content className="blackBG">
+                            <div className="blackBG">
                                 <Header title={title} selected={this.state.current}/>
                                 {subPageContainer}
 
-                            </Content>
+                            </div>
                         </Col>
 
 

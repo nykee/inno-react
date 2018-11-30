@@ -5,7 +5,7 @@ import LoginBtn from '../componenets/LoginBtn'
 import innoLogo from '../assets/img/nykeeLogo.png'
 import ep from '../utils/eventProxy'
 import React from 'react';
-import { Layout, Menu, Dropdown, Avatar,Icon ,Row,Col} from 'antd';
+import { Layout, Menu, Dropdown, Avatar,Icon ,Row ,Col} from 'antd';
 // const {  Sider } = Layout;
 
 
@@ -23,12 +23,6 @@ class TopNav extends React.Component {
         browserHistory.push(e.key)
     };
     componentDidMount(){
-        // if(document.body.clientWidth <500){
-        //     console.log("屏幕小于500px!");
-        //     this.setState({
-        //         collapsed:true
-        //     })
-        // }
         ep.on('fastEntranceItemClick',(path)=>{
 
         })
