@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row,Col,Menu,Layout, Icon} from 'antd';
+import {Row, Col, Menu, Layout, Icon, Sider} from 'antd';
 
 
 
@@ -16,7 +16,7 @@ import BasicChartAnalyze from "./SportsAnyalyze/BasicChartAnalyze"
 
 import '../../style/ManageCenter.css'
 
-const {Sider, Content} =Layout;
+const { Content} =Layout;
 
 
 const SubMenu = Menu.SubMenu;

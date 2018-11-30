@@ -1,7 +1,7 @@
 import React from 'react';
 // import CustomDPie from '../../../componenets/D3Charts/CustomDPie'
 import {PieChart,Pie, Legend,ResponsiveContainer} from 'recharts'
-
+import {noop} from "../../../utils/util"
 class PercentCount extends React.Component {
     constructor() {
         super();
@@ -28,17 +28,17 @@ class PercentCount extends React.Component {
           color1:'#B29EFF',
             activeColor:'#B29EFF',
             outerRadius1:85,
-        }):'';
+        }):noop();
         data.name ==="Sales"? this.setState({
             color2:'#3394E7',
             activeColor:'#3394E7',
             outerRadius2:85,
-        }):'';
+        }):noop();
         data.name ==="Refound"? this.setState({
             color3:'#49B9E3',
             activeColor:'#49B9E3',
             outerRadius3:85,
-        }):'';
+        }):noop();
 
 }
     onMouseOut(){
@@ -64,17 +64,17 @@ class PercentCount extends React.Component {
             color1:'#B29EFF',
             activeColor:'#B29EFF',
             outerRadius1:85,
-        }):'';
+        }):noop();
         data.name ==="Sales"? this.setState({
             color2:'#3394E7',
             activeColor:'#3394E7',
             outerRadius2:85,
-        }):'';
+        }):noop();
         data.name ==="Refound"? this.setState({
             color3:'#49B9E3',
             activeColor:'#49B9E3',
             outerRadius3:85,
-        }):'';
+        }):noop();
     }
     handleTouchEnd(){
         console.log("touch end");

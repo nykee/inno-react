@@ -3,6 +3,7 @@ import BarChart from '../../../componenets/Echarts/BarChart'
 import '../../../style/SaleDashboard/common.css'
 import {Row,Col} from 'antd'
 import ep from '../../../utils/eventProxy'
+import {noop} from "../../../utils/util"
 class AmountCount extends React.Component {
     constructor() {
         super();
@@ -91,7 +92,7 @@ class AmountCount extends React.Component {
                         }*/
                     },
                     formatter:function (v) {
-                        v/1000>=1? v=(v/1000)+'k':'';
+                        v/1000>=1? v=(v/1000)+'k':noop();
                         // console.log(v);
                         return '$ '+v
                     }},

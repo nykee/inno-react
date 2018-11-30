@@ -6,7 +6,7 @@ import innoLogo from '../assets/img/nykeeLogo.png'
 import ep from '../utils/eventProxy'
 import React from 'react';
 import { Layout, Menu, Dropdown, Avatar,Icon ,Row,Col} from 'antd';
-const {  Sider } = Layout;
+// const {  Sider } = Layout;
 
 
 
